@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: "Shipping Policy | MOQ Pools",
   description: "Shipping timelines, tracking, insurance, and customs for group orders.",

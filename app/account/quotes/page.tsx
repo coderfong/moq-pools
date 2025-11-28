@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Quotes - Account - MOQ Pools' };
 export default function QuotesPage() {
   return (
