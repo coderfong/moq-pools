@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth/next';
+import { auth } from '@/auth';
 import { performanceMonitor } from '@/lib/monitoring';
 
 export async function GET(req: NextRequest) {
   try {
     // Check if user is admin
-    const session = await getServerSession();
+    const session = await auth();
     if (!session?.user?.email?.includes('admin') && 
         !session?.user?.email?.includes('jonfong78')) {
       return NextResponse.json(
