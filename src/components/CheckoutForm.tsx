@@ -214,13 +214,11 @@ export default function CheckoutForm({
               </h3>
               <div className="bg-white/80 rounded-xl border-2 border-orange-200 p-4 shadow-md">
                 <ShippingCalculator 
-                  productTitle={actualTitle}
-                  quantity={quantity}
-                  showTitle={false}
+                  title={actualTitle}
+                  price={actualPrice || 0}
                 />
               </div>
             </div>
-          </div>
           </div>
 
           <style jsx>{`
