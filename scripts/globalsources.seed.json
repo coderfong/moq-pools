@@ -1,0 +1,3100 @@
+{
+  "jobs": [
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gaming Mouse",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "consumer-electronics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gaming Keyboards",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "consumer-electronics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Mouse",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "consumer-electronics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Tablet PC",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "consumer-electronics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gaming Laptops",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "consumer-electronics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Keyboards",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "consumer-electronics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Laptops",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "consumer-electronics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Computer Accessories",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "consumer-electronics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bicycle Accessories",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "sports-entertainment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Jetski",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "sports-entertainment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fishing Accessories",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "sports-entertainment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Accessories",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "sports-entertainment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bicycle",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "sports-entertainment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Keyboard Instrument",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "sports-entertainment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Piano Keyboard",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "sports-entertainment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Camping Gear",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "sports-entertainment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Badge Holder",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "school-office"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Highlighters",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "school-office"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Staplers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "school-office"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Laminator",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "school-office"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Art Supplies",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "school-office"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Typewriter",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "school-office"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Notebooks",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "school-office"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gouache Paint",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "school-office"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Storage Cabinet",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "furniture"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Plastic Chair",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "furniture"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Baby Cribs",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "furniture"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Baby Bed",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "furniture"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Desk",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "furniture"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gaming Tables",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "furniture"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gaming Desk",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "furniture"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Luggage Racks",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "furniture"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Micro Camera",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "safety-security"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Army Boots",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "safety-security"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Hidden Camera",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "safety-security"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Spy Camera",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "safety-security"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Mini Cameras",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "safety-security"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Boots",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "safety-security"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Keys",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "safety-security"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Respirator",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "safety-security"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Witch Costume",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "apparel-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Top Hat",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "apparel-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fishing Suit",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "apparel-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "African Clothes",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "apparel-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Church Hats",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "apparel-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Carnival Costume",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "apparel-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "African Clothing",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "apparel-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Boy Swimming Trunks",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "apparel-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Irrigation Sprinkler",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-garden"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Dry herb vaporizers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-garden"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wedding Backdrop",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-garden"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Living Room Decoration",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-garden"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Christmas Gifts",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-garden"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Home Decor",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-garden"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Christmas decorations",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-garden"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Batter Dispenser",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-garden"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cryolipolysis Slimming Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "beauty"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Eye Cream",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "beauty"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Face Cream",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "beauty"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Manicure Tables",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "beauty"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Nail Supplies",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "beauty"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Skin Care Products",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "beauty"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cosmetic",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "beauty"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Rotary Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "beauty"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Moonstone",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "jewelry-eyewear-watches"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Hair Sticks",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "jewelry-eyewear-watches"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fashion accessories",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "jewelry-eyewear-watches"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fine Jewelry Earrings",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "jewelry-eyewear-watches"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fine Jewelry Necklaces",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "jewelry-eyewear-watches"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Contact Lenses",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "jewelry-eyewear-watches"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Jewelry",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "jewelry-eyewear-watches"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Pocket Watch Chains",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "jewelry-eyewear-watches"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cowboy Boots",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "shoes-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Ankle Boots",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "shoes-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Flat Shoes",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "shoes-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Women Boots",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "shoes-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Sandals",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "shoes-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Men shoes",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "shoes-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Women shoes",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "shoes-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fur Shoe",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "shoes-accessories"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Men's Backpacks",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "luggage-bags-cases"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Tactical Backpacks",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "luggage-bags-cases"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Men's Handbags",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "luggage-bags-cases"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Women's Backpacks",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "luggage-bags-cases"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Shoulder Bag",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "luggage-bags-cases"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Backpack",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "luggage-bags-cases"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bag",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "luggage-bags-cases"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Hydration Backpack",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "luggage-bags-cases"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Food Bag",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-printing"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Pill Box",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-printing"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wine Bottle",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-printing"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Pepper Spray",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-printing"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wedding Favors",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-printing"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Plastic Bottles",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-printing"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Coffee Cup",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-printing"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Propane Tank",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-printing"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Candy Toys",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "parents-kids-toys"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Boys clothing",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "parents-kids-toys"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Organizers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "parents-kids-toys"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Party Decoration",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "parents-kids-toys"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Swimming Pool",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "parents-kids-toys"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Baby Strollers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "parents-kids-toys"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Toys",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "parents-kids-toys"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Diy Toys",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "parents-kids-toys"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bleach",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "personal-home-care"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Glass Cleaners",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "personal-home-care"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Liquid Soap",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "personal-home-care"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Hair Extension Tools",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "personal-home-care"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Scissors",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "personal-home-care"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Washing Powder",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "personal-home-care"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Detergent",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "personal-home-care"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Barber Vest",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "personal-home-care"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Continuous Glucose Monitor",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "health-medical"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Ginseng",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "health-medical"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Stretcher",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "health-medical"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Oxygen Concentrator",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "health-medical"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Electric Wheelchair",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "health-medical"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wheelchair",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "health-medical"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Collagen",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "health-medical"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Nebulizer Mask",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "health-medical"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Leather Keychain",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "gifts-crafts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Promotional Business Gifts",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "gifts-crafts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wedding Souvenirs",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "gifts-crafts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Natural stone",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "gifts-crafts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wedding Invitation",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "gifts-crafts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gift Sets",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "gifts-crafts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Keychain",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "gifts-crafts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wood Key Chains",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "gifts-crafts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Parrot Cage",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pet-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Dog Crate",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pet-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Hamster Cage",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pet-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cat Toy",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pet-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bird Cage",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pet-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Aquariums",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pet-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Pet Accessories",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pet-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Poop Bag Dispenser",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pet-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Sorting Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wet Grinder",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Spindle Motor",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Shafts",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Peeling Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Balers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Table",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Pneumatic Connector",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Buffet Table",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "commercial-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Christmas Inflatable",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "commercial-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Kitchen Machines",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "commercial-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bakery Equipment",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "commercial-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cutting Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "commercial-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Freezers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "commercial-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Water Filter",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "commercial-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Printing Materials",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "commercial-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Power Plant",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-building-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Pavers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-building-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Mining Machinery",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-building-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Crusher",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-building-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Construction Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-building-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Crane",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-building-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Concrete Pumps",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-building-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Drill Head",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-building-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Tombstones",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-real-estate"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Veneers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-real-estate"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Liquid Soap Dispensers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-real-estate"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Exterior Doors",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-real-estate"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Toilet Accessories",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-real-estate"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fireplaces",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-real-estate"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Doors",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-real-estate"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Garden Faucet",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "construction-real-estate"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Garden Lights",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "lights-lighting"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Outdoor Lighting",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "lights-lighting"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Led Lamp",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "lights-lighting"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Ceiling Lights",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "lights-lighting"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Lamp",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "lights-lighting"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Light",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "lights-lighting"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Led Light",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "lights-lighting"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Motif Lights",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "lights-lighting"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Industrial Fans",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-appliances"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gas Heaters",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-appliances"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Water Cooler",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-appliances"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Clothes Dryers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-appliances"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Car Refrigerators",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-appliances"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Water Purifier",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-appliances"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Kitchen Appliances",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-appliances"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Refrigerator Motor",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "home-appliances"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Interior Accessories",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "automotive-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Car Interior Accessories",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "automotive-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Car Alarms",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "automotive-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wax",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "automotive-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Car Vacuum Cleaner",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "automotive-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cloth",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "automotive-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Car Stickers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "automotive-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Exhaust Valve",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "automotive-supplies"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Brake Pads",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicle-parts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Shock Absorber",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicle-parts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fuel Injector",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicle-parts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Alternator",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicle-parts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Radiator",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicle-parts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Clutch Kit",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicle-parts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Turbocharger",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicle-parts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Ignition Coil",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicle-parts"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cordless Drill",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "tools-hardware"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Angle Grinder",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "tools-hardware"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Impact Wrench",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "tools-hardware"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Screwdriver Set",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "tools-hardware"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Socket Set",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "tools-hardware"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Heat Gun",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "tools-hardware"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Measuring Tape",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "tools-hardware"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Hammer Drill",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "tools-hardware"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Solar Panel",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "renewable-energy"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Solar Inverter",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "renewable-energy"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Solar Battery",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "renewable-energy"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Solar Charge Controller",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "renewable-energy"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Solar Street Light",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "renewable-energy"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Wind Turbine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "renewable-energy"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Solar Mounting Brackets",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "renewable-energy"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Solar Cable",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "renewable-energy"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cable Connector",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electrical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fuse Box",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electrical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Limit Switches",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electrical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Battery Terminal",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electrical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Power Strips",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electrical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Electrical Equipment",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electrical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Connectors",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electrical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Power Converter",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electrical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Trolley Cart",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "material-handling"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Pallet Truck",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "material-handling"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Winches",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "material-handling"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Conveyor Belt",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "material-handling"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Roller",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "material-handling"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Shelves",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "material-handling"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Forklifts",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "material-handling"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Anchor Winch",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "material-handling"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gas Regulator",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "testing-instruments"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Infrared Camera",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "testing-instruments"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Lab Equipment",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "testing-instruments"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Weighing Scales",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "testing-instruments"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Oscilloscopes",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "testing-instruments"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Digital Scale",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "testing-instruments"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Thermal Camera",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "testing-instruments"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Ph Test Strips",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "testing-instruments"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fan Motor",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "power-transmission"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Hydraulic Motors",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "power-transmission"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Linear Actuator",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "power-transmission"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gearboxes",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "power-transmission"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Hydraulic Cylinders",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "power-transmission"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bearing",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "power-transmission"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Motor",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "power-transmission"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Conveyor Chain",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "power-transmission"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Touch Screen",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electronic-components"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Motion Sensor",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electronic-components"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Sensor",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electronic-components"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Power Supplies",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electronic-components"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "LEDs",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electronic-components"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Keypad",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electronic-components"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Switches",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electronic-components"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Solenoids",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "electronic-components"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Gas Scooters",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicles-transportation"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "UTVs",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicles-transportation"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Golf Carts",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicles-transportation"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Dirt Bike",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicles-transportation"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "ATVs",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicles-transportation"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Electric Motorcycles",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicles-transportation"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Motorcycle",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicles-transportation"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cruiser Motorcycles",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "vehicles-transportation"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Brandy",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "agriculture-food-beverage"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fresh fruit",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "agriculture-food-beverage"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Mayonnaise",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "agriculture-food-beverage"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fish Pond",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "agriculture-food-beverage"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bread",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "agriculture-food-beverage"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Ice Cream",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "agriculture-food-beverage"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Pizza",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "agriculture-food-beverage"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Quinoa",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "agriculture-food-beverage"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Sodium Hydroxide",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "raw-materials"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Tweed Fabric",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "raw-materials"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Herbicides",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "raw-materials"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Zinc",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "raw-materials"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fabric",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "raw-materials"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "PET",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "raw-materials"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "PC",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "raw-materials"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Polyurethane Rubber",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "raw-materials"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Concrete Blocks Molds",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "fabrication-services"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Casting Services",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "fabrication-services"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Sheet Metal Fabrication",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "fabrication-services"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Machining Services",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "fabrication-services"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Plastic Mold",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "fabrication-services"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Moulds",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "fabrication-services"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Concrete Molds",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "fabrication-services"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Steel Products",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "fabrication-services"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Prefabricated Houses",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "building-materials-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Scaffolding Planks",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "building-materials-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Construction Machines",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "building-materials-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Crushing Plants",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "building-materials-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Brick Making Machines",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "building-materials-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fly Ash Brick Making Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "building-materials-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cement Brick Making Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "building-materials-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Passenger Lifts",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "building-materials-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Antibiotic Tablets",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pharma-drugs"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Antifungal Injection",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pharma-drugs"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Vitamin Tablets",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pharma-drugs"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Dietary Supplements",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pharma-drugs"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Mineral Supplement",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pharma-drugs"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Weight Loss Supplement",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pharma-drugs"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Weight Gain Nutrition",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pharma-drugs"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Immune Booster",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "pharma-drugs"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Medical Ventilators",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "hospital-medical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Oxygen Cylinder",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "hospital-medical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Rapid Test Kit",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "hospital-medical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Biochemistry Analyzer",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "hospital-medical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Patient Monitoring Systems",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "hospital-medical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Blood Pressure Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "hospital-medical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Infrared Thermometers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "hospital-medical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "X Ray Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "hospital-medical-equipment"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Agarbatti Making Machines",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-plants-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Oil Extraction Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-plants-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Food Processing Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-plants-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Rice Mill Machinery",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-plants-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Spice Processing Machines",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-plants-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Non Woven Bag Making Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-plants-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Pani Puri Making Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-plants-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bakery Machinery",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "industrial-plants-machinery"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Corrugated Box",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-material-machines"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "PET Bottles",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-material-machines"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Bottle Caps",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-material-machines"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Plastic Pouches",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-material-machines"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Stand Up Pouch",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-material-machines"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Fruit Juice Packaging Machine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-material-machines"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Shrink Packaging Machines",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-material-machines"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Vacuum Packaging Machines",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "packaging-material-machines"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Isopropyl Alcohol",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "chemicals-dyes"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Ethyl Alcohol",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "chemicals-dyes"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Glycerine",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "chemicals-dyes"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Silver Nitrate",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "chemicals-dyes"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Reactive Dyes",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "chemicals-dyes"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Acid Dyes",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "chemicals-dyes"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Direct Dyes",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "chemicals-dyes"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "PVC Resin",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "chemicals-dyes"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Air Cargo Service",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "transportation-logistics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Sea Cargo Service",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "transportation-logistics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Road Transportation Services",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "transportation-logistics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Goods Transport Services",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "transportation-logistics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Cold Chain Logistics",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "transportation-logistics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Third Party Logistics",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "transportation-logistics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Container Truck Service",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "transportation-logistics"
+      ]
+    },
+    {
+      "platform": "GLOBAL_SOURCES",
+      "q": "Packers Movers",
+      "limit": 160,
+      "headless": false,
+      "categories": [
+        "transportation-logistics"
+      ]
+    }
+  ]
+}

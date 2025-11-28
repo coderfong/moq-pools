@@ -1,0 +1,395 @@
+{
+  "cookies": [
+    {
+      "name": "incap_ses_1221_2720266",
+      "value": "zWSYL/UplE8uKGVnbt3xELx89mgAAAAAl8FIo7jCrwPQRyv+2eTdZg==",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "incap_sh_2720266",
+      "value": "xHz2aAAAAADIWfk/DAAIxPnZxwYQvPnZxwY3XiYbH/VGn29nTzDKFKQb",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "lang",
+      "value": "enus",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "nlbi_2720266",
+      "value": "56MEVVn27m2eSYHdILKq9AAAAABQkuad9xVx3t3xNkwWMvTU",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "visid_incap_2720266",
+      "value": "FZSnQ7lJTHe4bdMweZEkt7x89mgAAAAAQkIPAAAAAACAade/AXkGyuY8msY+BNXPRpopg9wwBb42",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "pageViewCount",
+      "value": "1",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sajssdk_2015_cross_new_user",
+      "value": "1",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "GsCookieFlag",
+      "value": "%7B%22pageCont%22%3A1%7D",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "bucket",
+      "value": "a",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "cookiePrefs",
+      "value": "%7B%22analyticsChecked%22%3Atrue%2C%22functionalChecked%22%3Atrue%2C%22advertisingChecked%22%3Atrue%2C%22socialChecked%22%3Atrue%7D",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "nlbi_2720266_2147483392",
+      "value": "rU2lPoFZSXPHuh8UILKq9AAAAABPe7kmXnJbmgJ7i29BZAoK",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_tt_enable_cookie",
+      "value": "1",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "visid_incap_2751186",
+      "value": "c1x9Hsn6Qh6AN8G7V6JjQ8V89mgAAAAAQUIPAAAAAACYpitm/XhqAHwffJtocTXg",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "incap_ses_1221_2751186",
+      "value": "5YSOV0IU7QfAMmVnbt3xEMV89mgAAAAAGEjtMBj56WmCTZrr/3UFsw==",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "nlbi_2751186",
+      "value": "wxSbYQ9lGiDb8oZGEihhtAAAAACKZbPfAQ7xisCpIoTp4vMJ",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "nlbi_3095191",
+      "value": "xkrUUYeRcSGlpiU6i2R/zAAAAAD+etA1GDKSX4scfNx6aoTv",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "visid_incap_3095191",
+      "value": "iqgcz7mmSzqtSkVdZx2CocZ89mgAAAAAQUIPAAAAAAB+CeATnMg9UtaEFEqv0uuq",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "incap_ses_1562_3095191",
+      "value": "hq7VA4kX7nfNyCfiH1etFcZ89mgAAAAAdAeRurZ+wzIUShu3baG47Q==",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.1342026415.1760984263",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sensorsdata2015jssdkcross",
+      "value": "%7B%22distinct_id%22%3A%2219a02d76dc75b-02fa3daa2ccf0c2-406e194f-329160-19a02d76dc8616%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTlhMDJkNzZkYzc1Yi0wMmZhM2RhYTJjY2YwYzItNDA2ZTE5NGYtMzI5MTYwLTE5YTAyZDc2ZGM4NjE2In0%3D%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D%7D",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sensorsdata2015jssdkchannel",
+      "value": "%7B%22prop%22%3A%7B%22_sa_channel_landing_url%22%3A%22%22%7D%7D",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "nlbi_2751186_2147483392",
+      "value": "+RCGdoW9b0HReDByEihhtAAAAABkbB+z+JPTKTiartC+ApVS",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "visid_incap_2815037",
+      "value": "v0uKRp3HRS6hJE5m5N44h8d89mgAAAAAQUIPAAAAAADo8J9m2mof5EbU7GhLtfVB",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "nlbi_2815037",
+      "value": "L8SDHLNnKH3b5QbP0K/W+AAAAAAiCAxuPsi9q3WVmmdHKk1q",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "incap_ses_1562_2815037",
+      "value": "SHZwVYUXxzHcySfiH1etFcd89mgAAAAAKAu2M6BCaQBt1G1hB7Iqsg==",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1922818582.1760984265",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_JK0ML7XE99",
+      "value": "GS2.1.s1760984265$o1$g0$t1760984265$j60$l0$h0",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ttp",
+      "value": "01K81DEX6S8MZNX1QW1MVHFJJZ_.tt.1",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_uetsid",
+      "value": "13d08ac0ade111f09a8ba7162f12bc54",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_uetvid",
+      "value": "13d12850ade111f0ab1c2501df0c4273",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ttcsid",
+      "value": "1760984265960::-Xb2QK5HwMIswSUE9ruM.1.1760984266283.0",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ttcsid_CI42A6JC77U441D0RJCG",
+      "value": "1760984265953::ler9ZlcBy3NrWL7Ov6rX.1.1760984266283.0",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_fbp",
+      "value": "fb.1.1760984266427.774318656969775234",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_clck",
+      "value": "15l9rbw%5E2%5Eg0b%5E0%5E2119",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_M0GFGLPMZ2",
+      "value": "GS2.1.s1760984265$o1$g1$t1760984267$j58$l0$h1894988169",
+      "domain": "www.globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "incap_ses_1221_2720266",
+      "value": "7USiTKM+93KXcnlobt3xEIRT92gAAAAA0qQi5Jo2TKm4bIyphabw8g==",
+      "domain": ".globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "reese84",
+      "value": "3:kX3soUW5Fip6F3Cem03aOw==:CnwqR7U3XInBjzRIYTEpT1NrFj7jdgwNzwAZLX6Sjic39h63qP2hikOT0CT9dln5qJAz+cyfG763YeYGTaBp2rdphRIB+p82oy3CUfWBTUnq0WJXN5Ad8clhVzQpx9CNwO6o7cyuLKnu8BD7KCX4zRlkeSZL28PFm78bseWI0/EwTGlTxCGaY9MHVFzrZ66PQAPLYOJ8TMu1fSNLx54bqdDdkwP8c+LdS6UWkvLHybcJeBvvKBcUnsUWB82PKNSTkIuJQwQzi7PvcEy/lcu8uvEqLUSSSrHR3G87BOOlLMQL1I9USNAI1qul6B2pJPAMdPI2nFAKXjWMg6j1/Ne6Y0cxF/vopeGjcMqAC8Lc8YHcF8cf1Fj6W0fQjt+TAhkAsiE9+KU2CblvNKc6Qve7vVTeJbygHOtIAHqZjRoMWWodw3Lgkt7BnDHB5LotnoBfrrwS8MveJcEUEbRTtN//YFljJGi2AqUHId7YwBMNXoTzozNfuAEKsvLFKoK0CMfDbG/x4e8r5pG1eBRk4Rc8bDabC57c5sEEJm6+RU5dJk8GVO/pnR3UxzJbfun5RYnc7u3AHIAUIZTGSrtyeRkdgxT52hXM9GgnzbDm/wBCYdyqu1ufxHDomgQ8YNvKhNpW:prUvP5k1uqpcn5ZhYGxnA28OyLEfz7E/tYXcrDl/WBk=",
+      "domain": ".globalsources.com",
+      "path": "/",
+      "expires": 1763631238.071577,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "nlbi_2720266_2147483392",
+      "value": "ESdyPA0b6i6u5wGXILKq9AAAAABPm00w9twAZ6tMtRR5GF7c",
+      "domain": ".globalsources.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.globalsources.com",
+      "localStorage": [
+        {
+          "name": "reese84",
+          "value": "{\"token\":\"3:kX3soUW5Fip6F3Cem03aOw==:CnwqR7U3XInBjzRIYTEpT1NrFj7jdgwNzwAZLX6Sjic39h63qP2hikOT0CT9dln5qJAz+cyfG763YeYGTaBp2rdphRIB+p82oy3CUfWBTUnq0WJXN5Ad8clhVzQpx9CNwO6o7cyuLKnu8BD7KCX4zRlkeSZL28PFm78bseWI0/EwTGlTxCGaY9MHVFzrZ66PQAPLYOJ8TMu1fSNLx54bqdDdkwP8c+LdS6UWkvLHybcJeBvvKBcUnsUWB82PKNSTkIuJQwQzi7PvcEy/lcu8uvEqLUSSSrHR3G87BOOlLMQL1I9USNAI1qul6B2pJPAMdPI2nFAKXjWMg6j1/Ne6Y0cxF/vopeGjcMqAC8Lc8YHcF8cf1Fj6W0fQjt+TAhkAsiE9+KU2CblvNKc6Qve7vVTeJbygHOtIAHqZjRoMWWodw3Lgkt7BnDHB5LotnoBfrrwS8MveJcEUEbRTtN//YFljJGi2AqUHId7YwBMNXoTzozNfuAEKsvLFKoK0CMfDbG/x4e8r5pG1eBRk4Rc8bDabC57c5sEEJm6+RU5dJk8GVO/pnR3UxzJbfun5RYnc7u3AHIAUIZTGSrtyeRkdgxT52hXM9GgnzbDm/wBCYdyqu1ufxHDomgQ8YNvKhNpW:prUvP5k1uqpcn5ZhYGxnA28OyLEfz7E/tYXcrDl/WBk=\",\"renewTime\":1761040051071,\"renewInSec\":813,\"cookieDomain\":\"globalsources.com\",\"serverTimestamp\":1761039072}"
+        }
+      ]
+    }
+  ]
+}

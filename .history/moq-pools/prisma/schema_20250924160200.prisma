@@ -1,0 +1,155 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role{
+	BUYER
+	ADMIN
+	SUPPLIER
+}
+
+enum PoolStatus{
+	OPEN
+	LOCKED
+	ORDER_PLACED
+	FULFILLING
+	FULFILLED
+	FAILED
+	CANCELLED
+}
+
+enum PayMethod{
+	STRIPE
+	BANK_TRANSFER
+}
+
+enum PayStatus{
+	PENDING
+	REQUIRES_ACTION
+	PAID
+	REFUNDED
+	FAILED
+}
+
+enum ShipStatus{
+	LABEL_CREATED
+	IN_TRANSIT
+	DELIVERED
+	EXCEPTION
+}
+
+model User {
+  id         String    @id @default(cuid())
+  email      String    @unique
+  name       String?
+  phone      String?
+  role       Role      @default(BUYER)
+  addresses  Address[]
+  poolItems  PoolItem[]
+  createdAt  DateTime  @default(now())
+}
+model Supplier {
+  id           String    @id @default(cuid())
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  name         String
+  contactName  String?
+  contactEmail String?
+  contactPhone String?
+  products     Product[]
+}
+
+
+model Address {
+  id     String @id @default(cuid())
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  line1    String
+  line2    String?
+  city     String
+  state    String?
+  postal   String
+  country  String
+  phone    String?
+}
+model Pool {
+  id          String      @id @default(cuid())
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  product     Product     @relation(fields: [productId], references: [id])
+  productId   String      @unique
+  status      PoolStatus  @default(OPEN)
+  targetQty   Int
+  pledgedQty  Int         @default(0)
+  deadlineAt  DateTime
+  createdAt   DateTime    @default(now())
+  items       PoolItem[]
+}
+model PoolItem {
+  id     String @id @default(cuid())
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  pool       Pool     @relation(fields: [poolId], references: [id])
+  poolId     String
+  quantity   Int
+  unitPrice  Decimal  @db.Decimal(10, 2)
+  currency   String
+  address    Address  @relation(fields: [addressId], references: [id])
+  addressId  String
+  payment    Payment?
+  shipment   Shipment?
+  createdAt  DateTime @default(now())
+}
+model Payment {
+  id         String    @id @default(cuid())
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  poolItem   PoolItem  @relation(fields: [poolItemId], references: [id])
+  poolItemId String    @unique
+  method     PayMethod
+  amount     Decimal   @db.Decimal(10, 2)
+  currency   String
+  status     PayStatus @default(PENDING)
+  reference  String?
+  proofUrl   String?
+  paidAt     DateTime?
+  createdAt  DateTime  @default(now())
+}
+
+model Shipment {
+  id          String     @id @default(cuid())
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  poolItem    PoolItem   @relation(fields: [poolItemId], references: [id])
+  poolItemId  String     @unique
+  carrier     String?
+  trackingNo  String?
+  status      ShipStatus @default(LABEL_CREATED)
+  etaDate     DateTime?
+  eventsJson  String?
+  updatedAt   DateTime   @updatedAt
+  createdAt   DateTime   @default(now())
+}
+model Product {
+  id            String    @id @default(cuid())
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  supplier      Supplier  @relation(fields: [supplierId], references: [id])
+  supplierId    String
+  title         String
+  description   String
+  imagesJson    String
+  baseCurrency  String
+  unitPrice     Decimal   @db.Decimal(10, 2)
+  moqQty        Int
+  maxQtyPerUser Int       @default(10)
+  leadTimeDays  Int       @default(14)
+  isActive      Boolean   @default(true)
+  pool          Pool?
+  createdAt     DateTime  @default(now())
+}

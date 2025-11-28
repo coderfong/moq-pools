@@ -1,0 +1,150 @@
+/**
+ * Test script for Alibaba IOP OAuth token exchange
+ * 
+ * Usage:
+ * 1. Get an authorization code by visiting the authorize URL
+ * 2. Run this script with the code:
+ *    node test-alibaba-oauth.js "3_501706_XXXXXXXX"
+ * 
+ * This verifies the IOP token exchange works correctly before testing through the web app.
+ */
+
+const crypto = require('crypto');
+
+const code = process.argv[2];
+
+if (!code) {
+  console.error('Usage: node test-alibaba-oauth.js <authorization_code>');
+  console.error('');
+  console.error('Example:');
+  console.error('  node test-alibaba-oauth.js "3_501706_XXXXXXXX"');
+  process.exit(1);
+}
+
+const appKey = process.env.ALIBABA_APP_KEY;
+const appSecret = process.env.ALIBABA_APP_SECRET;
+const redirectUri = process.env.ALIBABA_REDIRECT_URI;
+
+if (!appKey || !appSecret || !redirectUri) {
+  console.error('Missing required environment variables:');
+  console.error('  ALIBABA_APP_KEY:', appKey ? '✓' : '✗');
+  console.error('  ALIBABA_APP_SECRET:', appSecret ? '✓' : '✗');
+  console.error('  ALIBABA_REDIRECT_URI:', redirectUri ? '✓' : '✗');
+  process.exit(1);
+}
+
+// IMPORTANT: Use the IOP token creation API (not standard OAuth2)
+// This requires signing the request according to Alibaba's IOP protocol
+const TOKEN_URL = 'https://openapi-auth.alibaba.com/auth/token/create';
+
+// Build parameters for signed request
+const timestamp = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
+const params = {
+  code: code,
+  app_key: appKey,
+  timestamp: timestamp,
+  sign_method: 'hmac',
+};
+
+// Generate signature according to Alibaba's IOP signing rules
+// Algorithm: MD5(app_secret + sorted_params + app_secret)
+const sortedKeys = Object.keys(params).sort();
+const paramString = sortedKeys.map(key => `${key}${params[key]}`).join('');
+const stringToSign = `${appSecret}${paramString}${appSecret}`;
+const sign = crypto.createHash('md5').update(stringToSign, 'utf8').digest('hex').toUpperCase();
+params.sign = sign;
+
+const queryString = new URLSearchParams(params).toString();
+const fullUrl = `${TOKEN_URL}?${queryString}`;
+
+console.log('🔄 Testing Alibaba IOP Token Exchange');
+console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+console.log('Token URL:', TOKEN_URL);
+console.log('App Key:', appKey);
+console.log('Code:', code.substring(0, 15) + '...');
+console.log('Timestamp:', timestamp);
+console.log('Sign (first 10 chars):', sign.substring(0, 10) + '...');
+console.log('');
+console.log('⚠️  Using IOP signed request (not standard OAuth2)');
+console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+
+fetch(fullUrl, {
+  method: 'GET', // IOP APIs use GET for token creation
+  headers: {
+    'Accept': 'application/json',
+  },
+})
+  .then(async (response) => {
+    // Read as text first for better error handling
+    const text = await response.text();
+    const contentType = response.headers.get('content-type') || '';
+    
+    console.log('\n📥 Response Status:', response.status, response.statusText);
+    console.log('📄 Content-Type:', contentType);
+    console.log('📝 Raw Response:', text.substring(0, 300) + (text.length > 300 ? '...' : ''));
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    
+    if (!response.ok) {
+      console.error('❌ Token request failed!');
+      console.error('Raw response:', text);
+      process.exit(1);
+    }
+    
+    // Parse JSON response
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch (parseError) {
+      console.error('❌ Failed to parse response as JSON:', parseError.message);
+      console.error('Raw response:', text);
+      process.exit(1);
+    }
+    
+    // Check for API error
+    if (data.error_code || data.error_response) {
+      console.error('❌ API Error Response:', JSON.stringify(data, null, 2));
+      
+      const errorMsg = data.error_message || data.error_response?.msg || 'Unknown error';
+      const errorCode = data.error_code || data.error_response?.code || 'Unknown code';
+      
+      console.error('');
+      console.error('Error Code:', errorCode);
+      console.error('Error Message:', errorMsg);
+      
+      if (errorCode.includes('param-appkey') || errorCode.includes('sign')) {
+        console.error('');
+        console.error('💡 Tip: Check that your app_key and sign generation are correct.');
+        console.error('   The signature algorithm is: MD5(app_secret + sorted_params + app_secret)');
+      }
+      
+      process.exit(1);
+    }
+    
+    console.log('✅ Token exchange successful!');
+    console.log('');
+    console.log('Access Token:', data.access_token ? data.access_token.substring(0, 20) + '...' : 'N/A');
+    console.log('Refresh Token:', data.refresh_token ? data.refresh_token.substring(0, 20) + '...' : 'N/A');
+    console.log('Expires In:', data.expires_in, 'seconds');
+    console.log('User ID:', data.user_id || 'N/A');
+    console.log('Seller ID:', data.seller_id || 'N/A');
+    console.log('Account:', data.account || 'N/A');
+    console.log('');
+    console.log('Full response:');
+    console.log(JSON.stringify(data, null, 2));
+    console.log('');
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    console.log('✅ Alibaba IOP token exchange is working correctly!');
+    console.log('');
+    console.log('Next steps:');
+    console.log('1. Store these tokens in your database');
+    console.log('2. Use the access_token for API calls to openapi.alibaba.com');
+    console.log('3. Use the refresh_token to get new access tokens when needed');
+  })
+  .catch((error) => {
+    console.error('');
+    console.error('❌ Request failed:', error.message);
+    console.error('');
+    console.error('Full error:');
+    console.error(error);
+    process.exit(1);
+  });

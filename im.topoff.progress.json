@@ -1,0 +1,938 @@
+{
+  "wooden-flush-doors": {
+    "done": true,
+    "attempts": 1
+  },
+  "designer-wooden-door": {
+    "done": true,
+    "attempts": 1
+  },
+  "flexible-pvc-pipes": {
+    "done": true,
+    "attempts": 1
+  },
+  "plywood-door": {
+    "done": true,
+    "attempts": 1
+  },
+  "finolex-pipes": {
+    "done": true,
+    "attempts": 1
+  },
+  "red-brick": {
+    "done": true,
+    "attempts": 1
+  },
+  "rigid-pvc-pipes": {
+    "done": true,
+    "attempts": 1
+  },
+  "multifunction-printer": {
+    "done": true,
+    "attempts": 1
+  },
+  "xerox-machines": {
+    "done": true,
+    "attempts": 1
+  },
+  "fly-ash-bricks": {
+    "done": true,
+    "attempts": 1
+  },
+  "fingerprint-scanners": {
+    "done": true,
+    "attempts": 1
+  },
+  "level-sensors": {
+    "done": true,
+    "attempts": 1
+  },
+  "level-controllers": {
+    "done": true,
+    "attempts": 1
+  },
+  "proximity-sensor": {
+    "done": true,
+    "attempts": 1
+  },
+  "motor-controllers": {
+    "done": true,
+    "attempts": 1
+  },
+  "load-cell": {
+    "done": true,
+    "attempts": 1
+  },
+  "temperature-controller": {
+    "done": true,
+    "attempts": 1
+  },
+  "vfd": {
+    "done": true,
+    "attempts": 1
+  },
+  "integrated-circuits": {
+    "done": true,
+    "attempts": 1
+  },
+  "armoured-cable": {
+    "done": true,
+    "attempts": 1
+  },
+  "light-emitting-diode": {
+    "done": true,
+    "attempts": 1
+  },
+  "house-wire": {
+    "done": true,
+    "attempts": 1
+  },
+  "thyristors": {
+    "done": true,
+    "attempts": 1
+  },
+  "flood-lights": {
+    "done": true,
+    "attempts": 1
+  },
+  "power-cable": {
+    "done": true,
+    "attempts": 1
+  },
+  "panel-light": {
+    "done": true,
+    "attempts": 1
+  },
+  "street-lights": {
+    "done": true,
+    "attempts": 1
+  },
+  "lithium-battery": {
+    "done": true,
+    "attempts": 1
+  },
+  "electric-vehicle-battery": {
+    "done": true,
+    "attempts": 1
+  },
+  "inverter-batteries": {
+    "done": true,
+    "attempts": 1
+  },
+  "solar-panels": {
+    "done": true,
+    "attempts": 1
+  },
+  "solar-pumps": {
+    "done": true,
+    "attempts": 1
+  },
+  "solar-inverter": {
+    "done": true,
+    "attempts": 1
+  },
+  "antibiotic-tablets-capsule-syrup": {
+    "done": true,
+    "attempts": 1
+  },
+  "vitamin-tablets-capsules": {
+    "done": true,
+    "attempts": 1
+  },
+  "dietary-supplements": {
+    "done": true,
+    "attempts": 1
+  },
+  "antiparasitic-drug": {
+    "done": true,
+    "attempts": 1
+  },
+  "weight-gain-nutrition": {
+    "done": true,
+    "attempts": 1
+  },
+  "mineral-supplement": {
+    "done": true,
+    "attempts": 1
+  },
+  "weight-loss-supplement": {
+    "done": true,
+    "attempts": 1
+  },
+  "weight-gain-capsule": {
+    "done": true,
+    "attempts": 1
+  },
+  "immune-booster": {
+    "done": true,
+    "attempts": 1
+  },
+  "dental-treatment-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "pre-workout-supplements": {
+    "done": true,
+    "attempts": 1
+  },
+  "medical-surgery-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "eye-treatment": {
+    "done": true,
+    "attempts": 1
+  },
+  "plastic-surgery-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "ultrasound-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "ct-scan-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "blood-testing": {
+    "done": true,
+    "attempts": 1
+  },
+  "echo-cardiography": {
+    "done": true,
+    "attempts": 1
+  },
+  "pharma-franchise": {
+    "done": true,
+    "attempts": 1
+  },
+  "ayurvedic-pcd-pharma-franchise": {
+    "done": true,
+    "attempts": 1
+  },
+  "blood-bank-equipments": {
+    "done": true,
+    "attempts": 1
+  },
+  "allopathic-pcd-pharma-franchise": {
+    "done": true,
+    "attempts": 1
+  },
+  "biochemistry-analyzer": {
+    "done": true,
+    "attempts": 1
+  },
+  "veterinary-pcd-pharma-franchise": {
+    "done": true,
+    "attempts": 1
+  },
+  "rapid-test-kit": {
+    "done": true,
+    "attempts": 1
+  },
+  "hematology-analyzers": {
+    "done": true,
+    "attempts": 1
+  },
+  "blood-pressure-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "medical-monitor": {
+    "done": true,
+    "attempts": 1
+  },
+  "surgical-monitor": {
+    "done": true,
+    "attempts": 1
+  },
+  "infrared-thermometers": {
+    "done": true,
+    "attempts": 1
+  },
+  "capnometer": {
+    "done": true,
+    "attempts": 1
+  },
+  "forehead-thermometer": {
+    "done": true,
+    "attempts": 1
+  },
+  "non-contact-thermometer": {
+    "done": true,
+    "attempts": 1
+  },
+  "ecg-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "ultrasound-machines": {
+    "done": true,
+    "attempts": 1
+  },
+  "doppler-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "cardiology-stethoscope": {
+    "done": true,
+    "attempts": 1
+  },
+  "dual-head-stethoscope": {
+    "done": true,
+    "attempts": 1
+  },
+  "electronic-stethoscope": {
+    "done": true,
+    "attempts": 1
+  },
+  "digital-thermometers": {
+    "done": true,
+    "attempts": 1
+  },
+  "pediatric-stethoscope": {
+    "done": true,
+    "attempts": 1
+  },
+  "foot-operated-suction-unit": {
+    "done": true,
+    "attempts": 1
+  },
+  "electric-suction-unit": {
+    "done": true,
+    "attempts": 1
+  },
+  "liposuction-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "central-suction-system": {
+    "done": true,
+    "attempts": 1
+  },
+  "hospital-consumables-diagnostics": {
+    "done": true,
+    "attempts": 1
+  },
+  "mask-sanitizer-hygiene-supplies": {
+    "done": true,
+    "attempts": 1
+  },
+  "rice-mill-machinery": {
+    "done": true,
+    "attempts": 1
+  },
+  "flour-mill": {
+    "done": true,
+    "attempts": 1
+  },
+  "spice-processing-machines": {
+    "done": true,
+    "attempts": 1
+  },
+  "popcorn-machines": {
+    "done": true,
+    "attempts": 1
+  },
+  "paper-bag-making-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "biodegradable-bag-making-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "pani-puri-making-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "non-woven-bag-making-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "namkeen-making-machines": {
+    "done": true,
+    "attempts": 1
+  },
+  "sweets-making-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "bakery-machinery": {
+    "done": true,
+    "attempts": 1
+  },
+  "bakery-oven": {
+    "done": true,
+    "attempts": 1
+  },
+  "cnc-machines": {
+    "done": true,
+    "attempts": 1
+  },
+  "lathe-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "cnc-vertical-machining-centers": {
+    "done": true,
+    "attempts": 1
+  },
+  "large-format-printers": {
+    "done": true,
+    "attempts": 1
+  },
+  "offset-printing-machines": {
+    "done": true,
+    "attempts": 1
+  },
+  "sublimation-printing-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "oil-free-air-compressor": {
+    "done": true,
+    "attempts": 1
+  },
+  "reciprocating-compressors": {
+    "done": true,
+    "attempts": 1
+  },
+  "refrigeration-compressors": {
+    "done": true,
+    "attempts": 1
+  },
+  "water-softening-systems": {
+    "done": true,
+    "attempts": 1
+  },
+  "water-treatment-plants": {
+    "done": true,
+    "attempts": 1
+  },
+  "reverse-osmosis-plants": {
+    "done": true,
+    "attempts": 1
+  },
+  "animal-feed-making-machine-plant": {
+    "done": true,
+    "attempts": 1
+  },
+  "wet-grinder": {
+    "done": true,
+    "attempts": 1
+  },
+  "borewell-submersible-pump": {
+    "done": true,
+    "attempts": 1
+  },
+  "sugarcane-juice-machine": {
+    "done": true,
+    "attempts": 1
+  },
+  "open-well-submersible-pump": {
+    "done": true,
+    "attempts": 1
+  },
+  "engine-oil": {
+    "done": true,
+    "attempts": 1
+  },
+  "cri-submersible-pumps": {
+    "done": true,
+    "attempts": 1
+  },
+  "gear-oil": {
+    "done": true,
+    "attempts": 1
+  },
+  "lubricating-oil": {
+    "done": true,
+    "attempts": 1
+  },
+  "stainless-steel-water-tank": {
+    "done": true,
+    "attempts": 1
+  },
+  "supreme-water-tanks": {
+    "done": true,
+    "attempts": 1
+  },
+  "pvc-marble-sheet": {
+    "done": true,
+    "attempts": 1
+  },
+  "triple-layered-water-tanks": {
+    "done": true,
+    "attempts": 1
+  },
+  "pvc-foam-sheets": {
+    "done": true,
+    "attempts": 1
+  },
+  "transparent-pvc-sheet": {
+    "done": true,
+    "attempts": 1
+  },
+  "conveyor-belt": {
+    "done": true,
+    "attempts": 1
+  },
+  "conveyor-rollers": {
+    "done": true,
+    "attempts": 1
+  },
+  "pp-scrap": {
+    "done": true,
+    "attempts": 1
+  },
+  "warehouse-racks": {
+    "done": true,
+    "attempts": 1
+  },
+  "pet-chips-scrap": {
+    "done": true,
+    "attempts": 1
+  },
+  "slotted-angle-racks": {
+    "done": true,
+    "attempts": 1
+  },
+  "pallet-racks": {
+    "done": true,
+    "attempts": 1
+  },
+  "disc-harrow": {
+    "done": true,
+    "attempts": 1
+  },
+  "land-leveler": {
+    "done": true,
+    "attempts": 1
+  },
+  "brush-cutters": {
+    "done": true,
+    "attempts": 1
+  },
+  "chain-saw": {
+    "done": true,
+    "attempts": 1
+  },
+  "power-tiller": {
+    "done": true,
+    "attempts": 1
+  },
+  "cotton-kurti": {
+    "done": true,
+    "attempts": 1
+  },
+  "designer-kurtis": {
+    "done": true,
+    "attempts": 1
+  },
+  "ladies-woolen-kurti": {
+    "done": true,
+    "attempts": 1
+  },
+  "mens-polo-t-shirt": {
+    "done": true,
+    "attempts": 1
+  },
+  "mens-round-neck-t-shirt": {
+    "done": true,
+    "attempts": 1
+  },
+  "graphic-printed-t-shirt": {
+    "done": false,
+    "attempts": 1
+  },
+  "mens-blazer": {
+    "done": false,
+    "attempts": 1
+  },
+  "womens-blazer": {
+    "done": false,
+    "attempts": 1
+  },
+  "designer-blazer": {
+    "done": false,
+    "attempts": 1
+  },
+  "leather-safety-shoes": {
+    "done": false,
+    "attempts": 1
+  },
+  "steel-toe-safety-shoes": {
+    "done": false,
+    "attempts": 1
+  },
+  "industrial-shoes": {
+    "done": false,
+    "attempts": 1
+  },
+  "cargo-pant": {
+    "done": false,
+    "attempts": 1
+  },
+  "jogger-pant": {
+    "done": false,
+    "attempts": 1
+  },
+  "chino-trousers": {
+    "done": false,
+    "attempts": 1
+  },
+  "female-mannequins": {
+    "done": false,
+    "attempts": 1
+  },
+  "dress-forms": {
+    "done": false,
+    "attempts": 1
+  },
+  "male-mannequins": {
+    "done": false,
+    "attempts": 1
+  },
+  "worker-uniform": {
+    "done": false,
+    "attempts": 1
+  },
+  "housekeeping-uniform": {
+    "done": false,
+    "attempts": 1
+  },
+  "corporate-uniform": {
+    "done": false,
+    "attempts": 1
+  },
+  "printed-shirt": {
+    "done": false,
+    "attempts": 1
+  },
+  "designer-shirt": {
+    "done": false,
+    "attempts": 1
+  },
+  "plain-shirt": {
+    "done": false,
+    "attempts": 1
+  },
+  "rayon-fabrics": {
+    "done": false,
+    "attempts": 1
+  },
+  "faux-fur-fabric": {
+    "done": false,
+    "attempts": 1
+  },
+  "viscose-fabrics": {
+    "done": false,
+    "attempts": 1
+  },
+  "corrugated-box": {
+    "done": false,
+    "attempts": 1
+  },
+  "three-ply-corrugated-box": {
+    "done": false,
+    "attempts": 1
+  },
+  "five-ply-corrugated-box": {
+    "done": false,
+    "attempts": 1
+  },
+  "heavy-duty-industrial-corrugated-boxes": {
+    "done": false,
+    "attempts": 1
+  },
+  "seven-ply-corrugated-box": {
+    "done": false,
+    "attempts": 1
+  },
+  "pet-bottles": {
+    "done": false,
+    "attempts": 1
+  },
+  "hdpe-bottle": {
+    "done": false,
+    "attempts": 1
+  },
+  "plastic-spray-bottle": {
+    "done": false,
+    "attempts": 1
+  },
+  "transparent-plastic-bottles": {
+    "done": false,
+    "attempts": 1
+  },
+  "packaging-bottles": {
+    "done": false,
+    "attempts": 1
+  },
+  "bottle-caps": {
+    "done": false,
+    "attempts": 1
+  },
+  "jar-cap": {
+    "done": false,
+    "attempts": 1
+  },
+  "flip-top-caps": {
+    "done": false,
+    "attempts": 1
+  },
+  "metal-caps": {
+    "done": false,
+    "attempts": 1
+  },
+  "screw-caps": {
+    "done": false,
+    "attempts": 1
+  },
+  "plastic-pouches": {
+    "done": false,
+    "attempts": 1
+  },
+  "stand-up-pouch": {
+    "done": false,
+    "attempts": 1
+  },
+  "zipper-pouches": {
+    "done": false,
+    "attempts": 1
+  },
+  "paper-pouch": {
+    "done": false,
+    "attempts": 1
+  },
+  "printed-pouches": {
+    "done": false,
+    "attempts": 1
+  },
+  "pouch-packaging-machines-leaf": {
+    "done": false,
+    "attempts": 1
+  },
+  "fruit-juice-packaging-machine": {
+    "done": false,
+    "attempts": 1
+  },
+  "blister-packaging-machines": {
+    "done": false,
+    "attempts": 1
+  },
+  "shrink-packaging-machines": {
+    "done": false,
+    "attempts": 1
+  },
+  "vacuum-packaging-machines": {
+    "done": false,
+    "attempts": 1
+  },
+  "spices-packing-machines": {
+    "done": false,
+    "attempts": 1
+  },
+  "liquid-packaging-machinery": {
+    "done": false,
+    "attempts": 1
+  },
+  "fertilizer-packing-machine": {
+    "done": false,
+    "attempts": 1
+  },
+  "snack-packing-machine": {
+    "done": false,
+    "attempts": 1
+  },
+  "vertical-form-fill-seal-machines": {
+    "done": false,
+    "attempts": 1
+  },
+  "rubbing-alcohol-ipa": {
+    "done": false,
+    "attempts": 1
+  },
+  "ethyl-alcohol": {
+    "done": false,
+    "attempts": 1
+  },
+  "neutral-ethanol": {
+    "done": false,
+    "attempts": 1
+  },
+  "ipa-hcl": {
+    "done": false,
+    "attempts": 1
+  },
+  "glycerine": {
+    "done": false,
+    "attempts": 1
+  },
+  "laboratory-reagents": {
+    "done": false,
+    "attempts": 1
+  },
+  "silver-nitrate": {
+    "done": false,
+    "attempts": 1
+  },
+  "speciality-chemicals": {
+    "done": false,
+    "attempts": 1
+  },
+  "waterproofing-chemicals-leaf": {
+    "done": false,
+    "attempts": 1
+  },
+  "water-treatment-chemicals": {
+    "done": false,
+    "attempts": 1
+  },
+  "adhesive-chemical": {
+    "done": false,
+    "attempts": 1
+  },
+  "reactive-dyes": {
+    "done": false,
+    "attempts": 1
+  },
+  "acid-dyes": {
+    "done": false,
+    "attempts": 1
+  },
+  "direct-dyes": {
+    "done": false,
+    "attempts": 1
+  },
+  "solvent-dyes": {
+    "done": false,
+    "attempts": 1
+  },
+  "pvc-resin": {
+    "done": false,
+    "attempts": 1
+  },
+  "ion-exchange-resin": {
+    "done": false,
+    "attempts": 1
+  },
+  "polyester-resins": {
+    "done": false,
+    "attempts": 1
+  },
+  "casting-resin": {
+    "done": false,
+    "attempts": 1
+  },
+  "micronutrient-fertilizers": {
+    "done": false,
+    "attempts": 1
+  },
+  "phosphate-fertilizers": {
+    "done": false,
+    "attempts": 1
+  },
+  "chemical-fertilizers-leaf": {
+    "done": true,
+    "attempts": 1
+  },
+  "sulfur-fertilizers": {
+    "done": true,
+    "attempts": 1
+  },
+  "goods-transport-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "food-transportation-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "liquid-transportation-service": {
+    "done": true,
+    "attempts": 1
+  },
+  "dangerous-goods-transportation": {
+    "done": true,
+    "attempts": 1
+  },
+  "packers-movers": {
+    "done": true,
+    "attempts": 1
+  },
+  "local-shifting-service": {
+    "done": true,
+    "attempts": 1
+  },
+  "air-cargo-service": {
+    "done": true,
+    "attempts": 1
+  },
+  "household-relocation-service": {
+    "done": true,
+    "attempts": 1
+  },
+  "loading-unloading-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "rail-cargo": {
+    "done": true,
+    "attempts": 1
+  },
+  "sea-cargo-service": {
+    "done": true,
+    "attempts": 1
+  },
+  "road-transportation-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "full-trucks-service": {
+    "done": true,
+    "attempts": 1
+  },
+  "tipper-truck-rental-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "lorry-transport-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "container-truck-service": {
+    "done": true,
+    "attempts": 1
+  },
+  "third-party-logistics": {
+    "done": true,
+    "attempts": 1
+  },
+  "local-logistics-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "contract-logistics-service": {
+    "done": true,
+    "attempts": 1
+  },
+  "warehousing-services": {
+    "done": true,
+    "attempts": 1
+  },
+  "home-delivery-service": {
+    "done": true,
+    "attempts": 1
+  },
+  "cold-chain-logistics": {
+    "done": true,
+    "attempts": 1
+  },
+  "courier-service": {
+    "done": true,
+    "attempts": 1
+  }
+}

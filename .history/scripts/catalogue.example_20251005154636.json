@@ -1,0 +1,6 @@
+{
+  "jobs": [
+    { "platform": "ALIBABA", "q": "Respirator", "limit": 120, "categories": ["safety-security"], "terms": ["mask","face","respirator"] },
+    { "platform": "C1688", "q": "dog crate", "limit": 80, "categories": ["pet-supplies"], "terms": ["pet","cage","crate"] }
+  ]
+}

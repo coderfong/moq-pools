@@ -1,0 +1,9 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="48" fill="#E60012"/>
+  <g transform="translate(48,48)">
+    <circle cx="80" cy="80" r="56" fill="white"/>
+    <rect x="70" y="20" width="20" height="120" fill="#E60012"/>
+    <rect x="20" y="70" width="120" height="20" fill="#E60012"/>
+  </g>
+  <title>Global Sources</title>
+</svg>

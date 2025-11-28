@@ -1,0 +1,1786 @@
+{
+  "jobs": [
+    {
+      "platform": "INDIAMART",
+      "q": "Fly Ash Brick Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Clay Brick Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Cement Brick Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Residential Elevator",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Kone Passenger Lift",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Stair Lift",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "TMT Steel Bars",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "TATA TMT Bars",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Kamdhenu TMT Bars",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Shuttering Plywood",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Laminated Plywood",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Waterproof Plywood",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Hitachi Excavator",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Hyundai Excavator",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Komatsu Excavator",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Asian Emulsion Paints",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Berger Emulsion Paints",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Nerolac Emulsion Paints",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Designer Wooden Door",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Plywood Door",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Wooden Flush Doors",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Finolex Pipes",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Rigid PVC Pipes",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Flexible PVC Pipes",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Red Brick",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Fly Ash Bricks",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Cement Brick",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Multifunction Printer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Xerox Machines",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Fingerprint Scanners",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Level Sensors",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Proximity Sensor",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Sensor for Home & Office",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Load Cell",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Level Controllers",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Motor Controllers",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Temperature Controller",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "VFD",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "PLC",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "HMI",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Integrated Circuits",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Thyristors",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Light Emitting Diode",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "House Wire",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Armoured Cable",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Power Cable",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Flood Lights",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Street Lights",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Panel Light",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Lithium Battery",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Inverter Batteries",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Electric Vehicle Battery",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Solar Panels",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Solar Inverter",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Solar Pumps",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Anticoagulant Drug",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Antiparasitic Drug",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Antibiotic Tablets",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Antifungal Tablet",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Vitamin Tablets",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Weight Loss Supplement",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Dietary Supplements",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Mineral Supplement",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Weight Gain Nutrition",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Weight Gain Capsule",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Pre Workout Supplements",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Immune Booster",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Dental Treatment Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Surgery Services",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Eye Treatment",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Plastic Surgery Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "CT Scan Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Ultrasound Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "ECHO Cardiography",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Blood Testing",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Pharma Franchise",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Allopathic PCD Pharma Franchise",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Ayurvedic PCD Pharma Franchise",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Veterinary PCD Pharma Franchise",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Rapid Test Kit",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Biochemistry Analyzer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Blood Bank Equipment",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Hematology Analyzer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Blood Pressure Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Capnometer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Medical Monitor",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Surgical Monitor",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Infrared Thermometer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Forehead Thermometer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Non Contact Thermometer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Digital Thermometer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "X Ray Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Ultrasound Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "ECG Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Doppler Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Cardiology Stethoscope",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Dual Head Stethoscope",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Electronic Stethoscope",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Pediatric Stethoscope",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Electric Suction Unit",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Foot Operated Suction Unit",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Liposuction Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Central Suction System",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Mask Sanitizer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Hospital Consumables",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Flour Mill Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Rice Mill Machinery",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Spice Processing Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Non Woven Bag Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Paper Bag Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Biodegradable Bag Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Popcorn Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Pani Puri Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Namkeen Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Bakery Machinery",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Bakery Oven",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Sweets Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Lathe Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "CNC Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "CNC Vertical Machining Center",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Large Format Printer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Offset Printing Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Sublimation Printing Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Oil Free Air Compressor",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Reciprocating Compressor",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Refrigeration Compressor",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Water Softening System",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Water Treatment Plant",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Reverse Osmosis Plant",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Animal Feed Making Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Sugarcane Juice Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Wet Grinder",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Borewell Submersible Pump",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "CRI Submersible Pump",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Open Well Submersible Pump",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Engine Oil",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Gear Oil",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Lubricating Oil",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Triple Layer Water Tank",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Stainless Steel Water Tank",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Supreme Water Tank",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "PVC Foam Sheet",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "PVC Marble Sheet",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Transparent PVC Sheet",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Conveyor Belt",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Conveyor Roller",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Conveyor Chain",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "PP Scrap",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Pet Bottle Scrap",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "PET Chips Scrap",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Self Adhesive Tape",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "BOPP Tape",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Brown Tape",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Warehouse Rack",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Slotted Angle Rack",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Pallet Rack",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Solar Water Heater",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Electric Geyser",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Gas Geyser",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Basmati Rice",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Kolam Rice",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Ponni Rice",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Sona Masoori Rice",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Wheat Grains",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Milling Wheat",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Lokwan Wheat",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Toor Dal",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Chana Dal",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Urad Dal",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Moong Dal",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Potato",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Onion",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Tomato",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Mushroom",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Green Cardamom",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Black Pepper",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Cardamom",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Turmeric",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Vegetable Seeds",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Hybrid Seeds",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Seed Spices",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Oil Seeds",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Organic Fertilizer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Bio Fertilizer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Vermicompost",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "NPK Fertilizer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Agricultural Sprayer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Agricultural Plough",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Disc Harrow",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Land Leveler",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Brush Cutter",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Chain Saw",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Power Weeder",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Power Tiller",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Designer Kurtis",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Cotton Kurti",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Woolen Kurti",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Mens Round Neck T Shirt",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Mens Polo T Shirt",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Graphic Printed T Shirt",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Mens Blazer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Women Blazer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Designer Blazer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Leather Safety Shoes",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Steel Toe Safety Shoes",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Industrial Shoes",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Cargo Pant",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Jogger Pant",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Chino Trousers",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Female Mannequin",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Dress Form",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Male Mannequin",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Worker Uniform",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Housekeeping Uniform",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Corporate Uniform",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Printed Shirt",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Designer Shirt",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Plain Shirt",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Rayon Fabric",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Faux Fur Fabric",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Viscose Fabric",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Corrugated Box",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "3 Ply Corrugated Box",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "5 Ply Corrugated Box",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Heavy Duty Corrugated Box",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "7 Ply Corrugated Box",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "PET Bottle",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "HDPE Bottle",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Plastic Spray Bottle",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Transparent Plastic Bottle",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Packaging Bottles",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Bottle Caps",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Jar Cap",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Flip Top Caps",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Metal Caps",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Screw Caps",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Plastic Pouches",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Stand Up Pouch",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Zipper Pouches",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Paper Pouch",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Printed Pouches",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Pouch Packaging Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Fruit Juice Packaging Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Blister Packaging Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Shrink Packaging Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Vacuum Packaging Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Spice Packing Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Liquid Packaging Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Fertilizer Packing Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Snack Packing Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Vertical Form Fill Seal Machine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Isopropyl Alcohol",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Ethyl Alcohol",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Neutral Ethanol",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "IPA HCL",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Glycerine",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Laboratory Reagent",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Silver Nitrate",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Speciality Chemicals",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Waterproofing Chemical",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Water Treatment Chemical",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Adhesive Chemical",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Reactive Dye",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Acid Dye",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Direct Dye",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Solvent Dye",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "PVC Resin",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Ion Exchange Resin",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Polyester Resin",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Casting Resin",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Micronutrient Fertilizer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Phosphate Fertilizer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Chemical Fertilizer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Sulfur Fertilizer",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Goods Transport Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Dangerous Goods Transportation",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Food Transportation Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Liquid Transportation Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Packers Movers",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Loading Unloading Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Local Shifting Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Household Relocation Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Air Cargo Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Rail Cargo",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Sea Cargo Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Road Transportation Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Tipper Truck Rental Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Full Truck Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Lorry Transport Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Container Truck Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Third Party Logistics",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Cold Chain Logistics",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Local Logistics Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Contract Logistics Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Warehousing Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Home Delivery Service",
+      "limit": 120,
+      "headless": false
+    },
+    {
+      "platform": "INDIAMART",
+      "q": "Courier Service",
+      "limit": 120,
+      "headless": false
+    }
+  ]
+}

@@ -1,0 +1,2391 @@
+{
+  "residential-elevator": {
+    "kept": 28,
+    "termsDone": [
+      "Residential Elevator",
+      "Passenger Lifts",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "clay-brick-making-machine": {
+    "kept": 29,
+    "termsDone": [
+      "Clay Brick Making Machine",
+      "Brick Making Machines",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "fly-ash-brick-making-machine": {
+    "kept": 27,
+    "termsDone": [
+      "Fly Ash Brick Making Machine",
+      "Brick Making Machines",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "kone-passenger-lift": {
+    "kept": 30,
+    "termsDone": [
+      "Kone Passenger Lift",
+      "Kone Lift",
+      "Passenger Lifts",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "stair-lift": {
+    "kept": 30,
+    "termsDone": [
+      "Stair Lift",
+      "Passenger Lifts",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "cement-brick-making-machine": {
+    "kept": 29,
+    "termsDone": [
+      "Cement Brick Making Machine",
+      "Brick Making Machines",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "tmt-steel-bars": {
+    "kept": 26,
+    "termsDone": [
+      "TMT Steel Bars",
+      "TMT Bars",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "tata-tmt-bars": {
+    "kept": 28,
+    "termsDone": [
+      "TATA TMT Bars",
+      "TATA TMT",
+      "TMT Bars",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "kamdhenu-tmt-bars": {
+    "kept": 29,
+    "termsDone": [
+      "Kamdhenu TMT Bars",
+      "Kamdhenu TMT",
+      "TMT Bars",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "shuttering-plywood": {
+    "kept": 28,
+    "termsDone": [
+      "Shuttering Plywood",
+      "Plywoods",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "waterproof-plywood": {
+    "kept": 27,
+    "termsDone": [
+      "Waterproof Plywood",
+      "Plywoods",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "laminated-plywood": {
+    "kept": 29,
+    "termsDone": [
+      "Laminated Plywood",
+      "Plywoods",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "hyundai-excavator": {
+    "kept": 20,
+    "termsDone": [
+      "Hyundai Excavator",
+      "Excavator",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "asian-emulsion-paints": {
+    "kept": 18,
+    "termsDone": [
+      "Asian Emulsion Paints",
+      "Emulsion Paints",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "hitachi-excavator": {
+    "kept": 26,
+    "termsDone": [
+      "Hitachi Excavator",
+      "Excavator",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "komatsu-excavator": {
+    "kept": 27,
+    "termsDone": [
+      "Komatsu Excavator",
+      "Excavator",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "nerolac-emulsion-paints": {
+    "kept": 18,
+    "termsDone": [
+      "Nerolac Emulsion Paints",
+      "Emulsion Paints",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "designer-wooden-door": {
+    "kept": 10,
+    "termsDone": [
+      "Designer Wooden Door",
+      "Wooden Door",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "berger-emulsion-paints": {
+    "kept": 18,
+    "termsDone": [
+      "Berger Emulsion Paints",
+      "Emulsion Paints",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "plywood-door": {
+    "kept": 10,
+    "termsDone": [
+      "Plywood Door",
+      "Wooden Door",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "wooden-flush-doors": {
+    "kept": 10,
+    "termsDone": [
+      "Wooden Flush Doors",
+      "Wooden Door",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "finolex-pipes": {
+    "kept": 10,
+    "termsDone": [
+      "Finolex Pipes",
+      "PVC Pipes",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "rigid-pvc-pipes": {
+    "kept": 10,
+    "termsDone": [
+      "Rigid PVC Pipes",
+      "PVC Pipes",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "flexible-pvc-pipes": {
+    "kept": 10,
+    "termsDone": [
+      "Flexible PVC Pipes",
+      "PVC Pipes",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "red-brick": {
+    "kept": 10,
+    "termsDone": [
+      "Red Brick",
+      "Building Brick",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "fly-ash-bricks": {
+    "kept": 10,
+    "termsDone": [
+      "Fly Ash Bricks",
+      "Building Brick",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "multifunction-printer": {
+    "kept": 0,
+    "termsDone": [
+      "Multifunction Printer",
+      "Office Automation Products",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "cement-brick": {
+    "kept": 10,
+    "termsDone": [
+      "Cement Brick",
+      "Building Brick",
+      "Building Construction Material & Equipment"
+    ]
+  },
+  "xerox-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Xerox Machines",
+      "Office Automation Products",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "fingerprint-scanners": {
+    "kept": 0,
+    "termsDone": [
+      "Fingerprint Scanners",
+      "Office Automation Products",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "level-sensors": {
+    "kept": 0,
+    "termsDone": [
+      "Level Sensors",
+      "Sensors & Transducers",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "proximity-sensor": {
+    "kept": 0,
+    "termsDone": [
+      "Proximity Sensor",
+      "Sensors & Transducers",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "load-cell": {
+    "kept": 0,
+    "termsDone": [
+      "Load Cell",
+      "Sensors & Transducers",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "sensor-home-office": {
+    "kept": 9,
+    "termsDone": [
+      "Sensor for Home & Office",
+      "Home Sensor",
+      "Office Sensor",
+      "Sensors & Transducers"
+    ]
+  },
+  "level-controllers": {
+    "kept": 0,
+    "termsDone": [
+      "Level Controllers",
+      "Process Controllers",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "motor-controllers": {
+    "kept": 0,
+    "termsDone": [
+      "Motor Controllers",
+      "Process Controllers",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "temperature-controller": {
+    "kept": 0,
+    "termsDone": [
+      "Temperature Controller",
+      "Process Controllers",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "vfd": {
+    "kept": 0,
+    "termsDone": [
+      "VFD",
+      "Control & Automation",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "plc": {
+    "kept": 12,
+    "termsDone": [
+      "PLC",
+      "Programmable Logic Controller",
+      "Control & Automation",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "hmi": {
+    "kept": 12,
+    "termsDone": [
+      "HMI",
+      "Human Machine Interface",
+      "Control & Automation",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "integrated-circuits": {
+    "kept": 0,
+    "termsDone": [
+      "Integrated Circuits",
+      "Diodes & Active Devices",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "thyristors": {
+    "kept": 0,
+    "termsDone": [
+      "Thyristors",
+      "Diodes & Active Devices",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "light-emitting-diode": {
+    "kept": 12,
+    "termsDone": [
+      "Light Emitting Diode",
+      "LED",
+      "Diodes & Active Devices",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "house-wire": {
+    "kept": 0,
+    "termsDone": [
+      "House Wire",
+      "Wires & Cables",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "armoured-cable": {
+    "kept": 0,
+    "termsDone": [
+      "Armoured Cable",
+      "Wires & Cables",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "power-cable": {
+    "kept": 0,
+    "termsDone": [
+      "Power Cable",
+      "Wires & Cables",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "flood-lights": {
+    "kept": 0,
+    "termsDone": [
+      "Flood Lights",
+      "Commercial Lights",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "street-lights": {
+    "kept": 0,
+    "termsDone": [
+      "Street Lights",
+      "Commercial Lights",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "panel-light": {
+    "kept": 0,
+    "termsDone": [
+      "Panel Light",
+      "Commercial Lights",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "lithium-battery": {
+    "kept": 0,
+    "termsDone": [
+      "Lithium Battery",
+      "Batteries",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "inverter-batteries": {
+    "kept": 0,
+    "termsDone": [
+      "Inverter Batteries",
+      "Batteries",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "electric-vehicle-battery": {
+    "kept": 12,
+    "termsDone": [
+      "Electric Vehicle Battery",
+      "EV Battery",
+      "Batteries",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "solar-panels": {
+    "kept": 0,
+    "termsDone": [
+      "Solar Panels",
+      "Solar & Renewable Energy",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "solar-inverter": {
+    "kept": 0,
+    "termsDone": [
+      "Solar Inverter",
+      "Solar & Renewable Energy",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "solar-pumps": {
+    "kept": 0,
+    "termsDone": [
+      "Solar Pumps",
+      "Solar & Renewable Energy",
+      "Electronics & Electrical Goods & Supplies"
+    ]
+  },
+  "anticoagulant-antiplatelet-drugs": {
+    "kept": 11,
+    "termsDone": [
+      "Anticoagulant Drug",
+      "Antiplatelet Drug",
+      "Pharmaceutical Drug",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "antiparasitic-drug": {
+    "kept": 0,
+    "termsDone": [
+      "Antiparasitic Drug",
+      "Pharmaceutical Drug",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "antibiotic-tablets-capsule-syrup": {
+    "kept": 9,
+    "termsDone": [
+      "Antibiotic Tablets",
+      "Antibiotic Capsules",
+      "Antibiotic Syrup",
+      "Pharmaceutical Drug"
+    ]
+  },
+  "antifungal-injection-tablet-syrup": {
+    "kept": 9,
+    "termsDone": [
+      "Antifungal Tablet",
+      "Antifungal Injection",
+      "Antifungal Syrup",
+      "Pharmaceutical Drug"
+    ]
+  },
+  "vitamin-tablets-capsules": {
+    "kept": 11,
+    "termsDone": [
+      "Vitamin Tablets",
+      "Vitamin Capsules",
+      "Nutraceuticals",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "weight-loss-supplement": {
+    "kept": 0,
+    "termsDone": [
+      "Weight Loss Supplement",
+      "Nutraceuticals",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "dietary-supplements": {
+    "kept": 0,
+    "termsDone": [
+      "Dietary Supplements",
+      "Nutraceuticals",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "mineral-supplement": {
+    "kept": 0,
+    "termsDone": [
+      "Mineral Supplement",
+      "Nutraceuticals",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "weight-gain-nutrition": {
+    "kept": 0,
+    "termsDone": [
+      "Weight Gain Nutrition",
+      "Fitness Supplements",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "weight-gain-capsule": {
+    "kept": 0,
+    "termsDone": [
+      "Weight Gain Capsule",
+      "Fitness Supplements",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "pre-workout-supplements": {
+    "kept": 0,
+    "termsDone": [
+      "Pre Workout Supplements",
+      "Fitness Supplements",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "immune-booster": {
+    "kept": 0,
+    "termsDone": [
+      "Immune Booster",
+      "Fitness Supplements",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "dental-treatment-services": {
+    "kept": 0,
+    "termsDone": [
+      "Dental Treatment Service",
+      "Medical Treatment Services",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "medical-surgery-services": {
+    "kept": 0,
+    "termsDone": [
+      "Surgery Services",
+      "Medical Treatment Services",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "eye-treatment": {
+    "kept": 0,
+    "termsDone": [
+      "Eye Treatment",
+      "Medical Treatment Services",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "plastic-surgery-services": {
+    "kept": 0,
+    "termsDone": [
+      "Plastic Surgery Service",
+      "Medical Treatment Services",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "ct-scan-services": {
+    "kept": 0,
+    "termsDone": [
+      "CT Scan Service",
+      "Medical Test Services",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "ultrasound-services": {
+    "kept": 0,
+    "termsDone": [
+      "Ultrasound Service",
+      "Medical Test Services",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "echo-cardiography": {
+    "kept": 0,
+    "termsDone": [
+      "ECHO Cardiography",
+      "Medical Test Services",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "blood-testing": {
+    "kept": 0,
+    "termsDone": [
+      "Blood Testing",
+      "Medical Test Services",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "pharma-franchise": {
+    "kept": 0,
+    "termsDone": [
+      "Pharma Franchise",
+      "PCD Pharma Franchise",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "allopathic-pcd-pharma-franchise": {
+    "kept": 0,
+    "termsDone": [
+      "Allopathic PCD Pharma Franchise",
+      "PCD Pharma Franchise",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "ayurvedic-pcd-pharma-franchise": {
+    "kept": 0,
+    "termsDone": [
+      "Ayurvedic PCD Pharma Franchise",
+      "PCD Pharma Franchise",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "veterinary-pcd-pharma-franchise": {
+    "kept": 0,
+    "termsDone": [
+      "Veterinary PCD Pharma Franchise",
+      "PCD Pharma Franchise",
+      "Pharmaceutical Drug, Medicine, Medical Care & Consultation"
+    ]
+  },
+  "rapid-test-kit": {
+    "kept": 0,
+    "termsDone": [
+      "Rapid Test Kit",
+      "Medical Laboratory Instruments",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "biochemistry-analyzer": {
+    "kept": 0,
+    "termsDone": [
+      "Biochemistry Analyzer",
+      "Medical Laboratory Instruments",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "blood-bank-equipments": {
+    "kept": 0,
+    "termsDone": [
+      "Blood Bank Equipment",
+      "Medical Laboratory Instruments",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "hematology-analyzers": {
+    "kept": 0,
+    "termsDone": [
+      "Hematology Analyzer",
+      "Medical Laboratory Instruments",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "blood-pressure-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Blood Pressure Machine",
+      "Patient Monitoring Systems",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "capnometer": {
+    "kept": 0,
+    "termsDone": [
+      "Capnometer",
+      "Patient Monitoring Systems",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "medical-monitor": {
+    "kept": 0,
+    "termsDone": [
+      "Medical Monitor",
+      "Patient Monitoring Systems",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "surgical-monitor": {
+    "kept": 0,
+    "termsDone": [
+      "Surgical Monitor",
+      "Patient Monitoring Systems",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "infrared-thermometers": {
+    "kept": 0,
+    "termsDone": [
+      "Infrared Thermometer",
+      "Thermometer",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "forehead-thermometer": {
+    "kept": 0,
+    "termsDone": [
+      "Forehead Thermometer",
+      "Thermometer",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "non-contact-thermometer": {
+    "kept": 0,
+    "termsDone": [
+      "Non Contact Thermometer",
+      "Thermometer",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "digital-thermometers": {
+    "kept": 0,
+    "termsDone": [
+      "Digital Thermometer",
+      "Thermometer",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "x-ray-machine": {
+    "kept": 8,
+    "termsDone": [
+      "X Ray Machine",
+      "X-Ray Machine",
+      "Medical Imaging Machine",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "ultrasound-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Ultrasound Machine",
+      "Medical Imaging Machine",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "ecg-machine": {
+    "kept": 0,
+    "termsDone": [
+      "ECG Machine",
+      "Medical Imaging Machine",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "doppler-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Doppler Machine",
+      "Medical Imaging Machine",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "cardiology-stethoscope": {
+    "kept": 0,
+    "termsDone": [
+      "Cardiology Stethoscope",
+      "Stethoscope",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "dual-head-stethoscope": {
+    "kept": 0,
+    "termsDone": [
+      "Dual Head Stethoscope",
+      "Stethoscope",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "electronic-stethoscope": {
+    "kept": 0,
+    "termsDone": [
+      "Electronic Stethoscope",
+      "Stethoscope",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "pediatric-stethoscope": {
+    "kept": 0,
+    "termsDone": [
+      "Pediatric Stethoscope",
+      "Stethoscope",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "electric-suction-unit": {
+    "kept": 0,
+    "termsDone": [
+      "Electric Suction Unit",
+      "Suction Machine",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "foot-operated-suction-unit": {
+    "kept": 0,
+    "termsDone": [
+      "Foot Operated Suction Unit",
+      "Suction Machine",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "liposuction-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Liposuction Machine",
+      "Suction Machine",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "central-suction-system": {
+    "kept": 0,
+    "termsDone": [
+      "Central Suction System",
+      "Suction Machine",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "mask-sanitizer-hygiene-supplies": {
+    "kept": 0,
+    "termsDone": [
+      "Mask Sanitizer",
+      "COVID-19 Prevention & Care Supplies",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "hospital-consumables-diagnostics": {
+    "kept": 0,
+    "termsDone": [
+      "Hospital Consumables",
+      "COVID-19 Prevention & Care Supplies",
+      "Hospital and Medical Equipment"
+    ]
+  },
+  "flour-mill": {
+    "kept": 0,
+    "termsDone": [
+      "Flour Mill Machine",
+      "Food Processing Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "rice-mill-machinery": {
+    "kept": 0,
+    "termsDone": [
+      "Rice Mill Machinery",
+      "Food Processing Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "spice-processing-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Spice Processing Machine",
+      "Food Processing Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "non-woven-bag-making-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Non Woven Bag Making Machine",
+      "Bag Making Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "paper-bag-making-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Paper Bag Making Machine",
+      "Bag Making Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "biodegradable-bag-making-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Biodegradable Bag Making Machine",
+      "Bag Making Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "popcorn-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Popcorn Machine",
+      "Snack Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "pani-puri-making-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Pani Puri Making Machine",
+      "Snack Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "namkeen-making-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Namkeen Making Machine",
+      "Snack Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "bakery-machinery": {
+    "kept": 0,
+    "termsDone": [
+      "Bakery Machinery",
+      "Bakery & Dairy Machinery",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "bakery-oven": {
+    "kept": 0,
+    "termsDone": [
+      "Bakery Oven",
+      "Bakery & Dairy Machinery",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "sweets-making-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Sweets Making Machine",
+      "Bakery & Dairy Machinery",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "lathe-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Lathe Machine",
+      "CNC Machines & Lathe Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "cnc-machines": {
+    "kept": 0,
+    "termsDone": [
+      "CNC Machine",
+      "CNC Machines & Lathe Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "cnc-vertical-machining-centers": {
+    "kept": 0,
+    "termsDone": [
+      "CNC Vertical Machining Center",
+      "CNC Machines & Lathe Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "large-format-printers": {
+    "kept": 0,
+    "termsDone": [
+      "Large Format Printer",
+      "Printing Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "offset-printing-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Offset Printing Machine",
+      "Printing Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "sublimation-printing-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Sublimation Printing Machine",
+      "Printing Machine",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "oil-free-air-compressor": {
+    "kept": 0,
+    "termsDone": [
+      "Oil Free Air Compressor",
+      "Air Compressors",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "refrigeration-compressors": {
+    "kept": 0,
+    "termsDone": [
+      "Refrigeration Compressor",
+      "Air Compressors",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "reciprocating-compressors": {
+    "kept": 0,
+    "termsDone": [
+      "Reciprocating Compressor",
+      "Air Compressors",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "water-softening-systems": {
+    "kept": 0,
+    "termsDone": [
+      "Water Softening System",
+      "Water Purification Plants",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "water-treatment-plants": {
+    "kept": 0,
+    "termsDone": [
+      "Water Treatment Plant",
+      "Water Purification Plants",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "reverse-osmosis-plants": {
+    "kept": 0,
+    "termsDone": [
+      "Reverse Osmosis Plant",
+      "Water Purification Plants",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "animal-feed-making-machine-plant": {
+    "kept": 0,
+    "termsDone": [
+      "Animal Feed Making Machine",
+      "Food Processing Plants",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "wet-grinder": {
+    "kept": 0,
+    "termsDone": [
+      "Wet Grinder",
+      "Food Processing Plants",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "sugarcane-juice-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Sugarcane Juice Machine",
+      "Food Processing Plants",
+      "Industrial Plants, Machinery & Equipment"
+    ]
+  },
+  "borewell-submersible-pump": {
+    "kept": 0,
+    "termsDone": [
+      "Borewell Submersible Pump",
+      "Submersible Pump",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "cri-submersible-pumps": {
+    "kept": 0,
+    "termsDone": [
+      "CRI Submersible Pump",
+      "Submersible Pump",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "open-well-submersible-pump": {
+    "kept": 0,
+    "termsDone": [
+      "Open Well Submersible Pump",
+      "Submersible Pump",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "engine-oil": {
+    "kept": 0,
+    "termsDone": [
+      "Engine Oil",
+      "Automotive Oils",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "lubricating-oil": {
+    "kept": 0,
+    "termsDone": [
+      "Lubricating Oil",
+      "Automotive Oils",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "gear-oil": {
+    "kept": 0,
+    "termsDone": [
+      "Gear Oil",
+      "Automotive Oils",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "triple-layered-water-tanks": {
+    "kept": 0,
+    "termsDone": [
+      "Triple Layer Water Tank",
+      "Water Tanks",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "stainless-steel-water-tank": {
+    "kept": 0,
+    "termsDone": [
+      "Stainless Steel Water Tank",
+      "Water Tanks",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "supreme-water-tanks": {
+    "kept": 0,
+    "termsDone": [
+      "Supreme Water Tank",
+      "Water Tanks",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "pvc-foam-sheets": {
+    "kept": 0,
+    "termsDone": [
+      "PVC Foam Sheet",
+      "PVC Sheets",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "transparent-pvc-sheet": {
+    "kept": 0,
+    "termsDone": [
+      "Transparent PVC Sheet",
+      "PVC Sheets",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "pvc-marble-sheet": {
+    "kept": 0,
+    "termsDone": [
+      "PVC Marble Sheet",
+      "PVC Sheets",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "conveyor-belt": {
+    "kept": 0,
+    "termsDone": [
+      "Conveyor Belt",
+      "Conveyor Components",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "conveyor-rollers": {
+    "kept": 14,
+    "termsDone": [
+      "Conveyor Roller",
+      "Conveyor Components",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "conveyor-chains": {
+    "kept": 24,
+    "termsDone": [
+      "Conveyor Chain",
+      "Conveyor Components",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "pet-bottle-scrap": {
+    "kept": 23,
+    "termsDone": [
+      "Pet Bottle Scrap",
+      "Plastic Scrap",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "pp-scrap": {
+    "kept": 23,
+    "termsDone": [
+      "PP Scrap",
+      "Plastic Scrap",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "pet-chips-scrap": {
+    "kept": 23,
+    "termsDone": [
+      "PET Chips Scrap",
+      "Plastic Scrap",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "self-adhesive-tapes": {
+    "kept": 32,
+    "termsDone": [
+      "Self Adhesive Tape",
+      "Packaging Tapes",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "bopp-tapes": {
+    "kept": 31,
+    "termsDone": [
+      "BOPP Tape",
+      "Packaging Tapes",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "brown-tape": {
+    "kept": 33,
+    "termsDone": [
+      "Brown Tape",
+      "Packaging Tapes",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "slotted-angle-racks": {
+    "kept": 14,
+    "termsDone": [
+      "Slotted Angle Rack",
+      "Industrial Rack",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "pallet-racks": {
+    "kept": 14,
+    "termsDone": [
+      "Pallet Rack",
+      "Industrial Rack",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "warehouse-racks": {
+    "kept": 15,
+    "termsDone": [
+      "Warehouse Rack",
+      "Industrial Rack",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "solar-water-heater": {
+    "kept": 33,
+    "termsDone": [
+      "Solar Water Heater",
+      "Water Heater & Geyser",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "gas-geyser": {
+    "kept": 34,
+    "termsDone": [
+      "Gas Geyser",
+      "Water Heater & Geyser",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "electric-geyser": {
+    "kept": 34,
+    "termsDone": [
+      "Electric Geyser",
+      "Water Heater & Geyser",
+      "Industrial & Engineering Products, Spares and Supplies"
+    ]
+  },
+  "basmati-rice": {
+    "kept": 28,
+    "termsDone": [
+      "Basmati Rice",
+      "Rice",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "ponni-rice": {
+    "kept": 30,
+    "termsDone": [
+      "Ponni Rice",
+      "Rice",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "kolam-rice": {
+    "kept": 30,
+    "termsDone": [
+      "Kolam Rice",
+      "Rice",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "sona-masoori-rice": {
+    "kept": 30,
+    "termsDone": [
+      "Sona Masoori Rice",
+      "Rice",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "wheat-grains": {
+    "kept": 25,
+    "termsDone": [
+      "Wheat Grains",
+      "Wheat",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "milling-wheat": {
+    "kept": 29,
+    "termsDone": [
+      "Milling Wheat",
+      "Wheat",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "lokwan-wheat": {
+    "kept": 29,
+    "termsDone": [
+      "Lokwan Wheat",
+      "Wheat",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "toor-dal": {
+    "kept": 29,
+    "termsDone": [
+      "Toor Dal",
+      "Pulses",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "moong-dal": {
+    "kept": 29,
+    "termsDone": [
+      "Moong Dal",
+      "Pulses",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "chana-dal": {
+    "kept": 29,
+    "termsDone": [
+      "Chana Dal",
+      "Pulses",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "urad-dal": {
+    "kept": 29,
+    "termsDone": [
+      "Urad Dal",
+      "Pulses",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "potato": {
+    "kept": 29,
+    "termsDone": [
+      "Potato",
+      "Fresh Vegetables",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "onion": {
+    "kept": 30,
+    "termsDone": [
+      "Onion",
+      "Fresh Vegetables",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "mushroom": {
+    "kept": 28,
+    "termsDone": [
+      "Mushroom",
+      "Fresh Vegetables",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "tomato": {
+    "kept": 30,
+    "termsDone": [
+      "Tomato",
+      "Fresh Vegetables",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "black-pepper": {
+    "kept": 28,
+    "termsDone": [
+      "Black Pepper",
+      "Whole Spices",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "turmeric": {
+    "kept": 28,
+    "termsDone": [
+      "Turmeric",
+      "Whole Spices",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "green-cardamom": {
+    "kept": 26,
+    "termsDone": [
+      "Green Cardamom",
+      "Whole Spices",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "cardamom": {
+    "kept": 27,
+    "termsDone": [
+      "Cardamom",
+      "Whole Spices",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "vegetable-seeds": {
+    "kept": 29,
+    "termsDone": [
+      "Vegetable Seeds",
+      "Seeds",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "seed-spices": {
+    "kept": 29,
+    "termsDone": [
+      "Seed Spices",
+      "Seeds",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "oil-seeds": {
+    "kept": 28,
+    "termsDone": [
+      "Oil Seeds",
+      "Seeds",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "hybrid-seeds": {
+    "kept": 29,
+    "termsDone": [
+      "Hybrid Seeds",
+      "Seeds",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "organic-fertilizers": {
+    "kept": 28,
+    "termsDone": [
+      "Organic Fertilizer",
+      "Fertilizer",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "bio-fertilizers": {
+    "kept": 28,
+    "termsDone": [
+      "Bio Fertilizer",
+      "Fertilizer",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "vermicompost": {
+    "kept": 30,
+    "termsDone": [
+      "Vermicompost",
+      "Fertilizer",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "agricultural-sprayers": {
+    "kept": 20,
+    "termsDone": [
+      "Agricultural Sprayer",
+      "Agricultural Tools",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "disc-harrow": {
+    "kept": 10,
+    "termsDone": [
+      "Disc Harrow",
+      "Agricultural Tools",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "land-leveler": {
+    "kept": 10,
+    "termsDone": [
+      "Land Leveler",
+      "Agricultural Tools",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "brush-cutters": {
+    "kept": 10,
+    "termsDone": [
+      "Brush Cutter",
+      "Agricultural Machinery",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "chain-saw": {
+    "kept": 10,
+    "termsDone": [
+      "Chain Saw",
+      "Agricultural Machinery",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "npk-fertilizer": {
+    "kept": 28,
+    "termsDone": [
+      "NPK Fertilizer",
+      "Fertilizer",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "power-tiller": {
+    "kept": 10,
+    "termsDone": [
+      "Power Tiller",
+      "Agricultural Machinery",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "designer-kurtis": {
+    "kept": 0,
+    "termsDone": [
+      "Designer Kurtis",
+      "Ladies Kurtis",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "agricultural-plough": {
+    "kept": 19,
+    "termsDone": [
+      "Agricultural Plough",
+      "Agricultural Tools",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "cotton-kurti": {
+    "kept": 0,
+    "termsDone": [
+      "Cotton Kurti",
+      "Ladies Kurtis",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "power-weeder": {
+    "kept": 10,
+    "termsDone": [
+      "Power Weeder",
+      "Agricultural Machinery",
+      "Food, Agriculture & Farming"
+    ]
+  },
+  "ladies-woolen-kurti": {
+    "kept": 0,
+    "termsDone": [
+      "Woolen Kurti",
+      "Ladies Kurtis",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "mens-round-neck-t-shirt": {
+    "kept": 0,
+    "termsDone": [
+      "Mens Round Neck T Shirt",
+      "Mens T-Shirts",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "mens-polo-t-shirt": {
+    "kept": 0,
+    "termsDone": [
+      "Mens Polo T Shirt",
+      "Mens T-Shirts",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "graphic-printed-t-shirt": {
+    "kept": 0,
+    "termsDone": [
+      "Graphic Printed T Shirt",
+      "Mens T-Shirts",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "mens-blazer": {
+    "kept": 0,
+    "termsDone": [
+      "Mens Blazer",
+      "Blazers",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "womens-blazer": {
+    "kept": 0,
+    "termsDone": [
+      "Women Blazer",
+      "Blazers",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "designer-blazer": {
+    "kept": 0,
+    "termsDone": [
+      "Designer Blazer",
+      "Blazers",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "leather-safety-shoes": {
+    "kept": 0,
+    "termsDone": [
+      "Leather Safety Shoes",
+      "Safety Shoes",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "steel-toe-safety-shoes": {
+    "kept": 0,
+    "termsDone": [
+      "Steel Toe Safety Shoes",
+      "Safety Shoes",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "industrial-shoes": {
+    "kept": 0,
+    "termsDone": [
+      "Industrial Shoes",
+      "Safety Shoes",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "cargo-pant": {
+    "kept": 0,
+    "termsDone": [
+      "Cargo Pant",
+      "Trouser",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "jogger-pant": {
+    "kept": 0,
+    "termsDone": [
+      "Jogger Pant",
+      "Trouser",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "chino-trousers": {
+    "kept": 0,
+    "termsDone": [
+      "Chino Trousers",
+      "Trouser",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "female-mannequins": {
+    "kept": 0,
+    "termsDone": [
+      "Female Mannequin",
+      "Mannequins",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "dress-forms": {
+    "kept": 0,
+    "termsDone": [
+      "Dress Form",
+      "Mannequins",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "male-mannequins": {
+    "kept": 0,
+    "termsDone": [
+      "Male Mannequin",
+      "Mannequins",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "worker-uniform": {
+    "kept": 0,
+    "termsDone": [
+      "Worker Uniform",
+      "Commercial Uniforms",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "housekeeping-uniform": {
+    "kept": 0,
+    "termsDone": [
+      "Housekeeping Uniform",
+      "Commercial Uniforms",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "corporate-uniform": {
+    "kept": 0,
+    "termsDone": [
+      "Corporate Uniform",
+      "Commercial Uniforms",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "printed-shirt": {
+    "kept": 0,
+    "termsDone": [
+      "Printed Shirt",
+      "Shirt",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "designer-shirt": {
+    "kept": 0,
+    "termsDone": [
+      "Designer Shirt",
+      "Shirt",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "plain-shirt": {
+    "kept": 0,
+    "termsDone": [
+      "Plain Shirt",
+      "Shirt",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "rayon-fabrics": {
+    "kept": 0,
+    "termsDone": [
+      "Rayon Fabric",
+      "Synthetic Fabric",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "faux-fur-fabric": {
+    "kept": 0,
+    "termsDone": [
+      "Faux Fur Fabric",
+      "Synthetic Fabric",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "viscose-fabrics": {
+    "kept": 0,
+    "termsDone": [
+      "Viscose Fabric",
+      "Synthetic Fabric",
+      "Apparel, Clothing & Garments"
+    ]
+  },
+  "corrugated-box": {
+    "kept": 0,
+    "termsDone": [
+      "Corrugated Box",
+      "Corrugated Packaging Boxes",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "three-ply-corrugated-box": {
+    "kept": 0,
+    "termsDone": [
+      "3 Ply Corrugated Box",
+      "Corrugated Packaging Boxes",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "five-ply-corrugated-box": {
+    "kept": 0,
+    "termsDone": [
+      "5 Ply Corrugated Box",
+      "Corrugated Packaging Boxes",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "heavy-duty-industrial-corrugated-boxes": {
+    "kept": 0,
+    "termsDone": [
+      "Heavy Duty Corrugated Box",
+      "Corrugated Packaging Boxes",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "seven-ply-corrugated-box": {
+    "kept": 0,
+    "termsDone": [
+      "7 Ply Corrugated Box",
+      "Corrugated Packaging Boxes",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "pet-bottles": {
+    "kept": 0,
+    "termsDone": [
+      "PET Bottle",
+      "Plastic Bottles",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "hdpe-bottle": {
+    "kept": 0,
+    "termsDone": [
+      "HDPE Bottle",
+      "Plastic Bottles",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "plastic-spray-bottle": {
+    "kept": 0,
+    "termsDone": [
+      "Plastic Spray Bottle",
+      "Plastic Bottles",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "transparent-plastic-bottles": {
+    "kept": 0,
+    "termsDone": [
+      "Transparent Plastic Bottle",
+      "Plastic Bottles",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "packaging-bottles": {
+    "kept": 0,
+    "termsDone": [
+      "Packaging Bottles",
+      "Plastic Bottles",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "bottle-caps": {
+    "kept": 0,
+    "termsDone": [
+      "Bottle Caps",
+      "Cap Closures",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "jar-cap": {
+    "kept": 0,
+    "termsDone": [
+      "Jar Cap",
+      "Cap Closures",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "flip-top-caps": {
+    "kept": 0,
+    "termsDone": [
+      "Flip Top Caps",
+      "Cap Closures",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "metal-caps": {
+    "kept": 0,
+    "termsDone": [
+      "Metal Caps",
+      "Cap Closures",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "screw-caps": {
+    "kept": 0,
+    "termsDone": [
+      "Screw Caps",
+      "Cap Closures",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "plastic-pouches": {
+    "kept": 0,
+    "termsDone": [
+      "Plastic Pouches",
+      "Packaging Pouch",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "stand-up-pouch": {
+    "kept": 0,
+    "termsDone": [
+      "Stand Up Pouch",
+      "Packaging Pouch",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "zipper-pouches": {
+    "kept": 0,
+    "termsDone": [
+      "Zipper Pouches",
+      "Packaging Pouch",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "paper-pouch": {
+    "kept": 0,
+    "termsDone": [
+      "Paper Pouch",
+      "Packaging Pouch",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "printed-pouches": {
+    "kept": 0,
+    "termsDone": [
+      "Printed Pouches",
+      "Packaging Pouch",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "pouch-packaging-machines-leaf": {
+    "kept": 0,
+    "termsDone": [
+      "Pouch Packaging Machine",
+      "Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "fruit-juice-packaging-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Fruit Juice Packaging Machine",
+      "Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "blister-packaging-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Blister Packaging Machine",
+      "Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "shrink-packaging-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Shrink Packaging Machine",
+      "Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "vacuum-packaging-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Vacuum Packaging Machine",
+      "Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "spices-packing-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Spice Packing Machine",
+      "Form Fill & Seal Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "liquid-packaging-machinery": {
+    "kept": 0,
+    "termsDone": [
+      "Liquid Packaging Machine",
+      "Form Fill & Seal Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "fertilizer-packing-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Fertilizer Packing Machine",
+      "Form Fill & Seal Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "snack-packing-machine": {
+    "kept": 0,
+    "termsDone": [
+      "Snack Packing Machine",
+      "Form Fill & Seal Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "vertical-form-fill-seal-machines": {
+    "kept": 0,
+    "termsDone": [
+      "Vertical Form Fill Seal Machine",
+      "Form Fill & Seal Packaging Machines",
+      "Packaging Material, Supplies & Machines"
+    ]
+  },
+  "rubbing-alcohol-ipa": {
+    "kept": 0,
+    "termsDone": [
+      "Isopropyl Alcohol",
+      "Industrial Alcohol",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "ethyl-alcohol": {
+    "kept": 0,
+    "termsDone": [
+      "Ethyl Alcohol",
+      "Industrial Alcohol",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "neutral-ethanol": {
+    "kept": 0,
+    "termsDone": [
+      "Neutral Ethanol",
+      "Industrial Alcohol",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "ipa-hcl": {
+    "kept": 0,
+    "termsDone": [
+      "IPA HCL",
+      "Chemical Compound",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "glycerine": {
+    "kept": 0,
+    "termsDone": [
+      "Glycerine",
+      "Chemical Compound",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "laboratory-reagents": {
+    "kept": 0,
+    "termsDone": [
+      "Laboratory Reagent",
+      "Chemical Compound",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "silver-nitrate": {
+    "kept": 0,
+    "termsDone": [
+      "Silver Nitrate",
+      "Chemical Compound",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "speciality-chemicals": {
+    "kept": 0,
+    "termsDone": [
+      "Speciality Chemicals",
+      "Industrial Chemicals",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "waterproofing-chemicals-leaf": {
+    "kept": 0,
+    "termsDone": [
+      "Waterproofing Chemical",
+      "Industrial Chemicals",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "water-treatment-chemicals": {
+    "kept": 0,
+    "termsDone": [
+      "Water Treatment Chemical",
+      "Industrial Chemicals",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "adhesive-chemical": {
+    "kept": 0,
+    "termsDone": [
+      "Adhesive Chemical",
+      "Industrial Chemicals",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "reactive-dyes": {
+    "kept": 0,
+    "termsDone": [
+      "Reactive Dye",
+      "Industrial Dyes",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "acid-dyes": {
+    "kept": 0,
+    "termsDone": [
+      "Acid Dye",
+      "Industrial Dyes",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "direct-dyes": {
+    "kept": 0,
+    "termsDone": [
+      "Direct Dye",
+      "Industrial Dyes",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "solvent-dyes": {
+    "kept": 0,
+    "termsDone": [
+      "Solvent Dye",
+      "Industrial Dyes",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "pvc-resin": {
+    "kept": 0,
+    "termsDone": [
+      "PVC Resin",
+      "Resin",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "ion-exchange-resin": {
+    "kept": 0,
+    "termsDone": [
+      "Ion Exchange Resin",
+      "Resin",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "polyester-resins": {
+    "kept": 0,
+    "termsDone": [
+      "Polyester Resin",
+      "Resin",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "casting-resin": {
+    "kept": 0,
+    "termsDone": [
+      "Casting Resin",
+      "Resin",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "phosphate-fertilizers": {
+    "kept": 0,
+    "termsDone": [
+      "Phosphate Fertilizer",
+      "Chemical Fertilizers",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "micronutrient-fertilizers": {
+    "kept": 0,
+    "termsDone": [
+      "Micronutrient Fertilizer",
+      "Chemical Fertilizers",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "chemical-fertilizers-leaf": {
+    "kept": 0,
+    "termsDone": [
+      "Chemical Fertilizer",
+      "Chemical Fertilizers",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "sulfur-fertilizers": {
+    "kept": 0,
+    "termsDone": [
+      "Sulfur Fertilizer",
+      "Chemical Fertilizers",
+      "Chemicals, Dyes, Solvents & Allied Products"
+    ]
+  },
+  "goods-transport-services": {
+    "kept": 0,
+    "termsDone": [
+      "Goods Transport Service",
+      "Transportation Services",
+      "Transportation & Logistics"
+    ]
+  },
+  "dangerous-goods-transportation": {
+    "kept": 0,
+    "termsDone": [
+      "Dangerous Goods Transportation",
+      "Transportation Services",
+      "Transportation & Logistics"
+    ]
+  },
+  "food-transportation-services": {
+    "kept": 0,
+    "termsDone": [
+      "Food Transportation Service",
+      "Transportation Services",
+      "Transportation & Logistics"
+    ]
+  },
+  "liquid-transportation-service": {
+    "kept": 0,
+    "termsDone": [
+      "Liquid Transportation Service",
+      "Transportation Services",
+      "Transportation & Logistics"
+    ]
+  },
+  "packers-movers": {
+    "kept": 0,
+    "termsDone": [
+      "Packers Movers",
+      "Domestic Relocation Service",
+      "Transportation & Logistics"
+    ]
+  },
+  "loading-unloading-services": {
+    "kept": 0,
+    "termsDone": [
+      "Loading Unloading Service",
+      "Domestic Relocation Service",
+      "Transportation & Logistics"
+    ]
+  },
+  "local-shifting-service": {
+    "kept": 0,
+    "termsDone": [
+      "Local Shifting Service",
+      "Domestic Relocation Service",
+      "Transportation & Logistics"
+    ]
+  },
+  "household-relocation-service": {
+    "kept": 0,
+    "termsDone": [
+      "Household Relocation Service",
+      "Domestic Relocation Service",
+      "Transportation & Logistics"
+    ]
+  },
+  "air-cargo-service": {
+    "kept": 0,
+    "termsDone": [
+      "Air Cargo Service",
+      "Cargo & Shipping",
+      "Transportation & Logistics"
+    ]
+  },
+  "rail-cargo": {
+    "kept": 0,
+    "termsDone": [
+      "Rail Cargo",
+      "Cargo & Shipping",
+      "Transportation & Logistics"
+    ]
+  },
+  "sea-cargo-service": {
+    "kept": 0,
+    "termsDone": [
+      "Sea Cargo Service",
+      "Cargo & Shipping",
+      "Transportation & Logistics"
+    ]
+  },
+  "road-transportation-services": {
+    "kept": 0,
+    "termsDone": [
+      "Road Transportation Service",
+      "Cargo & Shipping",
+      "Transportation & Logistics"
+    ]
+  },
+  "tipper-truck-rental-services": {
+    "kept": 0,
+    "termsDone": [
+      "Tipper Truck Rental Service",
+      "Truck Rentals",
+      "Transportation & Logistics"
+    ]
+  },
+  "full-trucks-service": {
+    "kept": 0,
+    "termsDone": [
+      "Full Truck Service",
+      "Truck Rentals",
+      "Transportation & Logistics"
+    ]
+  },
+  "lorry-transport-services": {
+    "kept": 0,
+    "termsDone": [
+      "Lorry Transport Service",
+      "Truck Rentals",
+      "Transportation & Logistics"
+    ]
+  },
+  "container-truck-service": {
+    "kept": 0,
+    "termsDone": [
+      "Container Truck Service",
+      "Truck Rentals",
+      "Transportation & Logistics"
+    ]
+  },
+  "third-party-logistics": {
+    "kept": 0,
+    "termsDone": [
+      "Third Party Logistics",
+      "Logistics Service",
+      "Transportation & Logistics"
+    ]
+  },
+  "cold-chain-logistics": {
+    "kept": 0,
+    "termsDone": [
+      "Cold Chain Logistics",
+      "Logistics Service",
+      "Transportation & Logistics"
+    ]
+  },
+  "local-logistics-services": {
+    "kept": 0,
+    "termsDone": [
+      "Local Logistics Service",
+      "Logistics Service",
+      "Transportation & Logistics"
+    ]
+  },
+  "contract-logistics-service": {
+    "kept": 0,
+    "termsDone": [
+      "Contract Logistics Service",
+      "Logistics Service",
+      "Transportation & Logistics"
+    ]
+  },
+  "warehousing-services": {
+    "kept": 0,
+    "termsDone": [
+      "Warehousing Service",
+      "Other Services",
+      "Transportation & Logistics"
+    ]
+  },
+  "home-delivery-service": {
+    "kept": 0,
+    "termsDone": [
+      "Home Delivery Service",
+      "Other Services",
+      "Transportation & Logistics"
+    ]
+  },
+  "courier-service": {
+    "kept": 0,
+    "termsDone": [
+      "Courier Service",
+      "Other Services",
+      "Transportation & Logistics"
+    ]
+  }
+}

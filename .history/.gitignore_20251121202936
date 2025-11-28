@@ -1,0 +1,23 @@
+/node_modules
+/.next
+/out
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Sentry
+.sentryclirc
+sentry.properties
+
+# Cache
+public/cache/*.jpg
+public/cache/*.webp
+
+# IDE
+.vscode/
+.idea/
+
+# Local config
+*.local

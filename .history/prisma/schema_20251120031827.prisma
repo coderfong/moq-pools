@@ -1,0 +1,495 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Optional scrape status for SavedListing detailJson freshness audits
+enum ScrapeStatus {
+  OK
+  WEAK
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client4"
+}
+
+// Alerts/Notifications enums
+enum AlertType {
+  GROUP_UPDATE
+  SHIPPING
+  PROMOTION
+  SYSTEM
+}
+
+enum AlertStatus {
+  UNREAD
+  READ
+}
+
+// Admin triage status for Alerts (separate from user read/unread)
+enum AlertTriageStatus {
+  OPEN
+  RESOLVED
+  ARCHIVED
+}
+
+enum SourcePlatform {
+  C1688
+  ALIBABA
+  TAOBAO
+  MADE_IN_CHINA
+  INDIAMART
+  SEA_LOCAL
+  ALIEXPRESS
+  GLOBAL_SOURCES
+}
+
+enum Role {
+  BUYER
+  ADMIN
+  SUPPLIER
+}
+
+enum PoolStatus {
+  OPEN
+  LOCKED
+  ORDER_PLACED
+  FULFILLING
+  FULFILLED
+  FAILED
+  CANCELLED
+}
+
+// Tracks last progress milestone achieved by a Pool to prevent duplicate alerts
+enum ProgressMilestone {
+  NONE
+  FIFTY
+  NINETY
+  MOQ
+}
+
+enum PayMethod {
+  STRIPE
+  BANK_TRANSFER
+}
+
+enum PayStatus {
+  PENDING
+  REQUIRES_ACTION
+  PAID
+  REFUNDED
+  FAILED
+}
+
+enum ShipStatus {
+  LABEL_CREATED
+  IN_TRANSIT
+  DELIVERED
+  EXCEPTION
+}
+
+model User {
+  id                       String                    @id @default(cuid())
+  email                    String                    @unique
+  passwordHash             String?
+  name                     String?
+  phone                    String?
+  companyName              String?
+  countryCode              String?
+  isIndividualBuyer        Boolean?
+  role                     Role                      @default(BUYER)
+  // OAuth fields
+  emailVerified            DateTime?
+  image                    String?
+  accounts                 Account[]
+  sessions                 Session[]
+  // Back-relations
+  addresses                Address[] // <- back-rel from Address.user
+  poolItems                PoolItem[] // <- back-rel from PoolItem.user
+  suppliers                Supplier[] // <- back-rel from Supplier.user
+  // Messaging back-relations
+  messages                 Message[] // <- back-rel from Message.senderUser
+  conversationParticipants ConversationParticipant[] // <- back-rel from ConversationParticipant.user
+  // Alerts back-relations
+  alerts                   Alert[]
+  assignedAlerts           Alert[]                   @relation("AlertAssignee")
+  // Push tokens back-relations
+  pushTokens              PushToken[]
+  // Product view history
+  productViews            ProductView[]
+  // Wishlist back-relations
+  wishlist                Wishlist[]
+  createdAt                DateTime                  @default(now())
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+ 
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ 
+  @@unique([provider, providerAccountId])
+}
+ 
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+ 
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+ 
+  @@unique([identifier, token])
+}
+
+model Supplier {
+  id           String    @id @default(cuid())
+  user         User      @relation(fields: [userId], references: [id])
+  userId       String
+  name         String
+  contactName  String?
+  contactEmail String?
+  contactPhone String?
+  products     Product[]
+}
+
+model Address {
+  id        String     @id @default(cuid())
+  user      User       @relation(fields: [userId], references: [id])
+  userId    String
+  line1     String
+  line2     String?
+  city      String
+  state     String?
+  postal    String
+  country   String
+  phone     String?
+  poolItems PoolItem[] // <- back-rel from PoolItem.address
+}
+
+model Pool {
+  id         String     @id @default(cuid())
+  product    Product    @relation(fields: [productId], references: [id])
+  productId  String     @unique
+  status     PoolStatus @default(OPEN)
+  targetQty  Int
+  pledgedQty Int        @default(0)
+  deadlineAt DateTime
+  createdAt  DateTime   @default(now())
+  items      PoolItem[]
+
+  // Progress alert deduplication helper
+  lastProgressMilestone ProgressMilestone @default(NONE)
+}
+
+model PoolItem {
+  id     String @id @default(cuid())
+  pool   Pool   @relation(fields: [poolId], references: [id])
+  poolId String
+
+  user   User   @relation(fields: [userId], references: [id]) // <- add this
+  userId String // <- and this
+
+  quantity  Int
+  unitPrice Decimal   @db.Decimal(10, 2)
+  currency  String
+  address   Address   @relation(fields: [addressId], references: [id])
+  addressId String
+  payment   Payment?
+  shipment  Shipment?
+  createdAt DateTime  @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model Payment {
+  id         String    @id @default(cuid())
+  poolItem   PoolItem  @relation(fields: [poolItemId], references: [id])
+  poolItemId String    @unique
+  method     PayMethod
+  amount     Decimal   @db.Decimal(10, 2)
+  currency   String
+  status     PayStatus @default(PENDING)
+  reference  String?
+  proofUrl   String?
+  paidAt     DateTime?
+  createdAt  DateTime  @default(now())
+}
+
+model Shipment {
+  id         String     @id @default(cuid())
+  poolItem   PoolItem   @relation(fields: [poolItemId], references: [id])
+  poolItemId String     @unique
+  carrier    String?
+  trackingNo String?
+  status     ShipStatus @default(LABEL_CREATED)
+  etaDate    DateTime?
+  eventsJson String?
+  updatedAt  DateTime   @updatedAt
+  createdAt  DateTime   @default(now())
+
+  @@index([trackingNo])
+}
+
+model Product {
+  id             String         @id @default(cuid())
+  supplier       Supplier       @relation(fields: [supplierId], references: [id])
+  supplierId     String
+  title          String
+  description    String
+  imagesJson     String
+  baseCurrency   String
+  unitPrice      Decimal        @db.Decimal(10, 2)
+  moqQty         Int
+  maxQtyPerUser  Int            @default(10)
+  leadTimeDays   Int            @default(14)
+  isActive       Boolean        @default(true)
+  sourcePlatform SourcePlatform @default(ALIBABA)
+  sourceUrl      String?
+  sourceNotes    String?
+  pool           Pool?
+  // Wishlist back-relations
+  wishlistItems  Wishlist[]
+  createdAt      DateTime       @default(now())
+}
+
+/// Simple persistent chat models
+model Conversation {
+  id        String   @id @default(cuid())
+  title     String?
+  company   String?
+  avatarUrl String?
+  preview   String?
+  updatedAt DateTime @default(now())
+  createdAt DateTime @default(now())
+
+  messages     Message[]
+  participants ConversationParticipant[]
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  conversationId String
+  // Legacy/simple display direction; prefer senderUserId for real auth
+  sender         String?
+  senderUser     User?        @relation(fields: [senderUserId], references: [id])
+  senderUserId   String?
+  text           String
+  createdAt      DateTime     @default(now())
+
+  @@index([conversationId, createdAt])
+  @@index([senderUserId])
+}
+
+model ConversationParticipant {
+  id             String       @id @default(cuid())
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  conversationId String
+  user           User         @relation(fields: [userId], references: [id])
+  userId         String
+  role           String?
+  lastReadAt     DateTime?
+  createdAt      DateTime     @default(now())
+
+  @@unique([conversationId, userId])
+  @@index([userId])
+}
+
+/// Cache of external marketplace listings (Alibaba/1688/Made-in-China/IndiaMART) for fast reuse
+model ExternalListingCache {
+  id          String         @id @default(cuid())
+  platform    SourcePlatform
+  url         String         @unique
+  title       String
+  image       String?
+  priceRaw    String?
+  currency    String?
+  priceMin    Float?
+  priceMax    Float?
+  moqRaw      String?
+  moq         Int?
+  ordersRaw   String?
+  ratingRaw   String?
+  storeName   String?
+  description String?
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  // Back-rel
+  searchItems ListingSearchItem[]
+
+  @@index([platform])
+}
+
+/// Stores a concrete search result set for a (q, platform, filters) so we can page quickly from DB
+model ListingSearch {
+  id          String   @id @default(cuid())
+  q           String
+  platform    String // 'ALL' or specific platform key
+  filtersJson String? // serialized filter params used
+  total       Int
+  createdAt   DateTime @default(now())
+
+  items ListingSearchItem[]
+
+  @@index([q, platform, createdAt])
+}
+
+model ListingSearchItem {
+  id        String               @id @default(cuid())
+  search    ListingSearch        @relation(fields: [searchId], references: [id])
+  searchId  String
+  listing   ExternalListingCache @relation(fields: [listingId], references: [id])
+  listingId String
+  position  Int
+
+  @@unique([searchId, position])
+  @@index([listingId])
+}
+
+/// Your own curated/ingested catalogue for instant category/search pages
+model SavedListing {
+  id              String         @id @default(cuid())
+  platform        SourcePlatform
+  url             String         @unique
+  title           String
+  image           String?
+  priceRaw        String?
+  priceMin        Float?
+  priceMax        Float?
+  currency        String?
+  moqRaw          String?
+  moq             Int?
+  storeName       String?
+  description     String?
+  categories      String[] // category keys (from CategoryDropdown)
+  terms           String[] // search terms/synonyms for this item
+  ratingRaw       String?
+  ordersRaw       String?
+  // Cached product detail payload and freshness timestamp
+  detailJson      Json?
+  detailUpdatedAt DateTime?
+  // Best-effort scrape quality indicator (not required; add via migration)
+  lastScrapeStatus ScrapeStatus?
+  // Product view tracking
+  productViews    ProductView[]
+  // Wishlist back-relations
+  wishlistItems   Wishlist[]
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([platform])
+  @@index([title])
+}
+
+/// Independent storage for export.indiamart.com discovered categories (does not reference other models)
+model ExportCategory {
+  id          String   @id @default(cuid())
+  label       String
+  url         String   @unique
+  parentLabel String?
+  depth       Int      @default(0)
+  itemCount   Int?
+  hash        String
+  firstSeen   DateTime @default(now())
+  lastSeen    DateTime @updatedAt
+
+  @@index([hash])
+}
+
+/// User-facing alerts/messages shown in Messages > Alerts
+model Alert {
+  id        String      @id @default(cuid())
+  user      User        @relation(fields: [userId], references: [id])
+  userId    String
+  type      AlertType
+  title     String
+  body      String
+  link      String?
+  status    AlertStatus @default(UNREAD)
+  // Admin triage fields (optional; used by admin dashboard)
+  triageStatus AlertTriageStatus @default(OPEN)
+  adminNotes   String?
+  assignee     User?             @relation("AlertAssignee", fields: [assigneeId], references: [id])
+  assigneeId   String?
+  priority     Boolean?          // Optional priority flag in addition to [PRIORITY] text tag
+  resolvedAt   DateTime?
+  archivedAt   DateTime?
+  updatedAt    DateTime          @updatedAt
+  timestamp DateTime    @default(now())
+
+  @@index([userId, status, timestamp])
+  @@index([userId, type, timestamp])
+  @@index([triageStatus, timestamp])
+}
+
+/// Push tokens for web/mobile notifications
+model PushToken {
+  id         String   @id @default(cuid())
+  user       User     @relation(fields: [userId], references: [id])
+  userId     String
+  token      String   @unique
+  platform   String   @default("web") // web | ios | android
+  userAgent  String?
+  createdAt  DateTime @default(now())
+  lastSeenAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+/// Product view history tracking
+model ProductView {
+  id              String   @id @default(cuid())
+  user            User?    @relation(fields: [userId], references: [id])
+  userId          String?
+  savedListing    SavedListing? @relation(fields: [savedListingId], references: [id])
+  savedListingId  String?
+  productTitle    String
+  productImage    String?
+  productUrl      String
+  viewedAt        DateTime @default(now())
+  
+  @@index([userId, viewedAt])
+  @@index([savedListingId])
+}
+
+/// Wishlist/Favorites for users
+model Wishlist {
+  id              String   @id @default(cuid())
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId          String
+  savedListing    SavedListing? @relation(fields: [savedListingId], references: [id], onDelete: Cascade)
+  savedListingId  String?
+  product         Product? @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId       String?
+  // Cache product details for quick display
+  productTitle    String
+  productImage    String?
+  productUrl      String
+  productPrice    String?
+  productMoq      String?
+  platform        String?
+  notes           String?  // User's personal notes on this item
+  createdAt       DateTime @default(now())
+  
+  @@unique([userId, savedListingId])
+  @@unique([userId, productId])
+  @@index([userId, createdAt])
+}

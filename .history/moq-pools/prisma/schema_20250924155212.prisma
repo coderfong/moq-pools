@@ -1,0 +1,44 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role{
+	BUYER
+	ADMIN
+	SUPPLIER
+}
+
+enum PoolStatus{
+	OPEN
+	LOCKED
+	ORDER_PLACED
+	FULFILLING
+	FULFILLED
+	FAILED
+	CANCELLED
+}
+
+enum PayMethod{
+	STRIPE
+	BANK_TRANSFER
+}
+
+enum PayStatus{
+	PENDING
+	REQUIRES_ACTION
+	PAID
+	REFUNDED
+	FAILED
+}
+
+enum ShipStatus{
+	LABEL_CREATED
+	IN_TRANSIT
+	DELIVERED
+	EXCEPTION
+}

@@ -1,0 +1,1265 @@
+{
+  "generatedAt": "2025-10-05T23:20:56.103Z",
+  "seeds": [
+    "Hospital Linen",
+    "Medical Scrub",
+    "Medical Gloves",
+    "Surgical Drapes",
+    "IV Cannula",
+    "Disposable Syringe"
+  ],
+  "results": {
+    "Hospital Linen": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss=Hospital+Linen"
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "Hospital Linen",
+        "url": "https://export.indiamart.com/search.php?ss=Hospital+Linen"
+      },
+      {
+        "label": "Hospital Bed Sheet",
+        "url": "https://export.indiamart.com/search.php?ss=Hospital+Bed+Sheet"
+      },
+      {
+        "label": "Hospital Curtain",
+        "url": "https://export.indiamart.com/search.php?ss=Hospital+Curtain"
+      },
+      {
+        "label": "Surgical Dressing Kit",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Dressing+Kit"
+      },
+      {
+        "label": "Medical Clothing",
+        "url": "https://export.indiamart.com/search.php?ss=Medical+Clothing"
+      },
+      {
+        "label": "Patient Gowns",
+        "url": "https://export.indiamart.com/search.php?ss=Patient+Gowns"
+      },
+      {
+        "label": "Mackintosh Sheeting",
+        "url": "https://export.indiamart.com/search.php?ss=Mackintosh+Sheeting"
+      },
+      {
+        "label": "Liposuction Compression Garment",
+        "url": "https://export.indiamart.com/search.php?ss=Liposuction+Compression+Garment"
+      },
+      {
+        "label": "Global Linen Company",
+        "url": "https://export.indiamart.com/company/globallinencompany/"
+      },
+      {
+        "label": "Ara India",
+        "url": "https://export.indiamart.com/company/araindia/"
+      },
+      {
+        "label": "Khli Export Private Limited",
+        "url": "https://export.indiamart.com/company/khliexportprivatelimited-newdelhi/"
+      },
+      {
+        "label": "Medi Karma (Unit Of Kansons Overseas Limited)",
+        "url": "https://export.indiamart.com/company/medikarma/"
+      },
+      {
+        "label": "Medi Care",
+        "url": "https://export.indiamart.com/company/medicare-newdelhi/"
+      },
+      {
+        "label": "TVL. B & B Merchandising",
+        "url": "https://export.indiamart.com/company/bbmerchandising/"
+      },
+      {
+        "label": "Fairbizps",
+        "url": "https://export.indiamart.com/company/fairbizps/"
+      },
+      {
+        "label": "Central India Fabrics",
+        "url": "https://export.indiamart.com/company/central-india-fabrics/"
+      },
+      {
+        "label": "Neelkanth Ortho Dent Private Limited",
+        "url": "https://export.indiamart.com/company/neelkanthorthodent/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "Request for Quotation (RFQ)",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ],
+    "Medical Scrub": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss=Medical+Scrub"
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "Medical Scrub",
+        "url": "https://export.indiamart.com/search.php?ss=Medical+Scrub"
+      },
+      {
+        "label": "Surgical Gown",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Gown"
+      },
+      {
+        "label": "Nurse Uniform",
+        "url": "https://export.indiamart.com/search.php?ss=Nurse+Uniform"
+      },
+      {
+        "label": "Scrub Suits",
+        "url": "https://export.indiamart.com/search.php?ss=Scrub+Suits"
+      },
+      {
+        "label": "Medical Apron",
+        "url": "https://export.indiamart.com/search.php?ss=Medical+Apron"
+      },
+      {
+        "label": "Hospital Uniforms",
+        "url": "https://export.indiamart.com/search.php?ss=Hospital+Uniforms"
+      },
+      {
+        "label": "Medical Clothing",
+        "url": "https://export.indiamart.com/search.php?ss=Medical+Clothing"
+      },
+      {
+        "label": "Hospital Staff Uniform",
+        "url": "https://export.indiamart.com/search.php?ss=Hospital+Staff+Uniform"
+      },
+      {
+        "label": "Gopesh Uniforms",
+        "url": "https://export.indiamart.com/company/gopesh-uniforms/"
+      },
+      {
+        "label": "Morni Fashions",
+        "url": "https://export.indiamart.com/company/morni-fashions/"
+      },
+      {
+        "label": "Ara India",
+        "url": "https://export.indiamart.com/company/araindia/"
+      },
+      {
+        "label": "Sudarshaan Impex",
+        "url": "https://export.indiamart.com/company/sudarshanimpexchennai/"
+      },
+      {
+        "label": "Medi Care",
+        "url": "https://export.indiamart.com/company/medicare-newdelhi/"
+      },
+      {
+        "label": "S S Enterprises",
+        "url": "https://export.indiamart.com/company/ssenterprises-mumbai-maharashtra/"
+      },
+      {
+        "label": "Pooja Enterprises",
+        "url": "https://export.indiamart.com/company/pooja-enterprises-chandigarh/"
+      },
+      {
+        "label": "Arvind Industries",
+        "url": "https://export.indiamart.com/company/arvind-industries-kota/"
+      },
+      {
+        "label": "Neu Micromed International Pvt. Ltd",
+        "url": "https://export.indiamart.com/company/micromed-international/"
+      },
+      {
+        "label": "Techfly Solution",
+        "url": "https://export.indiamart.com/company/techflysolution/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "Request for Quotation (RFQ)",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ],
+    "Medical Gloves": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss=Disposable+Gloves"
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "Disposable Gloves",
+        "url": "https://export.indiamart.com/search.php?ss=Disposable+Gloves"
+      },
+      {
+        "label": "Nitrile Gloves",
+        "url": "https://export.indiamart.com/search.php?ss=Nitrile+Gloves"
+      },
+      {
+        "label": "Surgical Gloves",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Gloves"
+      },
+      {
+        "label": "Examination Gloves",
+        "url": "https://export.indiamart.com/search.php?ss=Examination+Gloves"
+      },
+      {
+        "label": "Latex Gloves",
+        "url": "https://export.indiamart.com/search.php?ss=Latex+Gloves"
+      },
+      {
+        "label": "Hand Gloves",
+        "url": "https://export.indiamart.com/search.php?ss=Hand+Gloves"
+      },
+      {
+        "label": "Powder Free Gloves",
+        "url": "https://export.indiamart.com/search.php?ss=Powder+Free+Gloves"
+      },
+      {
+        "label": "Disposable Plastic Gloves",
+        "url": "https://export.indiamart.com/search.php?ss=Disposable+Plastic+Gloves"
+      },
+      {
+        "label": "Sri Vishnu Disposables Private Limited",
+        "url": "https://export.indiamart.com/company/sri-vishnu-industries/"
+      },
+      {
+        "label": "Phoenix Medical Technologies And Imports",
+        "url": "https://export.indiamart.com/company/phoenixmedicaltechnologies/"
+      },
+      {
+        "label": "Pal Surgical And Medical",
+        "url": "https://export.indiamart.com/company/pal-surgical-medical/"
+      },
+      {
+        "label": "Akshar Lifescience",
+        "url": "https://export.indiamart.com/company/akshar-lifescience/"
+      },
+      {
+        "label": "Cortex Products Solution Private Limited",
+        "url": "https://export.indiamart.com/company/cortex-products-solution/"
+      },
+      {
+        "label": "Bhaskar Enterprise",
+        "url": "https://export.indiamart.com/company/bhaskar-enterprise-gujarat/"
+      },
+      {
+        "label": "BR Biochem Life Sciences Private Limited",
+        "url": "https://export.indiamart.com/company/biochemlifesciences/"
+      },
+      {
+        "label": "Chris Merchant Private Limited",
+        "url": "https://export.indiamart.com/company/chris-merchant-limited/"
+      },
+      {
+        "label": "Aashirwad Pharma International Private Limited",
+        "url": "https://export.indiamart.com/company/aashirwad-pharma-international/"
+      },
+      {
+        "label": "Wrapper India",
+        "url": "https://export.indiamart.com/company/wrapperindia/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "Request for Quotation (RFQ)",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ],
+    "Surgical Drapes": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss=Surgical+Drapes"
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "Surgical Drapes",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Drapes"
+      },
+      {
+        "label": "Disposable Drapes",
+        "url": "https://export.indiamart.com/search.php?ss=Disposable+Drapes"
+      },
+      {
+        "label": "Ortho Pack",
+        "url": "https://export.indiamart.com/search.php?ss=Ortho+Pack"
+      },
+      {
+        "label": "Adhesive Drapes",
+        "url": "https://export.indiamart.com/search.php?ss=Adhesive+Drapes"
+      },
+      {
+        "label": "Surgical Gown",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Gown"
+      },
+      {
+        "label": "Surgical Disposables",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Disposables"
+      },
+      {
+        "label": "Surgical Dressing Kit",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Dressing+Kit"
+      },
+      {
+        "label": "Delivery Kit",
+        "url": "https://export.indiamart.com/search.php?ss=Delivery+Kit"
+      },
+      {
+        "label": "DP Tradelink",
+        "url": "https://export.indiamart.com/company/dptradelink/"
+      },
+      {
+        "label": "Advin Health Care",
+        "url": "https://export.indiamart.com/company/advinhealthcare/"
+      },
+      {
+        "label": "Royal International",
+        "url": "https://export.indiamart.com/company/royal-international/"
+      },
+      {
+        "label": "Ilika Inc",
+        "url": "https://export.indiamart.com/company/ilika-inc/"
+      },
+      {
+        "label": "Advix Medical",
+        "url": "https://export.indiamart.com/company/advix-medical/"
+      },
+      {
+        "label": "Microtrack Surgicals",
+        "url": "https://export.indiamart.com/company/micro-track-surgicals/"
+      },
+      {
+        "label": "Sri Vishnu Disposables Private Limited",
+        "url": "https://export.indiamart.com/company/sri-vishnu-industries/"
+      },
+      {
+        "label": "Radha Meditech",
+        "url": "https://export.indiamart.com/company/radha-meditech-mumbai/"
+      },
+      {
+        "label": "Blyce International LLP",
+        "url": "https://export.indiamart.com/company/blyceinternational-ahmedabad/"
+      },
+      {
+        "label": "Lalji International",
+        "url": "https://export.indiamart.com/company/lalji-international/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "Request for Quotation (RFQ)",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ],
+    "IV Cannula": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss=IV+Cannula"
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "IV Cannula",
+        "url": "https://export.indiamart.com/search.php?ss=IV+Cannula"
+      },
+      {
+        "label": "Surgical Dressing",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Dressing"
+      },
+      {
+        "label": "Infusion Sets",
+        "url": "https://export.indiamart.com/search.php?ss=Infusion+Sets"
+      },
+      {
+        "label": "Surgical Instruments",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Instruments"
+      },
+      {
+        "label": "Catheter",
+        "url": "https://export.indiamart.com/search.php?ss=Catheter"
+      },
+      {
+        "label": "Central Venous Catheters",
+        "url": "https://export.indiamart.com/search.php?ss=Central+Venous+Catheters"
+      },
+      {
+        "label": "Surgical Disposables",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Disposables"
+      },
+      {
+        "label": "Nasal Cannula",
+        "url": "https://export.indiamart.com/search.php?ss=Nasal+Cannula"
+      },
+      {
+        "label": "Angus Healthcare",
+        "url": "https://export.indiamart.com/company/angushealthcare/"
+      },
+      {
+        "label": "Vea Impex",
+        "url": "https://export.indiamart.com/company/veaimpex/"
+      },
+      {
+        "label": "Akshar Lifescience",
+        "url": "https://export.indiamart.com/company/akshar-lifescience/"
+      },
+      {
+        "label": "Varni Corporation",
+        "url": "https://export.indiamart.com/company/varni-corporation/"
+      },
+      {
+        "label": "Welox International",
+        "url": "https://export.indiamart.com/company/welox-international/"
+      },
+      {
+        "label": "Royal International",
+        "url": "https://export.indiamart.com/company/royal-international/"
+      },
+      {
+        "label": "Radiance Impex International",
+        "url": "https://export.indiamart.com/company/radianceimpexinternational/"
+      },
+      {
+        "label": "Khushbu Medical Agency",
+        "url": "https://export.indiamart.com/company/khushbumedicalagency-ahmedabad/"
+      },
+      {
+        "label": "Advix Medical",
+        "url": "https://export.indiamart.com/company/advix-medical/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "Request for Quotation (RFQ)",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ],
+    "Disposable Syringe": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss=Disposable+Syringe"
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "Disposable Syringe",
+        "url": "https://export.indiamart.com/search.php?ss=Disposable+Syringe"
+      },
+      {
+        "label": "Medical Syringes",
+        "url": "https://export.indiamart.com/search.php?ss=Medical+Syringes"
+      },
+      {
+        "label": "Insulin Syringe",
+        "url": "https://export.indiamart.com/search.php?ss=Insulin+Syringe"
+      },
+      {
+        "label": "Dispovan Syringe",
+        "url": "https://export.indiamart.com/search.php?ss=Dispovan+Syringe"
+      },
+      {
+        "label": "Syringes",
+        "url": "https://export.indiamart.com/search.php?ss=Syringes"
+      },
+      {
+        "label": "Medical Needles",
+        "url": "https://export.indiamart.com/search.php?ss=Medical+Needles"
+      },
+      {
+        "label": "Surgical Disposables",
+        "url": "https://export.indiamart.com/search.php?ss=Surgical+Disposables"
+      },
+      {
+        "label": "Hypodermic Syringes",
+        "url": "https://export.indiamart.com/search.php?ss=Hypodermic+Syringes"
+      },
+      {
+        "label": "Raj Biosis Private Limited",
+        "url": "https://export.indiamart.com/company/rajbiosis/"
+      },
+      {
+        "label": "Varni Corporation",
+        "url": "https://export.indiamart.com/company/varni-corporation/"
+      },
+      {
+        "label": "Fourway Pharma LLP",
+        "url": "https://export.indiamart.com/company/fourway-pharma-llp/"
+      },
+      {
+        "label": "Globalstar Company",
+        "url": "https://export.indiamart.com/company/globalstar-company/"
+      },
+      {
+        "label": "Radiance Impex International",
+        "url": "https://export.indiamart.com/company/radianceimpexinternational/"
+      },
+      {
+        "label": "Welox International",
+        "url": "https://export.indiamart.com/company/welox-international/"
+      },
+      {
+        "label": "Sky Impex",
+        "url": "https://export.indiamart.com/company/sky-impex-nagpur/"
+      },
+      {
+        "label": "Divine Enterprises",
+        "url": "https://export.indiamart.com/company/divine-enterprises-nagpurmaharashtra/"
+      },
+      {
+        "label": "Shashwat Pharma",
+        "url": "https://export.indiamart.com/company/shashwat-pharma-rajkot/"
+      },
+      {
+        "label": "Chris Merchant Private Limited",
+        "url": "https://export.indiamart.com/company/chris-merchant-limited/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "Request for Quotation (RFQ)",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ],
+    "Why Trust Us?": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ],
+    "Get Quote": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss=Quotation+Management+Software"
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "Quotation Management Software",
+        "url": "https://export.indiamart.com/search.php?ss=Quotation+Management+Software"
+      },
+      {
+        "label": "Software Development Services",
+        "url": "https://export.indiamart.com/search.php?ss=Software+Development+Services"
+      },
+      {
+        "label": "Double Hydrant Valve",
+        "url": "https://export.indiamart.com/search.php?ss=Double+Hydrant+Valve"
+      },
+      {
+        "label": "Application Development Service",
+        "url": "https://export.indiamart.com/search.php?ss=Application+Development+Service"
+      },
+      {
+        "label": "Transfer Pricing Service",
+        "url": "https://export.indiamart.com/search.php?ss=Transfer+Pricing+Service"
+      },
+      {
+        "label": "Tour Packages",
+        "url": "https://export.indiamart.com/search.php?ss=Tour+Packages"
+      },
+      {
+        "label": "Mobile Recharge Services",
+        "url": "https://export.indiamart.com/search.php?ss=Mobile+Recharge+Services"
+      },
+      {
+        "label": "Billing Software",
+        "url": "https://export.indiamart.com/search.php?ss=Billing+Software"
+      },
+      {
+        "label": "Dreamwarez",
+        "url": "https://export.indiamart.com/company/dreamwarez/"
+      },
+      {
+        "label": "Taksh IT Solutions Private Limited",
+        "url": "https://export.indiamart.com/company/taksh-it-solutions/"
+      },
+      {
+        "label": "Sharvaya Infotech",
+        "url": "https://export.indiamart.com/company/sharvaya-infotech/"
+      },
+      {
+        "label": "HMRC Industry Private Limited",
+        "url": "https://export.indiamart.com/company/hmrc-industry/"
+      },
+      {
+        "label": "Brownsofts Solutions Private Limited",
+        "url": "https://export.indiamart.com/company/brownsofts-solutions/"
+      },
+      {
+        "label": "ADD Pearlinfo Pvt Ltd",
+        "url": "https://export.indiamart.com/company/addpearlinfo/"
+      },
+      {
+        "label": "Digital Communique Private Limited",
+        "url": "https://export.indiamart.com/company/digital-communique/"
+      },
+      {
+        "label": "SMG Info Solution Pvt. Ltd.",
+        "url": "https://export.indiamart.com/company/smginfosolution-gujarat/"
+      },
+      {
+        "label": "Perennial Code IT Consultants Private Limited",
+        "url": "https://export.indiamart.com/company/perennialcode-itconsultants/"
+      },
+      {
+        "label": "Infotronicx Private Limited",
+        "url": "https://export.indiamart.com/company/dupatinfotronicx/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "Request for Quotation (RFQ)",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ],
+    "Join Now": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss=Now+Foods+Supplement"
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "Now Foods Supplement",
+        "url": "https://export.indiamart.com/search.php?ss=Now+Foods+Supplement"
+      },
+      {
+        "label": "Certification Services",
+        "url": "https://export.indiamart.com/search.php?ss=Certification+Services"
+      },
+      {
+        "label": "Piece End Joining Machine",
+        "url": "https://export.indiamart.com/search.php?ss=Piece+End+Joining+Machine"
+      },
+      {
+        "label": "Air Ticket Booking",
+        "url": "https://export.indiamart.com/search.php?ss=Air+Ticket+Booking"
+      },
+      {
+        "label": "Business Consultant",
+        "url": "https://export.indiamart.com/search.php?ss=Business+Consultant"
+      },
+      {
+        "label": "Live Chat Support",
+        "url": "https://export.indiamart.com/search.php?ss=Live+Chat+Support"
+      },
+      {
+        "label": "Dietary Supplements",
+        "url": "https://export.indiamart.com/search.php?ss=Dietary+Supplements"
+      },
+      {
+        "label": "Protein Supplement",
+        "url": "https://export.indiamart.com/search.php?ss=Protein+Supplement"
+      },
+      {
+        "label": "Foodsure (A Brand Of Bins & Services)",
+        "url": "https://export.indiamart.com/company/bins-services-foodsure/"
+      },
+      {
+        "label": "Kalasanskruti Education Training And Consultancy Private Limited",
+        "url": "https://export.indiamart.com/company/kalasanskruti-education-consultancy/"
+      },
+      {
+        "label": "Krishna Perfumery And Cosmetics",
+        "url": "https://export.indiamart.com/company/krishna-perfumery/"
+      },
+      {
+        "label": "Travelpomo India (OPC) Private Limited",
+        "url": "https://export.indiamart.com/company/travelpomoindia-opc/"
+      },
+      {
+        "label": "Niir Project Consultancy Services",
+        "url": "https://export.indiamart.com/company/niirprojectconsultancyservices/"
+      },
+      {
+        "label": "CK And Co.",
+        "url": "https://export.indiamart.com/company/ckco/"
+      },
+      {
+        "label": "Accredium Global Compliance Services LLP",
+        "url": "https://export.indiamart.com/company/accrediumglobalcomplianceservices/"
+      },
+      {
+        "label": "Synergy Therapeutics",
+        "url": "https://export.indiamart.com/company/synergy-therapeutics/"
+      },
+      {
+        "label": "Syngenta India Ltd.",
+        "url": "https://export.indiamart.com/company/syngenta/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "Request for Quotation (RFQ)",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ],
+    "Top Export Countries": [
+      {
+        "label": "Why Trust Us?",
+        "url": "https://export.indiamart.com/trustworthiness/"
+      },
+      {
+        "label": "Get Quote",
+        "url": "https://export.indiamart.com/get-quote/?ss=Export+Consultants"
+      },
+      {
+        "label": "Join Now",
+        "url": "https://export.indiamart.com/#"
+      },
+      {
+        "label": "Top Export Countries",
+        "url": "https://export.indiamart.com/country/"
+      },
+      {
+        "label": "Singapore Trade Insights",
+        "url": "https://export.indiamart.com/country/singapore-exports/"
+      },
+      {
+        "label": "Export Consultants",
+        "url": "https://export.indiamart.com/search.php?ss=Export+Consultants"
+      },
+      {
+        "label": "Export Import Code Number Services",
+        "url": "https://export.indiamart.com/search.php?ss=Export+Import+Code+Number+Services"
+      },
+      {
+        "label": "Tan Brown Granite",
+        "url": "https://export.indiamart.com/search.php?ss=Tan+Brown+Granite"
+      },
+      {
+        "label": "Import Consultants",
+        "url": "https://export.indiamart.com/search.php?ss=Import+Consultants"
+      },
+      {
+        "label": "Custom Clearing Service",
+        "url": "https://export.indiamart.com/search.php?ss=Custom+Clearing+Service"
+      },
+      {
+        "label": "Freight Forwarding Services",
+        "url": "https://export.indiamart.com/search.php?ss=Freight+Forwarding+Services"
+      },
+      {
+        "label": "Import Clearance Services",
+        "url": "https://export.indiamart.com/search.php?ss=Import+Clearance+Services"
+      },
+      {
+        "label": "Air Cargo Service",
+        "url": "https://export.indiamart.com/search.php?ss=Air+Cargo+Service"
+      },
+      {
+        "label": "S.S Tax Solutions",
+        "url": "https://export.indiamart.com/company/ss-tax-solutions/"
+      },
+      {
+        "label": "Krishnavi India",
+        "url": "https://export.indiamart.com/company/krishnavi-india/"
+      },
+      {
+        "label": "Global Freight Mart India",
+        "url": "https://export.indiamart.com/company/globalfreightmartindia/"
+      },
+      {
+        "label": "Jackson Machine",
+        "url": "https://export.indiamart.com/company/jacksonmachine/"
+      },
+      {
+        "label": "Parshwa Jewellery",
+        "url": "https://export.indiamart.com/company/parshwa-jewellery-mumbai/"
+      },
+      {
+        "label": "K B Group",
+        "url": "https://export.indiamart.com/company/kbgroup/"
+      },
+      {
+        "label": "Bagayat Enterprises",
+        "url": "https://export.indiamart.com/company/bagayatenterprises/"
+      },
+      {
+        "label": "Kevay Stones Private Limited",
+        "url": "https://export.indiamart.com/company/kevay-stones-pvt-ltd/"
+      },
+      {
+        "label": "Shree Ram Impax",
+        "url": "https://export.indiamart.com/company/shreeramimpax/"
+      },
+      {
+        "label": "Jai Mata Granites Exports",
+        "url": "https://export.indiamart.com/company/jaimatagranitesexports/"
+      },
+      {
+        "label": "About Us",
+        "url": "https://export.indiamart.com/"
+      },
+      {
+        "label": "Press Section",
+        "url": "https://corporate.indiamart.com/category/indiamart-in-news/"
+      },
+      {
+        "label": "Customer Care",
+        "url": "https://corporate.indiamart.com/customer-care-services/"
+      },
+      {
+        "label": "Request for Quotation (RFQ)",
+        "url": "https://export.indiamart.com/get-quote/?ss="
+      },
+      {
+        "label": "How IndiaMART Works?",
+        "url": "https://export.indiamart.com/trustworthiness/#how-works"
+      },
+      {
+        "label": "India-USA Trade",
+        "url": "https://export.indiamart.com/country/usa-exports/"
+      },
+      {
+        "label": "India-China Trade",
+        "url": "https://export.indiamart.com/country/china-exports/"
+      },
+      {
+        "label": "India-UAE Trade",
+        "url": "https://export.indiamart.com/country/uae-exports/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "https://www.indiamart.com/terms-of-use.html"
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "https://www.indiamart.com/privacy-policy.html"
+      }
+    ]
+  }
+}
