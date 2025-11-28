@@ -1340,9 +1340,9 @@ export default async function Products({ searchParams }: { searchParams: { platf
                       {/* Enhanced gradient glow on hover */}
                       <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 via-amber-400 to-orange-400 rounded-2xl blur-sm opacity-0 group-hover:opacity-40 transition-all duration-500"></div>
                       
-                      <div className="relative rounded-2xl overflow-hidden bg-white/98 backdrop-blur-sm border-2 border-orange-200/50 shadow-lg hover:shadow-2xl hover:shadow-orange-500/15 transition-all duration-300 hover:-translate-y-2 h-[540px] flex flex-col">
+                      <div className="relative rounded-2xl overflow-hidden bg-white/98 backdrop-blur-sm border-2 border-orange-200/50 shadow-lg hover:shadow-2xl hover:shadow-orange-500/15 transition-all duration-300 hover:-translate-y-2 min-h-[600px] flex flex-col">
                       {/* Main clickable block - now goes to pool page */}
-                      <Link href={savedId ? `/pools/${savedId}` : (it.url || '#')} className="block flex-1 flex flex-col p-6">
+                      <Link href={savedId ? `/pools/${savedId}` : (it.url || '#')} className="block flex-1 flex flex-col p-6 pb-4">
                         {(() => {
                           // Avoid sleeves on ALL; never pass sleeves to Image
                           const isSeedish = (u?: string | null) => {
@@ -1366,7 +1366,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1280px) 33vw, (max-width: 1536px) 25vw, 20vw"
                                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                                 referrerPolicy="no-referrer"
-                                unoptimized={src.startsWith('/cache/')}
+                                unoptimized
                                 priority={false}
                               />
                               {/* Platform badge with logo */}
@@ -1509,7 +1509,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                         </div>
                       </Link>
                       {/* Enhanced CTA row (sibling to avoid nested links) */}
-                      <div className="p-6 pt-0 flex flex-wrap items-center gap-3 mt-auto border-t border-gray-100/60">
+                      <div className="p-6 pt-4 flex flex-wrap items-center gap-3 mt-auto border-t border-gray-100/60">
                         <a 
                           href={it.url || '#'} 
                           target="_blank" 
