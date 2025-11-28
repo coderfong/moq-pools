@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest) {
   try {
     if (!prisma) return NextResponse.json({ pools: [] }, { status: 503 });
@@ -28,11 +30,32 @@ export async function GET(req: NextRequest) {
       take,
     });
 
+    // Collect sourceUrls to batch-fetch SavedListings for image upgrade
+    const sourceUrls = items.map((p: any) => p.sourceUrl).filter((u: any) => !!u);
+    const savedListingsMap = new Map<string, string>();
+    if (sourceUrls.length > 0) {
+      const savedListings = await db.savedListing.findMany({
+        where: { url: { in: sourceUrls } },
+        select: { url: true, image: true }
+      });
+      for (const sl of savedListings) {
+        if (sl.image && /^\/cache\//i.test(sl.image)) {
+          savedListingsMap.set(sl.url, sl.image);
+        }
+      }
+    }
+
     const pools = items
       .filter((p: any) => p.pool)
       .map((p: any) => {
         let img: string | null = null;
         try { img = (JSON.parse(p.imagesJson || '[]') as string[])[0] || null; } catch { img = null; }
+        
+        // Upgrade /seed/ placeholder to real cached image from SavedListing
+        if (img && /^\/seed\//i.test(img) && p.sourceUrl && savedListingsMap.has(p.sourceUrl)) {
+          img = savedListingsMap.get(p.sourceUrl)!;
+        }
+        
         return {
           poolId: p.pool.id as string,
           productId: p.id as string,
