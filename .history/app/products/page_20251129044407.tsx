@@ -1492,7 +1492,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                           } catch {
                             // Fallback UI if anything goes wrong
                             return (
-                              <div className="h-16 mb-3 space-y-3">
+                              <div className="h-16 mb-5 space-y-3">
                                 <div className="flex justify-between text-xs">
                                   <span className="text-gray-600 font-bold">Pool Progress</span>
                                   <span className="font-extrabold bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">0/100</span>

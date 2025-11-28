@@ -1356,7 +1356,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                           const best = candidates.find(u => !!u && !isSeedish(u) && !isClearlyNonProductImage(u) && !(u.startsWith('/cache/') && isBadImageHashFromPath(u)));
                           const src = best || '/seed/sleeves.jpg';
                           return (
-                            <div className="relative h-52 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 rounded-xl mb-3 overflow-hidden border-2 border-orange-100/60 shadow-sm">
+                            <div className="relative h-52 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 rounded-xl mb-5 overflow-hidden border-2 border-orange-100/60 shadow-sm">
                               {/* Enhanced hover gradient overlay */}
                               <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                               <Image
@@ -1385,8 +1385,8 @@ export default async function Products({ searchParams }: { searchParams: { platf
                             </div>
                           );
                         })()}
-                        <div className="h-5 text-xs text-gray-500 truncate mb-2 font-medium flex items-center" title={it.storeName || ''}>{it.storeName || 'Marketplace Store'}</div>
-                        <div className="h-16 font-bold text-sm text-gray-900 line-clamp-3 mb-3 leading-tight overflow-hidden" title={title}>{title || 'See listing'}</div>
+                        <div className="h-5 text-xs text-gray-500 truncate mb-4 font-medium flex items-center" title={it.storeName || ''}>{it.storeName || 'Marketplace Store'}</div>
+                        <div className="h-16 font-bold text-sm text-gray-900 line-clamp-3 mb-5 leading-tight overflow-hidden" title={title}>{title || 'See listing'}</div>
                         {(() => {
                           const primary = it.price && it.price.toString().trim().length ? it.price : '';
                           let display = primary;
@@ -1440,7 +1440,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                           }
                           const soldText = displayOrdersAsSold((it as any)?.orders);
                           return (
-                            <div className="h-10 flex items-baseline gap-2 mb-3">
+                            <div className="h-10 flex items-baseline gap-2 mb-5">
                               <div className="text-xl font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent">
                                 {display ? `${display}` : 'See listing'}
                               </div>
@@ -1476,7 +1476,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                             
                             const percent = target > 0 ? Math.max(0, Math.min(100, Math.round((current / target) * 100))) : 0;
                             return (
-                              <div className="h-16 mb-3 space-y-3">
+                              <div className="h-16 mb-5 space-y-3">
                                 <div className="flex justify-between text-xs">
                                   <span className="text-gray-600 font-bold">Pool Progress</span>
                                   <span className="font-extrabold bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">{formatNumberEN(current)}/{formatNumberEN(target)}</span>
@@ -1492,7 +1492,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                           } catch {
                             // Fallback UI if anything goes wrong
                             return (
-                              <div className="h-16 mb-3 space-y-3">
+                              <div className="h-16 mb-5 space-y-3">
                                 <div className="flex justify-between text-xs">
                                   <span className="text-gray-600 font-bold">Pool Progress</span>
                                   <span className="font-extrabold bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">0/100</span>
@@ -1504,12 +1504,12 @@ export default async function Products({ searchParams }: { searchParams: { platf
                             );
                           }
                         })()}
-                        <div className="h-10 mb-2 flex items-center">
+                        <div className="h-10 mb-4 flex items-center">
                           <SyncedCountdown size="md" variant="accent" showIcon={true} />
                         </div>
                       </Link>
                       {/* Enhanced CTA row (sibling to avoid nested links) */}
-                      <div className="p-6 pt-4 flex flex-wrap items-center gap-3 mt-auto border-t border-gray-100/60">
+                      <div className="p-6 pt-0 flex flex-wrap items-center gap-3 mt-auto border-t border-gray-100/60">
                         <a 
                           href={it.url || '#'} 
                           target="_blank" 
