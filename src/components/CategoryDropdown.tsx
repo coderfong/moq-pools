@@ -44,6 +44,21 @@ export default function CategoryDropdown({ platform, currentQuery }: { platform:
         </div>
       </button>
 
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden fixed inset-0 z-50 bg-black/50" onClick={() => setOpen(false)}>
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-white overflow-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="sticky top-0 z-10 flex items-center justify-between px-4 py-3 border-b border-gray-200 bg-white">
+              <span className="text-lg font-bold text-gray-900">Categories</span>
+              <button onClick={() => setOpen(false)} className="p-2 text-gray-600 hover:text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+            <MegaCategoryMenu platform={platform} onSelect={() => setOpen(false)} />
+          </div>
+        </div>
+      )}
+
       {/* Desktop mega menu (shared across platforms) */}
       {open && (
         <div className="hidden md:block absolute z-20 mt-2 w-[min(90vw,900px)] max-h-[70vh] overflow-auto rounded-2xl border border-gray-200 bg-white/95 backdrop-blur shadow-xl">
