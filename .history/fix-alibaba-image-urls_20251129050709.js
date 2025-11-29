@@ -7,14 +7,11 @@
 const { PrismaClient } = require('./prisma/generated/client4');
 const prisma = new PrismaClient();
 
-async function fixAlibabaImageUrls(dryRun = false) {
+async function fixAlibabaImageUrls() {
   try {
     console.log('='.repeat(80));
-    console.log(dryRun ? 'DRY RUN: PREVIEWING ALIBABA IMAGE URL FIXES' : 'FIXING ALIBABA IMAGE URLS');
+    console.log('FIXING ALIBABA IMAGE URLS');
     console.log('='.repeat(80));
-    if (dryRun) {
-      console.log('⚠️  DRY RUN MODE: No database changes will be made\n');
-    }
     
     // Find all Alibaba listings with /cache/ images
     const cacheListings = await prisma.savedListing.findMany({
@@ -60,14 +57,14 @@ async function fixAlibabaImageUrls(dryRun = false) {
           
           // Priority: Get single best quality image from gallery
           if (detail.gallery && detail.gallery.length > 0) {
-            // Priority 1: Find existing 960x960 quality images (best quality from carousel)
+            // Priority 1: Find 960x960 quality images (best quality from carousel)
             originalUrl = detail.gallery.find(url => 
               url.includes('alicdn.com') && 
               url.includes('_960x960') &&
               !url.includes('tps-960-102') // Skip badges/watermarks
             );
             
-            // Priority 2: Find original full-size images (keep as-is, don't modify)
+            // Priority 2: Find original full-size images (no size suffix before .jpg)
             if (!originalUrl) {
               originalUrl = detail.gallery.find(url => 
                 url.includes('alicdn.com') && 
@@ -77,11 +74,11 @@ async function fixAlibabaImageUrls(dryRun = false) {
               );
             }
             
-            // Priority 3: Find large resolution images (600x600, 350x350)
+            // Priority 3: Find 350x350 or 600x600 images
             if (!originalUrl) {
               originalUrl = detail.gallery.find(url => 
                 url.includes('alicdn.com') && 
-                (url.includes('_600x600') || url.includes('_350x350')) &&
+                (url.includes('_350x350') || url.includes('_600x600')) &&
                 !url.includes('tps-960-102')
               );
             }
@@ -105,15 +102,15 @@ async function fixAlibabaImageUrls(dryRun = false) {
             originalUrl = detail.heroImage;
           }
           
-          // Only upgrade small thumbnails to larger sizes (these variants should exist)
+          // Upgrade thumbnail URLs to better quality if needed
           if (originalUrl) {
             if (originalUrl.includes('_80x80')) {
-              // Upgrade to 350x350 (more reliable than 960x960)
-              originalUrl = originalUrl.replace('_80x80', '_350x350');
+              // Try to get 960x960 first, fallback to 350x350
+              originalUrl = originalUrl.replace('_80x80', '_960x960q80');
             } else if (originalUrl.includes('_50x50')) {
-              originalUrl = originalUrl.replace('_50x50', '_350x350');
+              originalUrl = originalUrl.replace('_50x50', '_960x960q80');
             } else if (originalUrl.includes('_120x120')) {
-              originalUrl = originalUrl.replace('_120x120', '_350x350');
+              originalUrl = originalUrl.replace('_120x120', '_960x960q80');
             }
             
             // Ensure https protocol
@@ -130,19 +127,14 @@ async function fixAlibabaImageUrls(dryRun = false) {
           continue;
         }
         
-        if (dryRun) {
-          console.log(`  ✅ Would update to: ${originalUrl.substring(0, 80)}`);
-          fixed++;
-        } else {
-          // Update database with original URL
-          await prisma.savedListing.update({
-            where: { id: listing.id },
-            data: { image: originalUrl }
-          });
-          
-          console.log(`  ✅ Fixed: ${originalUrl.substring(0, 80)}`);
-          fixed++;
-        }
+        // Update database with original URL
+        await prisma.savedListing.update({
+          where: { id: listing.id },
+          data: { image: originalUrl }
+        });
+        
+        console.log(`  ✅ Fixed: ${originalUrl.substring(0, 80)}`);
+        fixed++;
         
         // Small delay to avoid overwhelming the database
         await new Promise(resolve => setTimeout(resolve, 50));
@@ -169,12 +161,5 @@ async function fixAlibabaImageUrls(dryRun = false) {
   }
 }
 
-// Parse command line arguments
-const args = process.argv.slice(2);
-const dryRun = args.includes('--dry-run') || args.includes('-d');
-
 // Run the script
-if (dryRun) {
-  console.log('Running in DRY RUN mode. Use without --dry-run to apply changes.\n');
-}
-fixAlibabaImageUrls(dryRun);
+fixAlibabaImageUrls();

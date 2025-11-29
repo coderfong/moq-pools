@@ -313,24 +313,24 @@ export default function Hero() {
               </div>
 
               {/* Enhanced Stats with counters */}
-              <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-5 pt-3 sm:pt-4">
-                <div className="group bg-white/90 backdrop-blur-md px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
-                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+              <div className="flex flex-wrap items-center gap-3 md:gap-5 pt-4">
+                <div className="group bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
+                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                     $2.5M+
                   </div>
-                  <div className="text-[10px] sm:text-xs text-gray-600 font-semibold uppercase tracking-wide">Saved Together</div>
+                  <div className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Saved Together</div>
                 </div>
-                <div className="group bg-white/90 backdrop-blur-md px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
-                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+                <div className="group bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
+                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                     500+
                   </div>
-                  <div className="text-[10px] sm:text-xs text-gray-600 font-semibold uppercase tracking-wide">Active Pools</div>
+                  <div className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Active Pools</div>
                 </div>
-                <div className="group bg-white/90 backdrop-blur-md px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
-                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+                <div className="group bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
+                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                     98%
                   </div>
-                  <div className="text-[10px] sm:text-xs text-gray-600 font-semibold uppercase tracking-wide">Success Rate</div>
+                  <div className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Success Rate</div>
                 </div>
               </div>
             </div>

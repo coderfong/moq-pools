@@ -44,13 +44,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
-      <body className="min-h-screen font-display bg-base text-ink">
+      <body className="min-h-screen font-display bg-base text-ink overflow-x-hidden max-w-full">
         <PlatformProviders>
           <AuthSessionProvider>
             <Navbar />
             <RevealRoot />
             {/* Full-bleed main with responsive gutters; remove vertical padding to keep hero flush */}
-            <main className="w-full">{children}</main>
+            <main className="w-full max-w-full px-0 md:px-0 xl:px-0">{children}</main>
             <Footer />
             <CompareModal />
           </AuthSessionProvider>

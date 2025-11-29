@@ -130,19 +130,14 @@ async function fixAlibabaImageUrls(dryRun = false) {
           continue;
         }
         
-        if (dryRun) {
-          console.log(`  ✅ Would update to: ${originalUrl.substring(0, 80)}`);
-          fixed++;
-        } else {
-          // Update database with original URL
-          await prisma.savedListing.update({
-            where: { id: listing.id },
-            data: { image: originalUrl }
-          });
-          
-          console.log(`  ✅ Fixed: ${originalUrl.substring(0, 80)}`);
-          fixed++;
-        }
+        // Update database with original URL
+        await prisma.savedListing.update({
+          where: { id: listing.id },
+          data: { image: originalUrl }
+        });
+        
+        console.log(`  ✅ Fixed: ${originalUrl.substring(0, 80)}`);
+        fixed++;
         
         // Small delay to avoid overwhelming the database
         await new Promise(resolve => setTimeout(resolve, 50));

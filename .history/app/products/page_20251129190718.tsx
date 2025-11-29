@@ -160,28 +160,11 @@ export default async function Products({ searchParams }: { searchParams: { platf
             const poolUrls = productsWithPools.map(p => p.sourceUrl).filter(Boolean) as string[];
             
             if (poolUrls.length > 0) {
-              // Build where clause for pool listings with search filter
-              const poolWhere: any = {
-                url: { in: poolUrls }
-              };
-              
-              // Apply platform filter
-              if (platform !== 'ALL') {
-                poolWhere.platform = platform;
-              }
-              
-              // Apply search query filter
-              if (searchTerm) {
-                poolWhere.OR = [
-                  { title: { contains: searchTerm, mode: 'insensitive' } },
-                  { description: { contains: searchTerm, mode: 'insensitive' } },
-                  { storeName: { contains: searchTerm, mode: 'insensitive' } }
-                ];
-              }
-              
               // Fetch SavedListings with these URLs
               const poolListings = await prisma.savedListing.findMany({
-                where: poolWhere,
+                where: {
+                  url: { in: poolUrls }
+                },
                 select: {
                   id: true,
                   platform: true,
@@ -1402,6 +1385,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                             </div>
                           );
                         })()}
+                        <div className="h-4 sm:h-5 text-[10px] sm:text-xs text-gray-500 truncate mb-1 sm:mb-2 font-medium flex items-center" title={it.storeName || ''}>{it.storeName || 'Marketplace Store'}</div>
                         <div className="h-10 sm:h-12 md:h-16 font-bold text-xs sm:text-sm text-gray-900 line-clamp-2 sm:line-clamp-3 mb-2 sm:mb-3 leading-tight overflow-hidden" title={title}>{title || 'See listing'}</div>
                         {(() => {
                           const primary = it.price && it.price.toString().trim().length ? it.price : '';
@@ -1520,7 +1504,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                             );
                           }
                         })()}
-                        <div className="h-6 sm:h-8 mb-1 sm:mb-1.5 flex items-center">
+                        <div className="h-10 mb-2 flex items-center">
                           <SyncedCountdown size="md" variant="accent" showIcon={true} />
                         </div>
                       </Link>
