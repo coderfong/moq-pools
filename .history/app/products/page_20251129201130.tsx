@@ -1153,15 +1153,15 @@ export default async function Products({ searchParams }: { searchParams: { platf
       {/* Persist and restore grid density (cols) preference */}
       <GridDensityPreference />
       
-      <div className="container mx-auto px-6 py-6 space-y-6">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 py-3 sm:py-6 space-y-4 sm:space-y-6">
         {/* Enhanced Header Section */}
-        <RevealSection className="sticky top-[72px] z-20 bg-white/80 backdrop-blur-xl border-b-2 border-orange-200/60 -mx-6 px-6 py-6 shadow-lg shadow-orange-500/5">
+        <RevealSection className="sticky top-[72px] z-20 bg-white/80 backdrop-blur-xl border-b-2 border-orange-200/60 -mx-2 sm:-mx-4 md:-mx-6 lg:-mx-8 xl:-mx-16 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 py-3 sm:py-6 shadow-lg shadow-orange-500/5">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
-              <h1 className="text-3xl font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-xl sm:text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent leading-tight">
                 MOQ Pools Marketplace
               </h1>
-              <p className="text-base text-gray-600 font-medium">Discover wholesale products from verified suppliers worldwide</p>
+              <p className="text-sm sm:text-base text-gray-600 font-medium">Discover wholesale products from verified suppliers worldwide</p>
             </div>
             <div className="flex items-center gap-3">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-orange-500/40 border-2 border-orange-400 hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105">

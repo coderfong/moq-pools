@@ -1153,15 +1153,15 @@ export default async function Products({ searchParams }: { searchParams: { platf
       {/* Persist and restore grid density (cols) preference */}
       <GridDensityPreference />
       
-      <div className="container mx-auto px-6 py-6 space-y-6">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 py-3 sm:py-6 space-y-4 sm:space-y-6">
         {/* Enhanced Header Section */}
-        <RevealSection className="sticky top-[72px] z-20 bg-white/80 backdrop-blur-xl border-b-2 border-orange-200/60 -mx-6 px-6 py-6 shadow-lg shadow-orange-500/5">
+        <RevealSection className="sticky top-[72px] z-20 bg-white/80 backdrop-blur-xl border-b-2 border-orange-200/60 -mx-2 sm:-mx-4 md:-mx-6 lg:-mx-8 xl:-mx-16 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 py-3 sm:py-6 shadow-lg shadow-orange-500/5">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
-              <h1 className="text-3xl font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-xl sm:text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent leading-tight">
                 MOQ Pools Marketplace
               </h1>
-              <p className="text-base text-gray-600 font-medium">Discover wholesale products from verified suppliers worldwide</p>
+              <p className="text-sm sm:text-base text-gray-600 font-medium">Discover wholesale products from verified suppliers worldwide</p>
             </div>
             <div className="flex items-center gap-3">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-orange-500/40 border-2 border-orange-400 hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105">
@@ -1373,7 +1373,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                           const best = candidates.find(u => !!u && !isSeedish(u) && !isClearlyNonProductImage(u) && !(u.startsWith('/cache/') && isBadImageHashFromPath(u)));
                           const src = best || '/seed/sleeves.jpg';
                           return (
-                            <div className="relative h-52 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 rounded-xl mb-3 overflow-hidden border border-orange-100/60 shadow-sm">
+                            <div className="relative h-32 sm:h-40 md:h-52 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 rounded-lg sm:rounded-xl mb-2 sm:mb-3 overflow-hidden border border-orange-100/60 shadow-sm">
                               {/* Enhanced hover gradient overlay */}
                               <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                               <Image
@@ -1402,7 +1402,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                             </div>
                           );
                         })()}
-                        <div className="h-16 font-bold text-sm text-gray-900 line-clamp-3 mb-3 leading-tight overflow-hidden" title={title}>{title || 'See listing'}</div>
+                        <div className="h-10 sm:h-12 md:h-16 font-bold text-xs sm:text-sm text-gray-900 line-clamp-2 sm:line-clamp-3 mb-2 sm:mb-3 leading-tight overflow-hidden" title={title}>{title || 'See listing'}</div>
                         {(() => {
                           const primary = it.price && it.price.toString().trim().length ? it.price : '';
                           let display = primary;
@@ -1456,8 +1456,8 @@ export default async function Products({ searchParams }: { searchParams: { platf
                           }
                           const soldText = displayOrdersAsSold((it as any)?.orders);
                           return (
-                            <div className="h-10 flex items-baseline gap-2 mb-3">
-                              <div className="text-xl font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent">
+                            <div className="h-8 sm:h-10 flex items-baseline gap-1 sm:gap-2 mb-2 sm:mb-3">
+                              <div className="text-sm sm:text-lg md:text-xl font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent">
                                 {display ? `${display}` : 'See listing'}
                               </div>
                               {soldText ? (
@@ -1525,12 +1525,12 @@ export default async function Products({ searchParams }: { searchParams: { platf
                         </div>
                       </Link>
                       {/* Enhanced CTA row (sibling to avoid nested links) */}
-                      <div className="p-6 pt-4 flex flex-wrap items-center gap-3 mt-auto border-t border-gray-100/60">
+                      <div className="p-2 sm:p-4 md:p-6 pt-2 sm:pt-4 flex flex-wrap items-center gap-1.5 sm:gap-2 md:gap-3 mt-auto border-t border-gray-100/60">
                         <a 
                           href={it.url || '#'} 
                           target="_blank" 
                           rel="noreferrer" 
-                          className="group/btn relative flex-1 min-w-[120px] inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl px-4 py-3 text-sm shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 overflow-hidden"
+                          className="group/btn relative flex-1 min-w-[80px] sm:min-w-[120px] inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-lg sm:rounded-xl px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-3 text-xs sm:text-sm shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 overflow-hidden"
                         >
                           <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700"></span>
                           <span className="relative flex items-center gap-2">
@@ -1542,9 +1542,9 @@ export default async function Products({ searchParams }: { searchParams: { platf
                           </span>
                         </a>
                         {it.url && ((it.url as string).includes('alibaba.com') || (it.url as string).includes('made-in-china.com') || (it.url as string).includes('indiamart.com')) ? (
-                          <DetailLink url={String(it.url)} title={title} className="flex-1 min-w-[90px] px-4 py-3 rounded-xl border border-orange-200/60 hover:border-orange-500 hover:bg-gradient-to-br hover:from-orange-50 hover:to-amber-50 transition-all duration-300 text-sm font-bold text-gray-700 hover:text-orange-600 hover:shadow-lg text-center" />
+                          <DetailLink url={String(it.url)} title={title} className="flex-1 min-w-[70px] sm:min-w-[90px] px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-3 rounded-lg sm:rounded-xl border border-orange-200/60 hover:border-orange-500 hover:bg-gradient-to-br hover:from-orange-50 hover:to-amber-50 transition-all duration-300 text-xs sm:text-sm font-bold text-gray-700 hover:text-orange-600 hover:shadow-lg text-center" />
                         ) : (
-                          <a href={it.url || '#'} target="_blank" rel="noreferrer" className="flex-1 min-w-[90px] px-4 py-3 rounded-xl border border-orange-200/60 hover:border-orange-500 hover:bg-gradient-to-br hover:from-orange-50 hover:to-amber-50 transition-all duration-300 text-sm font-bold text-gray-700 hover:text-orange-600 hover:shadow-lg text-center">
+                          <a href={it.url || '#'} target="_blank" rel="noreferrer" className="flex-1 min-w-[70px] sm:min-w-[90px] px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-3 rounded-lg sm:rounded-xl border border-orange-200/60 hover:border-orange-500 hover:bg-gradient-to-br hover:from-orange-50 hover:to-amber-50 transition-all duration-300 text-xs sm:text-sm font-bold text-gray-700 hover:text-orange-600 hover:shadow-lg text-center">
                             Details
                           </a>
                         )}

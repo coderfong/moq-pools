@@ -127,7 +127,7 @@ function NavbarContent({ scrolled, progress }: { scrolled: boolean; progress: nu
           </Link>
 
           {/* Enhanced Primary nav with hover underline effect */}
-          <nav className={`flex items-center gap-6 text-base font-semibold ${!isAdmin ? 'mx-auto' : ''}`}>
+          <nav className={`hidden md:flex items-center gap-2 lg:gap-6 xl:gap-8 text-base font-semibold ${!isAdmin ? 'mx-auto' : ''}`}>
             <Link href="/products" className="relative px-3 lg:px-5 py-2 text-gray-700 hover:text-orange-600 transition-colors group">
               Browse
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-500 to-amber-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
@@ -151,7 +151,7 @@ function NavbarContent({ scrolled, progress }: { scrolled: boolean; progress: nu
           </nav>
 
           {/* Enhanced Auth area (right) - compact layout */}
-          <div className={`flex items-center gap-3 ${!isAdmin ? 'absolute right-8' : ''}`}>
+          <div className={`hidden md:flex items-center gap-2 lg:gap-3 ${!isAdmin ? 'md:absolute md:right-8 md:xl:right-20' : ''}`}>
             {/* Shopping Cart */}
             <ShoppingCartLink />
             {/* Wishlist link */}
@@ -167,7 +167,23 @@ function NavbarContent({ scrolled, progress }: { scrolled: boolean; progress: nu
             <AuthMenu />
           </div>
 
+          {/* Enhanced Mobile menu button */}
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all" 
+            aria-label="Open menu"
+          >
+            {mobileMenuOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>
+            )}
+          </button>
         </div>
+        
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-gray-200 bg-white">
             <nav className="flex flex-col p-4 space-y-2">
               <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
                 Browse

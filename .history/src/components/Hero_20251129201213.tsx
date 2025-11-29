@@ -354,7 +354,7 @@ export default function Hero() {
                   />
                   <button 
                     type="submit"
-                    className="rounded-xl px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 text-base whitespace-nowrap"
+                    className="rounded-lg sm:rounded-xl px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 text-sm sm:text-base md:text-lg whitespace-nowrap"
                   >
                     Search
                   </button>

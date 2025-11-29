@@ -127,7 +127,7 @@ function NavbarContent({ scrolled, progress }: { scrolled: boolean; progress: nu
           </Link>
 
           {/* Enhanced Primary nav with hover underline effect */}
-          <nav className={`flex items-center gap-6 text-base font-semibold ${!isAdmin ? 'mx-auto' : ''}`}>
+          <nav className={`hidden md:flex items-center gap-2 lg:gap-6 xl:gap-8 text-base font-semibold ${!isAdmin ? 'mx-auto' : ''}`}>
             <Link href="/products" className="relative px-3 lg:px-5 py-2 text-gray-700 hover:text-orange-600 transition-colors group">
               Browse
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-500 to-amber-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
@@ -151,7 +151,7 @@ function NavbarContent({ scrolled, progress }: { scrolled: boolean; progress: nu
           </nav>
 
           {/* Enhanced Auth area (right) - compact layout */}
-          <div className={`flex items-center gap-3 ${!isAdmin ? 'absolute right-8' : ''}`}>
+          <div className={`hidden md:flex items-center gap-2 lg:gap-3 ${!isAdmin ? 'md:absolute md:right-8 md:xl:right-20' : ''}`}>
             {/* Shopping Cart */}
             <ShoppingCartLink />
             {/* Wishlist link */}

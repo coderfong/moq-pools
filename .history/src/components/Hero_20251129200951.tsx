@@ -318,19 +318,19 @@ export default function Hero() {
                   <div className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                     $2.5M+
                   </div>
-                  <div className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Saved Together</div>
+                  <div className="text-[10px] sm:text-xs text-gray-600 font-semibold uppercase tracking-wide">Saved Together</div>
                 </div>
-                <div className="group bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+                <div className="group bg-white/90 backdrop-blur-md px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
+                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                     500+
                   </div>
-                  <div className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Active Pools</div>
+                  <div className="text-[10px] sm:text-xs text-gray-600 font-semibold uppercase tracking-wide">Active Pools</div>
                 </div>
-                <div className="group bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+                <div className="group bg-white/90 backdrop-blur-md px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
+                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                     98%
                   </div>
-                  <div className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Success Rate</div>
+                  <div className="text-[10px] sm:text-xs text-gray-600 font-semibold uppercase tracking-wide">Success Rate</div>
                 </div>
               </div>
             </div>
@@ -349,12 +349,12 @@ export default function Hero() {
                   <input
                     value={q}
                     onChange={(e) => setQ(e.target.value)}
-                    className="flex-1 rounded-xl px-3 py-3.5 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none bg-transparent"
+                    className="flex-1 rounded-lg sm:rounded-xl px-2 sm:px-3 py-2.5 sm:py-3 md:py-3.5 text-sm sm:text-base md:text-lg text-gray-900 placeholder:text-gray-400 focus:outline-none bg-transparent"
                     placeholder="Search products, suppliers, categories…"
                   />
                   <button 
                     type="submit"
-                    className="rounded-xl px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 text-base whitespace-nowrap"
+                    className="rounded-lg sm:rounded-xl px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 text-sm sm:text-base md:text-lg whitespace-nowrap"
                   >
                     Search
                   </button>
