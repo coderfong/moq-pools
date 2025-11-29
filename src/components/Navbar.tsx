@@ -98,7 +98,6 @@ export default function Navbar() {
 
 function NavbarContent({ scrolled, progress }: { scrolled: boolean; progress: number }) {
   const { isAdmin } = useNavbarAuth();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   return (
     <>
@@ -166,34 +165,7 @@ function NavbarContent({ scrolled, progress }: { scrolled: boolean; progress: nu
             {/* Keep sign-in logic/popover */}
             <AuthMenu />
           </div>
-
         </div>
-            <nav className="flex flex-col p-4 space-y-2">
-              <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Browse
-              </Link>
-              <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                How It Works
-              </Link>
-              <Link href="/#benefits" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Benefits
-              </Link>
-              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                About
-              </Link>
-              <Link href="/support" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Support
-              </Link>
-              <div className="border-t border-gray-200 my-2"></div>
-              <Link href="/account" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Account
-              </Link>
-              <Link href="/messages" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Messages
-              </Link>
-            </nav>
-          </div>
-        )}
       </header>
     </>
   );
