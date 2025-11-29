@@ -168,48 +168,10 @@ function NavbarContent({ scrolled, progress }: { scrolled: boolean; progress: nu
           </div>
 
           {/* Enhanced Mobile menu button */}
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all" 
-            aria-label="Open menu"
-          >
-            {mobileMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>
-            )}
+          <button className="md:hidden p-2.5 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>
           </button>
         </div>
-        
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 bg-white">
-            <nav className="flex flex-col p-4 space-y-2">
-              <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Browse
-              </Link>
-              <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                How It Works
-              </Link>
-              <Link href="/#benefits" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Benefits
-              </Link>
-              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                About
-              </Link>
-              <Link href="/support" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Support
-              </Link>
-              <div className="border-t border-gray-200 my-2"></div>
-              <Link href="/account" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Account
-              </Link>
-              <Link href="/messages" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors font-medium">
-                Messages
-              </Link>
-            </nav>
-          </div>
-        )}
       </header>
     </>
   );
