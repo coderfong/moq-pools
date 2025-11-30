@@ -1,0 +1,25 @@
+export default function TrustStrip() {
+  const items = [
+    { name: 'Alibaba', logo: '/logos/alibaba.png' },
+    { name: 'Made-in-China', logo: '/logos/madeinchina.png' },
+    { name: 'IndiaMART', logo: '/logos/indiamart.png' },
+  ];
+  return (
+    <section data-reveal>
+      <div className="container mx-auto px-10 py-10 bg-surface border-t border-b border-hairline text-center">
+        <div className="text-xl font-semibold text-muted-foreground">Sourced from trusted suppliers</div>
+        <div className="mt-6 flex flex-row justify-center items-center gap-12 mx-auto max-w-5xl">
+          {items.map((x) => (
+            <div key={x.name} className="flex flex-col items-center text-center">
+              <div className="h-16 flex items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={x.logo} alt="" loading="lazy" className="max-h-16 object-contain" />
+              </div>
+              <div className="mt-1 text-xl font-semibold text-foreground">{x.name}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
