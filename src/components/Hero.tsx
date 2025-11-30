@@ -281,7 +281,7 @@ export default function Hero() {
               </h1>
 
               {/* Enhanced Description */}
-              <p className="text-sm sm:text-base text-gray-600 max-w-xl leading-relaxed font-medium">
+              <p className="text-sm sm:text-base text-gray-900 max-w-xl leading-relaxed font-medium">
                 Join buyers pooling orders to meet factory minimums. Get <span className="text-orange-600 font-semibold">wholesale prices</span> on the exact quantity you need—no bulk buying required.
               </p>
 

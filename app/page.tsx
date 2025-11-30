@@ -53,7 +53,7 @@ export default function Home() {
                 </svg>
               </span>
             </h2>
-            <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-gray-600 font-medium max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-gray-900 font-medium max-w-2xl mx-auto">
               Join now to secure your spot and unlock <span className="text-orange-600 font-bold">wholesale pricing</span>
             </p>
           </div>
