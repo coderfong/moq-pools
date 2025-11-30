@@ -1153,18 +1153,18 @@ export default async function Products({ searchParams }: { searchParams: { platf
       {/* Persist and restore grid density (cols) preference */}
       <GridDensityPreference />
       
-      <div className="container mx-auto px-6 py-6 space-y-6">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-6 space-y-3 sm:space-y-4 lg:space-y-6">
         {/* Enhanced Header Section */}
-        <RevealSection className="sticky top-[72px] z-20 bg-white/80 backdrop-blur-xl border-b-2 border-orange-200/60 -mx-6 px-6 py-6 shadow-lg shadow-orange-500/5">
+        <RevealSection className="sticky top-[72px] z-20 bg-white/80 backdrop-blur-xl border-b-2 border-orange-200/60 -mx-3 sm:-mx-4 lg:-mx-6 px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-6 shadow-lg shadow-orange-500/5">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
-              <h1 className="text-3xl font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent leading-tight">
                 MOQ Pools Marketplace
               </h1>
-              <p className="text-base text-gray-600 font-medium">Discover wholesale products from verified suppliers worldwide</p>
+              <p className="text-xs sm:text-sm lg:text-base text-gray-600 font-medium">Discover wholesale products from verified suppliers worldwide</p>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-orange-500/40 border-2 border-orange-400 hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="inline-flex items-center gap-1 sm:gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 lg:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-orange-500/40 border-2 border-orange-400 hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse">
                   <circle cx="12" cy="12" r="10"></circle>
                   <path d="M12 6v6l4 2"></path>
@@ -1205,8 +1205,8 @@ export default async function Products({ searchParams }: { searchParams: { platf
         {/* Enhanced Filters Row */}
         <div className="relative group">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-300/30 to-amber-300/30 rounded-3xl blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
-          <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl p-5 border-2 border-orange-200/60 shadow-xl shadow-orange-500/5 z-20">
-            <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="relative bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 border-2 border-orange-200/60 shadow-xl shadow-orange-500/5 z-20">
+            <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-3 lg:gap-4">
               <div className="flex items-center gap-3 flex-wrap">
                 <CategoryDropdown platform={platform} currentQuery={q} />
                 <FiltersBar />
@@ -1241,7 +1241,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
             {total === 0 ? (
               <EmptyState title="No listings found" subtitle="Try a different query or relax your filters." actionHref="/products" actionLabel="Reset filters" />
             ) : (
-            <RevealSection className={`${gridColsClass} gap-2 sm:gap-4 md:gap-6 auto-rows-fr items-stretch relative z-0`}>
+            <RevealSection className={`${gridColsClass} gap-2 sm:gap-3 lg:gap-4 xl:gap-6 auto-rows-fr items-stretch relative z-0`}>
               {pageItems.map((it, idx) => {
                 const rawUrl = String((it as any)?.url || '');
                 const savedForUrl = savedTitleMap.get(rawUrl) || savedTitleMap.get(normalizeUrl(rawUrl)) || savedTitleMap.get(extractProductKey(rawUrl) || '__nope__');
@@ -1357,9 +1357,9 @@ export default async function Products({ searchParams }: { searchParams: { platf
                       {/* Enhanced gradient glow on hover */}
                       <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 via-amber-400 to-orange-400 rounded-2xl blur-sm opacity-0 group-hover:opacity-40 transition-all duration-500"></div>
                       
-                      <div className="relative rounded-2xl overflow-hidden bg-white/98 backdrop-blur-sm border-2 border-orange-200/50 shadow-lg hover:shadow-2xl hover:shadow-orange-500/15 transition-all duration-300 hover:-translate-y-2 min-h-[600px] flex flex-col">
+                      <div className="relative rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden bg-white/98 backdrop-blur-sm border border-orange-200/50 sm:border-2 shadow-lg hover:shadow-2xl hover:shadow-orange-500/15 transition-all duration-300 hover:-translate-y-2 min-h-[380px] sm:min-h-[450px] lg:min-h-[550px] flex flex-col h-full">
                       {/* Main clickable block - now goes to pool page */}
-                      <Link href={savedId ? `/pools/${savedId}` : (it.url || '#')} className="block flex-1 flex flex-col p-6 pb-4">
+                      <Link href={savedId ? `/pools/${savedId}` : (it.url || '#')} className="block flex-1 flex flex-col p-2 sm:p-3 lg:p-4 xl:p-6 pb-2 sm:pb-3 lg:pb-4">
                         {(() => {
                           // Avoid sleeves on ALL; never pass sleeves to Image
                           const isSeedish = (u?: string | null) => {
@@ -1592,16 +1592,16 @@ export default async function Products({ searchParams }: { searchParams: { platf
               let pEnd = Math.min(totalPages, pStart + windowPages - 1);
               pStart = Math.max(1, Math.min(pStart, Math.max(1, pEnd - windowPages + 1)));
               return (
-                <RevealSection className="flex items-center justify-center gap-3 mt-10 mb-6">
+                <RevealSection className="flex items-center justify-center gap-1.5 sm:gap-2 lg:gap-3 mt-4 sm:mt-6 lg:mt-10 mb-3 sm:mb-4 lg:mb-6">
                   <a 
                     href={buildUrl(Math.max(1, page - 1))} 
-                    className={`group relative px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 ${
+                    className={`group relative px-2 sm:px-3 lg:px-5 py-1.5 sm:py-2 lg:py-3 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 ${
                       page <= 1 
                         ? 'pointer-events-none opacity-40 bg-gray-100 text-gray-400' 
-                        : 'bg-white border-2 border-orange-200/60 text-gray-700 hover:border-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:text-white hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105'
+                        : 'bg-white border border-orange-200/60 sm:border-2 text-gray-700 hover:border-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:text-white hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105'
                     }`}
                   >
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-1 sm:gap-2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m15 18-6-6 6-6"/>
                       </svg>
@@ -1612,7 +1612,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
                     <a 
                       key={p} 
                       href={buildUrl(p)} 
-                      className={`px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 ${
+                      className={`px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 lg:py-3 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 ${
                         p === page 
                           ? 'bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 text-white shadow-xl shadow-orange-500/40 scale-110 border-2 border-orange-400' 
                           : 'bg-white border-2 border-orange-200/60 text-gray-700 hover:border-orange-500 hover:bg-orange-50 hover:text-orange-600 hover:shadow-lg hover:scale-105'
@@ -1623,13 +1623,13 @@ export default async function Products({ searchParams }: { searchParams: { platf
                   ))}
                   <a 
                     href={buildUrl(Math.min(totalPages, page + 1))} 
-                    className={`group relative px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 ${
+                    className={`group relative px-2 sm:px-3 lg:px-5 py-1.5 sm:py-2 lg:py-3 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 ${
                       page >= totalPages 
                         ? 'pointer-events-none opacity-40 bg-gray-100 text-gray-400' 
-                        : 'bg-white border-2 border-orange-200/60 text-gray-700 hover:border-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:text-white hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105'
+                        : 'bg-white border border-orange-200/60 sm:border-2 text-gray-700 hover:border-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:text-white hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105'
                     }`}
                   >
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-1 sm:gap-2">
                       Next
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6"/>
