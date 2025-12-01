@@ -35,8 +35,8 @@ import ProductCardButtons from '@/components/ProductCardButtons';
 import AdminActions from '@/components/AdminActions';
 
 export const runtime = 'nodejs';
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+export const dynamic = 'force-static';
+export const revalidate = 60; // Cache for 60 seconds
 
 const price = (x: any) => (x?.toString?.() ?? String(x));
 
@@ -81,11 +81,8 @@ export default async function Products({ searchParams }: { searchParams: { platf
   const page = Math.max(1, Number(searchParams.page || '1'));
   // Responsive grid: 2 columns on mobile, 5 columns on desktop
   const gridColsClass = 'grid grid-cols-2 lg:grid-cols-5';
-  // Fetch aggressively to ensure we have enough unique, deduped items to fill the page
-  // Overfetch by a factor to compensate for duplicates and sparse pages from providers
-  // Fetch more aggressively to ensure enough after filtering/dedupe
-  // Fetch far more to compensate for dedupe and filtering, then slice with stable sort
-  const extLimit = Math.min(6000, Math.max(600, perPage * page * 10));
+  // PERFORMANCE: Reduced from 6000 to 1000 for better load times
+  const extLimit = Math.min(1000, Math.max(200, perPage * page * 3));
   // moqLeft reserved for pools (hidden section)
 
   // Live external listings: when 'ALL', fetch across all platforms
@@ -118,9 +115,9 @@ export default async function Products({ searchParams }: { searchParams: { platf
   type Item = any;
   type CountRow = any;
 
-  function withTimeout<T>(p: Promise<T>, ms = 5000, label = 'op'): Promise<T> {
+  function withTimeout<T>(p: Promise<T>, ms = 3000, label = 'op'): Promise<T> {
     return new Promise<T>((resolve, reject) => {
-      const id = setTimeout(() => reject(new Error(`timeout:${label}`)), Math.max(800, ms));
+      const id = setTimeout(() => reject(new Error(`timeout:${label}`)), Math.max(500, ms));
       p.then((v) => { clearTimeout(id); resolve(v); }, (e) => { clearTimeout(id); reject(e); });
     });
   }
@@ -129,8 +126,9 @@ export default async function Products({ searchParams }: { searchParams: { platf
     (hasDb && prisma ? withTimeout(prisma.product.findMany({
       where,
       include: { pool: true, supplier: { select: { name: true } } },
-      orderBy: { createdAt: 'desc' }
-    }), 6000, 'db:findMany').catch(() => []) : Promise.resolve([])) as Promise<any[]>,
+      orderBy: { createdAt: 'desc' },
+      take: 500 // Limit to 500 products max
+    }), 3000, 'db:findMany').catch(() => []) : Promise.resolve([])) as Promise<any[]>,
   (hasDb && prisma ? withTimeout(prisma.product.groupBy({ 
       by: ['sourcePlatform'], 
       where: { 
@@ -139,7 +137,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
         sourcePlatform: { in: ALL_ALLOWED_PLATFORMS as any } 
       }, 
       _count: { _all: true } 
-    }), 5000, 'db:groupBy').catch(() => []) : Promise.resolve([])) as Promise<any[]>,
+    }), 2000, 'db:groupBy').catch(() => []) : Promise.resolve([])) as Promise<any[]>,
     (async (): Promise<ExternalListing[]> => {
       try {
         console.log('[PRODUCTS DEBUG] Fetching from SavedListing only, platform:', platform, 'searchTerm:', searchTerm);
@@ -223,8 +221,8 @@ export default async function Products({ searchParams }: { searchParams: { platf
         }
         
         // Then fetch regular SavedListings
-        // PERFORMANCE: Reduced from 10,000 to 1,000 to speed up initial load
-        const savedLimit = searchTerm ? Math.min(500, perPage * 10) : Math.min(1000, perPage * 20);
+        // PERFORMANCE: Further reduced limits for faster response
+        const savedLimit = searchTerm ? Math.min(200, perPage * 5) : Math.min(500, perPage * 10);
         console.log('[PRODUCTS DEBUG] Calling querySavedListings with limit:', savedLimit);
         const saved = await querySavedListings({
           q: searchTerm,

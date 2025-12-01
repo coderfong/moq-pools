@@ -2,6 +2,16 @@ import { withSentryConfig } from '@sentry/nextjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	// Enable compression for better performance
+	compress: true,
+	// Enable optimized package imports
+	modularizeImports: {
+		'@/components': {
+			transform: '@/components/{{member}}',
+		},
+	},
+	// Optimize production builds
+	swcMinify: true,
 	images: {
 		remotePatterns: [
 			// Alibaba and 1688 image CDNs
@@ -114,6 +124,25 @@ const nextConfig = {
 					{
 						key: 'Cache-Control',
 						value: 'no-store, no-cache, must-revalidate',
+					},
+				],
+			},
+			// Cache static assets aggressively
+			{
+				source: '/_next/static/:path*',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=31536000, immutable',
+					},
+				],
+			},
+			{
+				source: '/cache/:path*',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=86400, stale-while-revalidate=604800',
 					},
 				],
 			},

@@ -44,6 +44,12 @@ const suspiciousPatterns = [
 function isSuspiciousRequest(req: NextRequest): boolean {
   const url = req.url.toLowerCase();
   const userAgent = req.headers.get('user-agent')?.toLowerCase() || '';
+  const clientIp = getClientIp(req);
+  
+  // Allow localhost/internal requests
+  if (clientIp === '::1' || clientIp === '127.0.0.1' || clientIp === 'localhost') {
+    return false;
+  }
   
   // Check for common attack patterns
   if (suspiciousPatterns.some(pattern => pattern.test(url))) {

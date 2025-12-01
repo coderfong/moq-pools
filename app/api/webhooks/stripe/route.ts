@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { prisma } from '@/lib/prisma';
 
-export const config = { api: { bodyParser: false } } as any;
+// Disable body parsing for Stripe webhooks
+export const runtime = 'nodejs';
 
 export async function POST(req: NextRequest) {
   const buf = await req.text();
