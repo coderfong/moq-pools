@@ -35,7 +35,7 @@ import ProductCardButtons from '@/components/ProductCardButtons';
 import AdminActions from '@/components/AdminActions';
 
 export const runtime = 'nodejs';
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic'; // Need dynamic for search params
 export const revalidate = 60; // Cache for 60 seconds
 
 const price = (x: any) => (x?.toString?.() ?? String(x));
