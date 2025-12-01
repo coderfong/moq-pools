@@ -115,9 +115,9 @@ export default async function Products({ searchParams }: { searchParams: { platf
   type Item = any;
   type CountRow = any;
 
-  function withTimeout<T>(p: Promise<T>, ms = 3000, label = 'op'): Promise<T> {
+  function withTimeout<T>(p: Promise<T>, ms = 1500, label = 'op'): Promise<T> {
     return new Promise<T>((resolve, reject) => {
-      const id = setTimeout(() => reject(new Error(`timeout:${label}`)), Math.max(500, ms));
+      const id = setTimeout(() => reject(new Error(`timeout:${label}`)), Math.max(300, ms));
       p.then((v) => { clearTimeout(id); resolve(v); }, (e) => { clearTimeout(id); reject(e); });
     });
   }
@@ -127,23 +127,15 @@ export default async function Products({ searchParams }: { searchParams: { platf
       where,
       include: { pool: true, supplier: { select: { name: true } } },
       orderBy: { createdAt: 'desc' },
-      take: 500 // Limit to 500 products max
-    }), 3000, 'db:findMany').catch(() => []) : Promise.resolve([])) as Promise<any[]>,
-  (hasDb && prisma ? withTimeout(prisma.product.groupBy({ 
-      by: ['sourcePlatform'], 
-      where: { 
-        isActive: true, 
-        moqQty: { gt: 0 }, 
-        sourcePlatform: { in: ALL_ALLOWED_PLATFORMS as any } 
-      }, 
-      _count: { _all: true } 
-    }), 2000, 'db:groupBy').catch(() => []) : Promise.resolve([])) as Promise<any[]>,
+      take: 100 // Limit to 100 products max for speed
+    }), 1500, 'db:findMany').catch(() => []) : Promise.resolve([])) as Promise<any[]>,
+  Promise.resolve([]) as Promise<any[]>,
     (async (): Promise<ExternalListing[]> => {
       try {
         console.log('[PRODUCTS DEBUG] Fetching from SavedListing only, platform:', platform, 'searchTerm:', searchTerm);
         
-        // PERFORMANCE: Simplified - just fetch SavedListings directly
-        const savedLimit = searchTerm ? Math.min(200, perPage * 5) : Math.min(500, perPage * 10);
+        // PERFORMANCE: Aggressive limits for fast response
+        const savedLimit = searchTerm ? Math.min(50, perPage * 2) : Math.min(100, perPage * 3);
         console.log('[PRODUCTS DEBUG] Calling querySavedListings with limit:', savedLimit);
         const saved = await querySavedListings({
           q: searchTerm,
@@ -666,8 +658,8 @@ export default async function Products({ searchParams }: { searchParams: { platf
   // Fetch pool data for ALL external listings BEFORE sorting
   const externalListingPoolMap = new Map<string, { pledgedQty: number; targetQty: number; poolId: string; progress: number }>();
   try {
-    // PERFORMANCE: Only check first 200 URLs to avoid massive queries
-    const urls = filteredExt.slice(0, 200).map((it) => String(it?.url || '')).filter(Boolean);
+    // PERFORMANCE: Only check first 50 URLs with 1s timeout
+    const urls = filteredExt.slice(0, 50).map((it) => String(it?.url || '')).filter(Boolean);
     if (urls.length && prisma) {
       const productsWithPools = await withTimeout(prisma.product.findMany({
         where: {
@@ -683,7 +675,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
             }
           }
         }
-      }), 2000, 'pool-data').catch(() => []);
+      }), 1000, 'pool-data').catch(() => []);
       
       for (const p of productsWithPools) {
         if (p.sourceUrl && p.pool) {
@@ -992,7 +984,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
         where: { OR: or.length ? or : undefined },
         // Pull detailJson so we can prefer the parsed detail title to match Pool page h1
         select: { id: true, url: true, title: true, detailJson: true },
-      }), 2000, 'saved-titles').catch(() => []);
+      }), 1000, 'saved-titles').catch(() => []);
       const map = new Map<string, { id: string; title: string; detailTitle?: string }>();
       for (const r of rows as Array<{ id: string; url: string; title: string; detailJson?: any }>) {
         const detailTitle = (r.detailJson && typeof r.detailJson === 'object') ? String(r.detailJson?.title || '').trim() : '';
