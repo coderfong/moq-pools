@@ -142,86 +142,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
       try {
         console.log('[PRODUCTS DEBUG] Fetching from SavedListing only, platform:', platform, 'searchTerm:', searchTerm);
         
-        // PRIORITY: Fetch SavedListings that have pools FIRST
-        let savedWithPools: ExternalListing[] = [];
-        if (hasDb && prisma) {
-          try {
-            // Get all products with pools and their sourceUrls
-            const productsWithPools = await prisma.product.findMany({
-              where: {
-                pool: { isNot: null },
-                sourceUrl: { not: null }
-              },
-              select: { sourceUrl: true }
-            });
-            
-            const poolUrls = productsWithPools.map(p => p.sourceUrl).filter(Boolean) as string[];
-            
-            if (poolUrls.length > 0) {
-              // Build where clause for pool listings with search filter
-              const poolWhere: any = {
-                url: { in: poolUrls }
-              };
-              
-              // Apply platform filter
-              if (platform !== 'ALL') {
-                poolWhere.platform = platform;
-              }
-              
-              // Apply search query filter
-              if (searchTerm) {
-                poolWhere.OR = [
-                  { title: { contains: searchTerm, mode: 'insensitive' } },
-                  { description: { contains: searchTerm, mode: 'insensitive' } },
-                  { storeName: { contains: searchTerm, mode: 'insensitive' } }
-                ];
-              }
-              
-              // Fetch SavedListings with these URLs
-              const poolListings = await prisma.savedListing.findMany({
-                where: poolWhere,
-                select: {
-                  id: true,
-                  platform: true,
-                  title: true,
-                  image: true,
-                  url: true,
-                  priceRaw: true,
-                  currency: true,
-                  moqRaw: true,
-                  storeName: true,
-                  description: true,
-                  ratingRaw: true,
-                  ordersRaw: true,
-                  detailJson: true,
-                }
-              });
-              
-              // Convert to ExternalListing format
-              savedWithPools = poolListings.map((row: any) => ({
-                id: row.id,
-                platform: row.platform || '',
-                title: row.title || '',
-                image: row.image || '',
-                url: row.url || '',
-                price: row.priceRaw || '',
-                moq: row.moqRaw || '',
-                storeName: row.storeName || '',
-                description: row.description || '',
-                rating: row.ratingRaw || '',
-                orders: row.ordersRaw || '',
-                detailJson: row.detailJson as any,
-              }));
-              
-              console.log('[PRODUCTS DEBUG] SavedListings with pools fetched:', savedWithPools.length);
-            }
-          } catch (err) {
-            console.error('[PRODUCTS DEBUG] Error fetching pool listings:', err);
-          }
-        }
-        
-        // Then fetch regular SavedListings
-        // PERFORMANCE: Further reduced limits for faster response
+        // PERFORMANCE: Simplified - just fetch SavedListings directly
         const savedLimit = searchTerm ? Math.min(200, perPage * 5) : Math.min(500, perPage * 10);
         console.log('[PRODUCTS DEBUG] Calling querySavedListings with limit:', savedLimit);
         const saved = await querySavedListings({
@@ -231,21 +152,9 @@ export default async function Products({ searchParams }: { searchParams: { platf
           offset: 0,
           limit: savedLimit,
         });
-        console.log('[PRODUCTS DEBUG] Regular SavedListings fetched:', saved.length);
+        console.log('[PRODUCTS DEBUG] SavedListings fetched:', saved.length);
         
-        // Combine: pool listings first, then regular listings (dedupe by URL)
-        const seenUrls = new Set(savedWithPools.map(l => l.url));
-        const regularListings = saved.filter(l => !seenUrls.has(l.url || ''));
-        const combined = [...savedWithPools, ...regularListings];
-        
-        console.log('[PRODUCTS DEBUG] Total combined listings:', combined.length);
-        console.log('[PRODUCTS DEBUG] Pool listings in combined:', 
-          combined.filter(l => 
-            l.url?.includes('Polar-Camera') || 
-            l.url?.includes('Batter-Dispenser')
-          ).map(l => l.title?.substring(0, 40))
-        );
-        return combined;
+        return saved;
       } catch (err) {
         console.error('[PRODUCTS DEBUG] Error in external listings fetch:', err);
       }
@@ -757,9 +666,10 @@ export default async function Products({ searchParams }: { searchParams: { platf
   // Fetch pool data for ALL external listings BEFORE sorting
   const externalListingPoolMap = new Map<string, { pledgedQty: number; targetQty: number; poolId: string; progress: number }>();
   try {
-    const urls = filteredExt.map((it) => String(it?.url || '')).filter(Boolean);
+    // PERFORMANCE: Only check first 200 URLs to avoid massive queries
+    const urls = filteredExt.slice(0, 200).map((it) => String(it?.url || '')).filter(Boolean);
     if (urls.length && prisma) {
-      const productsWithPools = await prisma.product.findMany({
+      const productsWithPools = await withTimeout(prisma.product.findMany({
         where: {
           sourceUrl: { in: Array.from(new Set(urls)) }
         },
@@ -773,7 +683,7 @@ export default async function Products({ searchParams }: { searchParams: { platf
             }
           }
         }
-      });
+      }), 2000, 'pool-data').catch(() => []);
       
       for (const p of productsWithPools) {
         if (p.sourceUrl && p.pool) {
@@ -1078,11 +988,11 @@ export default async function Products({ searchParams }: { searchParams: { platf
           or.push({ url: { contains: val } });
         }
       }
-      const rows = await prisma.savedListing.findMany({
+      const rows = await withTimeout(prisma.savedListing.findMany({
         where: { OR: or.length ? or : undefined },
         // Pull detailJson so we can prefer the parsed detail title to match Pool page h1
         select: { id: true, url: true, title: true, detailJson: true },
-      });
+      }), 2000, 'saved-titles').catch(() => []);
       const map = new Map<string, { id: string; title: string; detailTitle?: string }>();
       for (const r of rows as Array<{ id: string; url: string; title: string; detailJson?: any }>) {
         const detailTitle = (r.detailJson && typeof r.detailJson === 'object') ? String(r.detailJson?.title || '').trim() : '';
