@@ -517,11 +517,19 @@ button, a, input, select, textarea {
 	}
   /* Ensure inputs always have dark text regardless of theme */
   input, textarea, select {
-    @apply text-gray-900;
+    @apply text-gray-900 !important;
   }
-  /* Dark mode inputs - still dark text on light input backgrounds */
+  /* Override any dark mode text colors on inputs */
   .dark input, .dark textarea, .dark select {
-    @apply text-gray-900 bg-white;
+    @apply text-gray-900 !important;
+    color: #111827 !important;
+  }
+  /* Force placeholder to be visible */
+  input::placeholder, textarea::placeholder {
+    @apply text-gray-500 !important;
+  }
+  .dark input::placeholder, .dark textarea::placeholder {
+    @apply text-gray-500 !important;
   }
 }
 

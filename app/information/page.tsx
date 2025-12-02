@@ -233,22 +233,21 @@ export default function InformationPage() {
       }
       console.log('Success! Updating session and redirecting to /products');
       
-      // Update the session to refresh profileComplete status
+      // Update the session to refresh profileComplete status from server
       try {
-        await updateSession({
-          ...session,
-          user: {
-            ...session?.user,
-            profileComplete: true,
-          },
-        });
-        console.log('Session updated successfully');
+        console.log('Triggering session refresh...');
+        await updateSession();
+        console.log('Session refreshed from server');
+        
+        // Small delay to ensure session is updated
+        await new Promise(resolve => setTimeout(resolve, 500));
       } catch (updateErr) {
-        console.error('Session update failed, but continuing:', updateErr);
+        console.error('Session update failed:', updateErr);
       }
       
-      // Use Next.js router for client-side navigation
-      router.push("/products");
+      // Force full page reload to ensure session is completely refreshed
+      console.log('Redirecting to /products');
+      window.location.href = "/products";
     } catch (err) {
       console.error('Submission error:', err);
       setError("Failed to submit information. Please try again.");
