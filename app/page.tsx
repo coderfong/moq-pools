@@ -33,14 +33,14 @@ export default function Home() {
         <div className="container relative mx-auto px-6">
           {/* Enhanced Section Header */}
           <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 lg:mb-20 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-50 to-amber-50 text-orange-600 px-4 py-2 rounded-full text-xs sm:text-sm font-bold mb-4 sm:mb-6 md:mb-8 shadow-lg border border-orange-100 hover:scale-105 transition-transform">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse-slow">
+            <div className="inline-flex items-center gap-1.5 bg-gradient-to-r from-orange-50 to-amber-50 text-orange-600 px-2.5 py-1.5 rounded-full text-[10px] sm:text-sm font-bold mb-2 sm:mb-6 md:mb-8 shadow-lg border border-orange-100 hover:scale-105 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse-slow sm:w-[18px] sm:h-[18px]">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
               Limited Time Offers
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
+            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 md:mb-6 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 Active Pools{' '}
               </span>
@@ -53,7 +53,7 @@ export default function Home() {
                 </svg>
               </span>
             </h2>
-            <p className="text-sm sm:text-base md:text-xl lg:text-2xl !text-gray-900 font-medium max-w-2xl mx-auto">
+            <p className="text-xs sm:text-base md:text-xl lg:text-2xl !text-gray-900 font-medium max-w-2xl mx-auto">
               Join now to secure your spot and unlock <span className="!text-orange-600 font-bold">wholesale pricing</span>
             </p>
           </div>
@@ -62,14 +62,14 @@ export default function Home() {
           <FeaturedPools />
 
           {/* Enhanced View All CTA */}
-          <div className="text-center mt-6 sm:mt-8 animate-fade-in">
+          <div className="text-center mt-4 sm:mt-8 animate-fade-in">
             <Link
               href="/products"
-              className="group relative inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-size-200 bg-pos-0 hover:bg-pos-100 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base md:text-lg shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+              className="group relative inline-flex items-center gap-1.5 sm:gap-3 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-size-200 bg-pos-0 hover:bg-pos-100 text-white px-4 sm:px-8 md:px-10 py-2 sm:py-4 md:py-5 rounded-lg sm:rounded-2xl font-bold text-xs sm:text-base md:text-lg shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 overflow-hidden">
             >
-              <span className="relative z-10 flex items-center gap-3">
+              <span className="relative z-10 flex items-center gap-1.5 sm:gap-3">
                 View All Pools
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[22px] sm:h-[22px] group-hover:translate-x-1 transition-transform">
                   <path d="M5 12h14"/>
                   <path d="m12 5 7 7-7 7"/>
                 </svg>
