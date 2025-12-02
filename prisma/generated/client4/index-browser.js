@@ -131,6 +131,7 @@ exports.Prisma.UserScalarFieldEnum = {
   companyName: 'companyName',
   countryCode: 'countryCode',
   isIndividualBuyer: 'isIndividualBuyer',
+  profileComplete: 'profileComplete',
   role: 'role',
   emailVerified: 'emailVerified',
   image: 'image',

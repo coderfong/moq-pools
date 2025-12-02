@@ -220,7 +220,8 @@ export default function InformationPage() {
         );
         return;
       }
-      router.push("/products");
+      // Force reload to refresh session with profileComplete=true
+      window.location.href = "/products";
     } catch (err) {
       setError("Failed to submit information. Please try again.");
     } finally {

@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import CompareModal from '@/components/CompareModal';
 import { PlatformProviders } from '@/components/PlatformProviders';
 import AuthSessionProvider from '@/components/AuthSessionProvider';
+import { ProfileCompleteGuard } from '@/components/ProfileCompleteGuard';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakarta', display: 'swap' });
@@ -48,12 +49,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="min-h-screen font-display bg-base text-ink">
         <PlatformProviders>
           <AuthSessionProvider>
-            <Navbar />
-            <RevealRoot />
-            {/* Full-bleed main with responsive gutters; remove vertical padding to keep hero flush */}
-            <main className="w-full">{children}</main>
-            <Footer />
-            <CompareModal />
+            <ProfileCompleteGuard>
+              <Navbar />
+              <RevealRoot />
+              {/* Full-bleed main with responsive gutters; remove vertical padding to keep hero flush */}
+              <main className="w-full">{children}</main>
+              <Footer />
+              <CompareModal />
+            </ProfileCompleteGuard>
           </AuthSessionProvider>
         </PlatformProviders>
       </body>

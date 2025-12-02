@@ -326,9 +326,9 @@ export default function RegisterPage() {
             </div>
 
             <div className="grid grid-cols-3 gap-1.5 sm:gap-4">
-              <SocialBtn label="Google" onClick={() => signIn('google', { callbackUrl: '/products' })} img="/company-logos/google%20logo.jpg" />
-              <SocialBtn label="Facebook" onClick={() => signIn('facebook', { callbackUrl: '/products' })} img="/company-logos/Facebook-Logo-JPG.jpg" />
-              <SocialBtn label="X" onClick={() => signIn('twitter', { callbackUrl: '/products' })} img="/company-logos/Twitter.png" />
+              <SocialBtn label="Google" onClick={() => signIn('google', { callbackUrl: '/information' })} img="/company-logos/google%20logo.jpg" />
+              <SocialBtn label="Facebook" onClick={() => signIn('facebook', { callbackUrl: '/information' })} img="/company-logos/Facebook-Logo-JPG.jpg" />
+              <SocialBtn label="X" onClick={() => signIn('twitter', { callbackUrl: '/information' })} img="/company-logos/Twitter.png" />
             </div>
 
             <p className="text-[9px] sm:text-xs text-gray-600 font-medium text-center">

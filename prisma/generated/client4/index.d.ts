@@ -3779,6 +3779,7 @@ export namespace Prisma {
     companyName: string | null
     countryCode: string | null
     isIndividualBuyer: boolean | null
+    profileComplete: boolean | null
     role: $Enums.Role | null
     emailVerified: Date | null
     image: string | null
@@ -3794,6 +3795,7 @@ export namespace Prisma {
     companyName: string | null
     countryCode: string | null
     isIndividualBuyer: boolean | null
+    profileComplete: boolean | null
     role: $Enums.Role | null
     emailVerified: Date | null
     image: string | null
@@ -3809,6 +3811,7 @@ export namespace Prisma {
     companyName: number
     countryCode: number
     isIndividualBuyer: number
+    profileComplete: number
     role: number
     emailVerified: number
     image: number
@@ -3826,6 +3829,7 @@ export namespace Prisma {
     companyName?: true
     countryCode?: true
     isIndividualBuyer?: true
+    profileComplete?: true
     role?: true
     emailVerified?: true
     image?: true
@@ -3841,6 +3845,7 @@ export namespace Prisma {
     companyName?: true
     countryCode?: true
     isIndividualBuyer?: true
+    profileComplete?: true
     role?: true
     emailVerified?: true
     image?: true
@@ -3856,6 +3861,7 @@ export namespace Prisma {
     companyName?: true
     countryCode?: true
     isIndividualBuyer?: true
+    profileComplete?: true
     role?: true
     emailVerified?: true
     image?: true
@@ -3944,6 +3950,7 @@ export namespace Prisma {
     companyName: string | null
     countryCode: string | null
     isIndividualBuyer: boolean | null
+    profileComplete: boolean
     role: $Enums.Role
     emailVerified: Date | null
     image: string | null
@@ -3976,6 +3983,7 @@ export namespace Prisma {
     companyName?: boolean
     countryCode?: boolean
     isIndividualBuyer?: boolean
+    profileComplete?: boolean
     role?: boolean
     emailVerified?: boolean
     image?: boolean
@@ -4006,6 +4014,7 @@ export namespace Prisma {
     companyName?: boolean
     countryCode?: boolean
     isIndividualBuyer?: boolean
+    profileComplete?: boolean
     role?: boolean
     emailVerified?: boolean
     image?: boolean
@@ -4021,6 +4030,7 @@ export namespace Prisma {
     companyName?: boolean
     countryCode?: boolean
     isIndividualBuyer?: boolean
+    profileComplete?: boolean
     role?: boolean
     emailVerified?: boolean
     image?: boolean
@@ -4073,6 +4083,7 @@ export namespace Prisma {
       companyName: string | null
       countryCode: string | null
       isIndividualBuyer: boolean | null
+      profileComplete: boolean
       role: $Enums.Role
       emailVerified: Date | null
       image: string | null
@@ -4492,6 +4503,7 @@ export namespace Prisma {
     readonly companyName: FieldRef<"User", 'String'>
     readonly countryCode: FieldRef<"User", 'String'>
     readonly isIndividualBuyer: FieldRef<"User", 'Boolean'>
+    readonly profileComplete: FieldRef<"User", 'Boolean'>
     readonly role: FieldRef<"User", 'Role'>
     readonly emailVerified: FieldRef<"User", 'DateTime'>
     readonly image: FieldRef<"User", 'String'>
@@ -31669,6 +31681,7 @@ export namespace Prisma {
     companyName: 'companyName',
     countryCode: 'countryCode',
     isIndividualBuyer: 'isIndividualBuyer',
+    profileComplete: 'profileComplete',
     role: 'role',
     emailVerified: 'emailVerified',
     image: 'image',
@@ -32396,6 +32409,7 @@ export namespace Prisma {
     companyName?: StringNullableFilter<"User"> | string | null
     countryCode?: StringNullableFilter<"User"> | string | null
     isIndividualBuyer?: BoolNullableFilter<"User"> | boolean | null
+    profileComplete?: BoolFilter<"User"> | boolean
     role?: EnumRoleFilter<"User"> | $Enums.Role
     emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
     image?: StringNullableFilter<"User"> | string | null
@@ -32425,6 +32439,7 @@ export namespace Prisma {
     companyName?: SortOrderInput | SortOrder
     countryCode?: SortOrderInput | SortOrder
     isIndividualBuyer?: SortOrderInput | SortOrder
+    profileComplete?: SortOrder
     role?: SortOrder
     emailVerified?: SortOrderInput | SortOrder
     image?: SortOrderInput | SortOrder
@@ -32457,6 +32472,7 @@ export namespace Prisma {
     companyName?: StringNullableFilter<"User"> | string | null
     countryCode?: StringNullableFilter<"User"> | string | null
     isIndividualBuyer?: BoolNullableFilter<"User"> | boolean | null
+    profileComplete?: BoolFilter<"User"> | boolean
     role?: EnumRoleFilter<"User"> | $Enums.Role
     emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
     image?: StringNullableFilter<"User"> | string | null
@@ -32486,6 +32502,7 @@ export namespace Prisma {
     companyName?: SortOrderInput | SortOrder
     countryCode?: SortOrderInput | SortOrder
     isIndividualBuyer?: SortOrderInput | SortOrder
+    profileComplete?: SortOrder
     role?: SortOrder
     emailVerified?: SortOrderInput | SortOrder
     image?: SortOrderInput | SortOrder
@@ -32507,6 +32524,7 @@ export namespace Prisma {
     companyName?: StringNullableWithAggregatesFilter<"User"> | string | null
     countryCode?: StringNullableWithAggregatesFilter<"User"> | string | null
     isIndividualBuyer?: BoolNullableWithAggregatesFilter<"User"> | boolean | null
+    profileComplete?: BoolWithAggregatesFilter<"User"> | boolean
     role?: EnumRoleWithAggregatesFilter<"User"> | $Enums.Role
     emailVerified?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
     image?: StringNullableWithAggregatesFilter<"User"> | string | null
@@ -34644,6 +34662,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -34673,6 +34692,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -34702,6 +34722,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -34731,6 +34752,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -34760,6 +34782,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -34775,6 +34798,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -34790,6 +34814,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -37157,6 +37182,11 @@ export namespace Prisma {
     not?: NestedBoolNullableFilter<$PrismaModel> | boolean | null
   }
 
+  export type BoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
   export type EnumRoleFilter<$PrismaModel = never> = {
     equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
     in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
@@ -37330,6 +37360,7 @@ export namespace Prisma {
     companyName?: SortOrder
     countryCode?: SortOrder
     isIndividualBuyer?: SortOrder
+    profileComplete?: SortOrder
     role?: SortOrder
     emailVerified?: SortOrder
     image?: SortOrder
@@ -37345,6 +37376,7 @@ export namespace Prisma {
     companyName?: SortOrder
     countryCode?: SortOrder
     isIndividualBuyer?: SortOrder
+    profileComplete?: SortOrder
     role?: SortOrder
     emailVerified?: SortOrder
     image?: SortOrder
@@ -37360,6 +37392,7 @@ export namespace Prisma {
     companyName?: SortOrder
     countryCode?: SortOrder
     isIndividualBuyer?: SortOrder
+    profileComplete?: SortOrder
     role?: SortOrder
     emailVerified?: SortOrder
     image?: SortOrder
@@ -37408,6 +37441,14 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedBoolNullableFilter<$PrismaModel>
     _max?: NestedBoolNullableFilter<$PrismaModel>
+  }
+
+  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type EnumRoleWithAggregatesFilter<$PrismaModel = never> = {
@@ -37897,11 +37938,6 @@ export namespace Prisma {
     not?: NestedEnumPoolItemStatusNullableFilter<$PrismaModel> | $Enums.PoolItemStatus | null
   }
 
-  export type BoolFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolFilter<$PrismaModel> | boolean
-  }
-
   export type PoolItemRelationFilter = {
     is?: PoolItemWhereInput
     isNot?: PoolItemWhereInput
@@ -37953,14 +37989,6 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedEnumPoolItemStatusNullableFilter<$PrismaModel>
     _max?: NestedEnumPoolItemStatusNullableFilter<$PrismaModel>
-  }
-
-  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedBoolFilter<$PrismaModel>
-    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type EnumPayMethodFilter<$PrismaModel = never> = {
@@ -39311,6 +39339,10 @@ export namespace Prisma {
     set?: boolean | null
   }
 
+  export type BoolFieldUpdateOperationsInput = {
+    set?: boolean
+  }
+
   export type EnumRoleFieldUpdateOperationsInput = {
     set?: $Enums.Role
   }
@@ -40195,10 +40227,6 @@ export namespace Prisma {
     set?: $Enums.PoolItemStatus | null
   }
 
-  export type BoolFieldUpdateOperationsInput = {
-    set?: boolean
-  }
-
   export type PoolItemUpdateOneRequiredWithoutStatusHistoryNestedInput = {
     create?: XOR<PoolItemCreateWithoutStatusHistoryInput, PoolItemUncheckedCreateWithoutStatusHistoryInput>
     connectOrCreate?: PoolItemCreateOrConnectWithoutStatusHistoryInput
@@ -41003,6 +41031,11 @@ export namespace Prisma {
     not?: NestedBoolNullableFilter<$PrismaModel> | boolean | null
   }
 
+  export type NestedBoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
   export type NestedEnumRoleFilter<$PrismaModel = never> = {
     equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
     in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
@@ -41094,6 +41127,14 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedBoolNullableFilter<$PrismaModel>
     _max?: NestedBoolNullableFilter<$PrismaModel>
+  }
+
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type NestedEnumRoleWithAggregatesFilter<$PrismaModel = never> = {
@@ -41273,11 +41314,6 @@ export namespace Prisma {
     not?: NestedEnumPoolItemStatusNullableFilter<$PrismaModel> | $Enums.PoolItemStatus | null
   }
 
-  export type NestedBoolFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolFilter<$PrismaModel> | boolean
-  }
-
   export type NestedEnumPoolItemStatusNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.PoolItemStatus | EnumPoolItemStatusFieldRefInput<$PrismaModel> | null
     in?: $Enums.PoolItemStatus[] | ListEnumPoolItemStatusFieldRefInput<$PrismaModel> | null
@@ -41286,14 +41322,6 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedEnumPoolItemStatusNullableFilter<$PrismaModel>
     _max?: NestedEnumPoolItemStatusNullableFilter<$PrismaModel>
-  }
-
-  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedBoolFilter<$PrismaModel>
-    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type NestedEnumPayMethodFilter<$PrismaModel = never> = {
@@ -42387,6 +42415,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -42415,6 +42444,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -42459,6 +42489,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -42487,6 +42518,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -42515,6 +42547,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -42543,6 +42576,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -42587,6 +42621,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -42615,6 +42650,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -42643,6 +42679,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -42671,6 +42708,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -42763,6 +42801,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -42791,6 +42830,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -42856,6 +42896,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -42884,6 +42925,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -42968,6 +43010,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -42996,6 +43039,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -43349,6 +43393,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -43377,6 +43422,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -43575,6 +43621,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -43603,6 +43650,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -43785,6 +43833,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -43813,6 +43862,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -43898,6 +43948,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -43926,6 +43977,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -44469,6 +44521,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -44497,6 +44550,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -44576,6 +44630,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -44604,6 +44659,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -44661,6 +44717,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -44689,6 +44746,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -44768,6 +44826,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -44796,6 +44855,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -45156,6 +45216,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -45184,6 +45245,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -45250,6 +45312,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -45278,6 +45341,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -45322,6 +45386,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -45350,6 +45415,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -45428,6 +45494,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -45456,6 +45523,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -45484,6 +45552,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -45512,6 +45581,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -45556,6 +45626,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -45584,6 +45655,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -45612,6 +45684,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -45640,6 +45713,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -45741,6 +45815,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -45769,6 +45844,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -45860,6 +45936,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -45888,6 +45965,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -46032,6 +46110,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -46060,6 +46139,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -46200,6 +46280,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -46228,6 +46309,7 @@ export namespace Prisma {
     companyName?: string | null
     countryCode?: string | null
     isIndividualBuyer?: boolean | null
+    profileComplete?: boolean
     role?: $Enums.Role
     emailVerified?: Date | string | null
     image?: string | null
@@ -46294,6 +46376,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null
@@ -46322,6 +46405,7 @@ export namespace Prisma {
     companyName?: NullableStringFieldUpdateOperationsInput | string | null
     countryCode?: NullableStringFieldUpdateOperationsInput | string | null
     isIndividualBuyer?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    profileComplete?: BoolFieldUpdateOperationsInput | boolean
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     image?: NullableStringFieldUpdateOperationsInput | string | null

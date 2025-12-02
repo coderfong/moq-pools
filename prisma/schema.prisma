@@ -121,6 +121,7 @@ model User {
   companyName              String?
   countryCode              String?
   isIndividualBuyer        Boolean?
+  profileComplete          Boolean                   @default(false)
   role                     Role                      @default(BUYER)
   // OAuth fields
   emailVerified            DateTime?

@@ -69,6 +69,7 @@ export const authConfig = {
         token.id = user.id;
         token.role = (user as any).role || 'BUYER';
         token.email = user.email;
+        token.profileComplete = (user as any).profileComplete ?? false;
       }
       return token;
     },
@@ -77,14 +78,15 @@ export const authConfig = {
         session.user.id = token.id as string;
         (session.user as any).role = token.role as string;
         session.user.email = token.email as string;
+        (session.user as any).profileComplete = token.profileComplete as boolean;
       }
       return session;
     },
     async signIn({ user, account, profile }) {
-      if (!prisma) return true;
+      if (!prisma || !account) return true;
       
       // For OAuth providers, create user if doesn't exist
-      if (account?.provider !== 'credentials') {
+      if (account.provider !== 'credentials') {
         try {
           if (!user.email) return false;
           
@@ -102,6 +104,7 @@ export const authConfig = {
                 image: user.image,
                 role: 'BUYER',
                 emailVerified: new Date(), // OAuth emails are pre-verified
+                profileComplete: false, // Needs to complete profile information
               },
             });
             
@@ -144,7 +147,7 @@ export const authConfig = {
                 token_type: account.token_type,
                 scope: account.scope,
                 id_token: account.id_token,
-                session_state: account.session_state,
+                session_state: account.session_state as string | null,
               },
             });
             
