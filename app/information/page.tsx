@@ -235,19 +235,20 @@ export default function InformationPage() {
       
       // Update the session to refresh profileComplete status from server
       try {
-        console.log('Triggering session refresh...');
-        await updateSession();
+        console.log('Triggering session refresh with data parameter...');
+        // Pass an empty object to trigger the JWT callback with trigger: 'update'
+        await updateSession({});
         console.log('Session refreshed from server');
         
         // Small delay to ensure session is updated
         await new Promise(resolve => setTimeout(resolve, 500));
+        
+        console.log('Redirecting to /products');
+        window.location.href = "/products";
       } catch (updateErr) {
-        console.error('Session update failed:', updateErr);
+        console.error('Session update failed, redirecting anyway:', updateErr);
+        window.location.href = "/products";
       }
-      
-      // Force full page reload to ensure session is completely refreshed
-      console.log('Redirecting to /products');
-      window.location.href = "/products";
     } catch (err) {
       console.error('Submission error:', err);
       setError("Failed to submit information. Please try again.");
