@@ -196,31 +196,48 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
     }
   } catch {}
 
-  // PERFORMANCE: Disabled automatic refresh for weak details to prevent slow page loads
-  // When FAST mode is enabled, we only use cached data and synthetic fallbacks
-  // This prevents expensive external scraping operations that block page render for seconds
-  // Users can still manually refresh with ?refresh=1 if they need fresh data
-  
-  // DISABLED: Automatic detail refresh (blocks page load for seconds)
-  // if (!force) {
-  //   try {
-  //     if (isWeak) {
-  //       const { refreshProductDetail } = await import('@/lib/providers/detail');
-  //       const fresh = await refreshProductDetail(listing).catch(() => null);
-  //       if (fresh) {
-  //         detail = fresh;
-  //         try {
-  //           const { normalizeDetail, isWeakDetail } = await import('@/lib/detail-contract');
-  //           normalized = normalizeDetail(...);
-  //           if (!detail?.priceText && normalized.priceText) detail.priceText = normalized.priceText;
-  //           if ((!detail?.priceTiers || detail.priceTiers.length === 0) && normalized.priceTiers?.length) detail.priceTiers = normalized.priceTiers;
-  //           if (!detail?.heroImage && normalized?.heroImage) detail.heroImage = normalized.heroImage;
-  //           try { isWeak = isWeakDetail(normalized as any); } catch {}
-  //         } catch {}
-  //       }
-  //     }
-  //   } catch {}
-  // }
+  // If the cached detail is weak and user didn't explicitly force refresh, perform a one-time live refresh
+  if (!force) {
+    try {
+      if (isWeak) {
+        const { refreshProductDetail } = await import('@/lib/providers/detail');
+        const fresh = await refreshProductDetail(listing).catch(() => null);
+        if (fresh) {
+          detail = fresh;
+          try {
+            const { normalizeDetail, isWeakDetail } = await import('@/lib/detail-contract');
+            normalized = normalizeDetail(
+              {
+                title: String(detail?.title || ''),
+                priceText: detail?.priceText ?? null,
+                priceTiers: Array.isArray(detail?.priceTiers) ? detail.priceTiers : [],
+                soldCount: (detail as any)?.soldCount ?? null,
+                attributes: Array.isArray(detail?.attributes) ? (detail.attributes as Array<{label:string; value:string}>).map(p => [String(p.label||''), String(p.value||'')] as [string,string]) : [],
+                packaging: Array.isArray(detail?.packaging) ? (detail.packaging as Array<{name:string; value:string}>).map(p => [String(p.name||''), String(p.value||'')] as [string,string]) : [],
+                protections: Array.isArray(detail?.protections) ? (detail.protections as Array<{header?:string; body?:string}>).map(p => [p.header, p.body].filter(Boolean).join(': ').trim()).filter(Boolean) : [],
+                supplier: { name: (detail as any)?.supplier?.name ?? null, logo: (detail as any)?.supplier?.logo ?? null },
+                moqText: (detail as any)?.moqText || undefined,
+                heroImage: (detail as any)?.heroImage ?? null,
+              },
+              {
+                title: String(listing.title || ''),
+                priceRaw: (listing as any)?.priceRaw ?? null,
+                priceMin: (listing as any)?.priceMin ?? null,
+                priceMax: (listing as any)?.priceMax ?? null,
+                currency: (listing as any)?.currency ?? null,
+                ordersRaw: (listing as any)?.ordersRaw ?? null,
+                image: (listing as any)?.image ?? null,
+              }
+            );
+            if (!detail?.priceText && normalized.priceText) detail.priceText = normalized.priceText;
+            if ((!detail?.priceTiers || detail.priceTiers.length === 0) && normalized.priceTiers?.length) detail.priceTiers = normalized.priceTiers;
+            if (!detail?.heroImage && normalized?.heroImage) detail.heroImage = normalized.heroImage;
+            try { isWeak = isWeakDetail(normalized as any); } catch {}
+          } catch {}
+        }
+      }
+    } catch {}
+  }
   const gallery = Array.isArray(detail?.gallery) ? detail!.gallery! : [];
   // Title sanitizer: remove file extensions and trailing long numeric IDs to match product card cleaning
   function cleanTitleString(s?: string | null): string {
@@ -255,84 +272,68 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
     const title: string = String(listing.title || '');
     const desc: string = String(listing.description || '');
     const fallback = resolveFallbackImage(raw, title, desc) || '';
-    // PERFORMANCE: Removed preferIM and isAli flags - not needed when FAST mode is enabled
-    // const preferIM = String((listing as any)?.platform || '').toUpperCase() === 'INDIAMART';
-    // const isAli = String((listing as any)?.platform || '').toUpperCase() === 'ALIBABA';
+    const preferIM = String((listing as any)?.platform || '').toUpperCase() === 'INDIAMART';
+    const isAli = String((listing as any)?.platform || '').toUpperCase() === 'ALIBABA';
 
     // 1) Prefer already-cached listing image if valid
     if (raw && raw.startsWith('/cache/') && !isBadImageHashFromPath(raw)) {
       return raw;
     }
 
-    // 2) If parser resolved a heroImage and it's already cached, use it
-    if (hero && hero.startsWith('/cache/') && !isBadImageHashFromPath(hero)) {
-      return hero;
+    // 2) If parser resolved a heroImage, try caching and use it
+    if (hero) {
+      if (hero.startsWith('/cache/') && !isBadImageHashFromPath(hero)) return hero;
+      if (hero.startsWith('http://') || hero.startsWith('https://') || hero.startsWith('//')) {
+        try {
+          const { cacheExternalImage } = await import('@/lib/imageCache');
+          const { localPath } = await cacheExternalImage(hero, { preferJpgForIndiaMart: preferIM });
+          if (localPath && !isBadImageHashFromPath(localPath)) return localPath;
+        } catch {}
+      }
     }
-    
-    // PERFORMANCE: Disabled synchronous image caching operations that block page load
-    // These operations can take seconds and significantly slow down page rendering
-    // Images should be pre-cached via background jobs, not during page render
-    
-    // DISABLED: Hero image caching (blocks page load)
-    // if (hero && (hero.startsWith('http://') || hero.startsWith('https://') || hero.startsWith('//'))) {
-    //   try {
-    //     const { cacheExternalImage } = await import('@/lib/imageCache');
-    //     const { localPath } = await cacheExternalImage(hero, { preferJpgForIndiaMart: preferIM });
-    //     if (localPath && !isBadImageHashFromPath(localPath)) return localPath;
-    //   } catch {}
-    // }
 
-    // DISABLED: Listing image caching (blocks page load)
-    // if (raw && (raw.startsWith('http://') || raw.startsWith('https://') || raw.startsWith('//'))) {
-    //   try {
-    //     const { cacheExternalImage } = await import('@/lib/imageCache');
-    //     const { localPath } = await cacheExternalImage(raw, { preferJpgForIndiaMart: preferIM });
-    //     if (localPath && !isBadImageHashFromPath(localPath)) return localPath;
-    //   } catch {}
-    // }
-
-    // DISABLED: Alibaba detail image scraping and caching (blocks page load for seconds)
-    // if (isAli && listing.url) {
-    //   try {
-    //     const { getAlibabaDetailFirstJpg } = await import('@/lib/providers/alibaba');
-    //     const best = await getAlibabaDetailFirstJpg(String(listing.url));
-    //     if (best) {
-    //       const { cacheExternalImage } = await import('@/lib/imageCache');
-    //       const { localPath } = await cacheExternalImage(best);
-    //       if (localPath && !isBadImageHashFromPath(localPath)) return localPath;
-    //       if (/^https?:\/\//i.test(best)) return best;
-    //     }
-    //   } catch {}
-    // }
-    
-    // DISABLED: API fetch to resolve-img (blocks page load with network call)
-    // try {
-    //   const apiPath = `/api/external/resolve-img?src=${encodeURIComponent(String(listing.url))}`;
-    //   let abs = apiPath;
-    //   try {
-    //     const h = headers();
-    //     const hostH = h.get('x-forwarded-host') || h.get('host') || process.env.HOST || 'localhost:3000';
-    //     const proto = h.get('x-forwarded-proto') || (String(hostH).includes('localhost') || String(hostH).includes('127.0.0.1') ? 'http' : 'https');
-    //     abs = `${proto}://${hostH}${apiPath}`;
-    //   } catch {
-    //     const base = (process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000').replace(/\/$/, '');
-    //     abs = `${base}${apiPath}`;
-    //   }
-    //   const resp = await fetch(abs, { cache: 'no-store' }).catch(() => null);
-    //   if (resp?.ok) {
-    //     const data = await resp.json().catch(() => null);
-    //     const lp = data?.localPath as string | undefined;
-    //     if (lp && !isBadImageHashFromPath(lp)) return lp;
-    //   }
-    // } catch {}
-
-    // 3) Use remote URLs directly if available (browser handles caching)
-    if (hero && (hero.startsWith('http://') || hero.startsWith('https://'))) {
-      return hero;
+    // 3) If listing image is a remote URL, attempt to cache it to /cache
+    if (raw && (raw.startsWith('http://') || raw.startsWith('https://') || raw.startsWith('//'))) {
+      try {
+        const { cacheExternalImage } = await import('@/lib/imageCache');
+        const { localPath } = await cacheExternalImage(raw, { preferJpgForIndiaMart: preferIM });
+        if (localPath && !isBadImageHashFromPath(localPath)) return localPath;
+      } catch {}
     }
-    
-    if (raw && (raw.startsWith('http://') || raw.startsWith('https://'))) {
-      return raw;
+
+    // 3b) Alibaba-only: try resolving best detail image and cache it so hero uses /cache path
+    if (isAli && listing.url) {
+      try {
+        const { getAlibabaDetailFirstJpg } = await import('@/lib/providers/alibaba');
+        const best = await getAlibabaDetailFirstJpg(String(listing.url));
+        if (best) {
+          const { cacheExternalImage } = await import('@/lib/imageCache');
+          const { localPath } = await cacheExternalImage(best);
+          if (localPath && !isBadImageHashFromPath(localPath)) return localPath;
+          // As a fallback, if caching fails but best is a direct URL, return it
+          if (/^https?:\/\//i.test(best)) return best;
+        }
+        // Secondary fallback: call the generic resolver API which also caches to /cache
+        try {
+          const apiPath = `/api/external/resolve-img?src=${encodeURIComponent(String(listing.url))}`;
+          let abs = apiPath;
+          try {
+            const h = headers();
+            const hostH = h.get('x-forwarded-host') || h.get('host') || process.env.HOST || 'localhost:3000';
+            const proto = h.get('x-forwarded-proto') || (String(hostH).includes('localhost') || String(hostH).includes('127.0.0.1') ? 'http' : 'https');
+            abs = `${proto}://${hostH}${apiPath}`;
+          } catch {
+            const base = (process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000').replace(/\/$/, '');
+            abs = `${base}${apiPath}`;
+          }
+          const resp = await fetch(abs, { cache: 'no-store' }).catch(() => null);
+          if (resp?.ok) {
+            const data = await resp.json().catch(() => null);
+            const lp = data?.localPath as string | undefined;
+            if (lp && !isBadImageHashFromPath(lp)) return lp;
+          }
+        } catch {}
+      } catch {}
     }
 
     // 4) Fallback (seed or computed placeholder)

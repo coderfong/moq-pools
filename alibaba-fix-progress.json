@@ -1,8 +1,8 @@
 {
-  "offset": 74748,
-  "good": 38815,
-  "partial": 1299,
-  "bad": 7430,
-  "errors": 25739,
+  "offset": 5090,
+  "good": 2126,
+  "partial": 130,
+  "bad": 2819,
+  "errors": 15,
   "consecutiveFails": 0
 }
