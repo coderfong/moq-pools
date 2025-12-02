@@ -515,6 +515,14 @@ button, a, input, select, textarea {
   body {
     @apply bg-background text-foreground;
 	}
+  /* Ensure inputs always have dark text regardless of theme */
+  input, textarea, select {
+    @apply text-gray-900;
+  }
+  /* Dark mode inputs - still dark text on light input backgrounds */
+  .dark input, .dark textarea, .dark select {
+    @apply text-gray-900 bg-white;
+  }
 }
 
 /* Payment Success Page Animations */
