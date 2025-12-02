@@ -135,34 +135,35 @@ export default function HowItWorksNew() {
             ))}
           </div>
 
-          {/* Mobile & Tablet: Vertical Timeline */}
-          <div className="lg:hidden space-y-8 max-w-md mx-auto">
-            {steps.map((step, i) => (
-              <div key={i} className="relative">
-                <div className="flex gap-4">
-                  {/* Step Number */}
-                  <div className="flex-shrink-0">
-                    <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${step.bgColor} ${step.textColor} flex items-center justify-center font-bold text-lg shadow-lg`}>
-                      {i + 1}
+          {/* Mobile & Tablet: Horizontal Scroll */}
+          <div className="lg:hidden overflow-x-auto pb-4 -mx-4 px-4">
+            <div className="flex gap-4 min-w-min">
+              {steps.map((step, i) => (
+                <div key={i} className="relative flex-shrink-0 w-[280px]">
+                  <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100 h-full">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${step.bgColor} ${step.textColor} flex items-center justify-center font-bold text-base shadow-md flex-shrink-0`}>
+                        {i + 1}
+                      </div>
+                      <div className={`inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br ${step.bgColor} ${step.textColor} flex-shrink-0`}>
+                        {step.icon}
+                      </div>
                     </div>
+                    <h3 className="text-base font-bold text-gray-900 mb-2">{step.title}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{step.body}</p>
                   </div>
                   
-                  {/* Content */}
-                  <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${step.bgColor} ${step.textColor} mb-3`}>
-                      {step.icon}
+                  {/* Arrow */}
+                  {i < steps.length - 1 && (
+                    <div className="absolute top-1/2 -right-6 transform -translate-y-1/2 pointer-events-none z-10">
+                      <svg className="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                      </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{step.body}</p>
-                  </div>
+                  )}
                 </div>
-                
-                {/* Connecting Line */}
-                {i < steps.length - 1 && (
-                  <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-gradient-to-b from-gray-200 to-transparent -translate-x-1/2"></div>
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 

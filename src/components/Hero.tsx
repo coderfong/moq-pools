@@ -248,7 +248,7 @@ export default function Hero() {
       <div className="relative container mx-auto px-4 sm:px-6 py-4 sm:py-6 md:py-10 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center">
           {/* Left column: Content */}
-          <div className="flex flex-col justify-center animate-fade-in-up">
+          <div className="flex flex-col justify-center animate-fade-in-up order-2 lg:order-1">
             <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-5">
               {/* Enhanced Badge with animation */}
               <div className="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-4 md:px-5 py-1 sm:py-2 md:py-2.5 rounded-full bg-white/80 backdrop-blur-md border border-orange-200/50 shadow-lg sm:shadow-xl w-fit hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
@@ -385,7 +385,7 @@ export default function Hero() {
           </div>
 
           {/* Right column: Enhanced Carousel */}
-          <div className="order-first lg:order-none flex items-center justify-center lg:justify-end animate-fade-in-up animation-delay-300">
+          <div className="order-1 lg:order-2 flex items-center justify-center lg:justify-end animate-fade-in-up animation-delay-300">
             <div className="relative w-full max-w-[500px] px-0">
               {/* Enhanced glow effect with multiple layers */}
               <div className="absolute inset-0 bg-gradient-to-br from-orange-400/30 via-amber-400/20 to-pink-400/30 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl -z-10 animate-pulse-slow"></div>
