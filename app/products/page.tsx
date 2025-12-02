@@ -1105,15 +1105,15 @@ export default async function Products({ searchParams }: { searchParams: { platf
         {/* Enhanced Filters Row */}
         <div className="relative group">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-300/30 to-amber-300/30 rounded-xl sm:rounded-3xl blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
-          <div className="relative bg-white/95 backdrop-blur-sm rounded-md sm:rounded-xl p-1.5 sm:p-3 lg:p-4 border border-orange-200/60 shadow-md sm:shadow-lg shadow-orange-500/5 z-20">
-            <div className="flex flex-wrap items-center justify-between gap-1 sm:gap-2 lg:gap-3">
-              <div className="flex items-center gap-1.5 sm:gap-3 flex-wrap">
+          <div className="relative bg-white/95 backdrop-blur-sm rounded-md sm:rounded-xl p-1 sm:p-3 lg:p-4 border border-orange-200/60 shadow-md sm:shadow-lg shadow-orange-500/5 z-20">
+            <div className="flex flex-wrap items-center justify-between gap-0.5 sm:gap-2 lg:gap-3">
+              <div className="flex items-center gap-1 sm:gap-3 flex-wrap">
                 <CategoryDropdown platform={platform} currentQuery={q} />
                 <FiltersBar />
               </div>
-            <div className="flex items-center gap-1 sm:gap-2 ms-auto flex-wrap">
+            <div className="flex items-center gap-0.5 sm:gap-2 ms-auto flex-wrap">
               <SortDropdown />
-              <div className="px-1.5 sm:px-3 py-0.5 sm:py-1.5 bg-orange-50 text-orange-700 rounded sm:rounded-md font-semibold text-[9px] sm:text-xs border border-orange-200">
+              <div className="px-1 sm:px-3 py-0.5 sm:py-1.5 bg-orange-50 text-orange-700 rounded sm:rounded-md font-semibold text-[8px] sm:text-xs border border-orange-200">
                 {formatNumberEN(filteredExt.length)} listings
               </div>
             </div>
@@ -1420,21 +1420,21 @@ export default async function Products({ searchParams }: { searchParams: { platf
                             );
                           }
                         })()}
-                        <div className="h-5 sm:h-8 mb-0.5 sm:mb-1.5 flex items-center">
-                          <SyncedCountdown size="md" variant="accent" showIcon={true} />
+                        <div className="h-4 sm:h-8 mb-0 sm:mb-1.5 flex items-center">
+                          <SyncedCountdown size="sm" variant="accent" showIcon={true} />
                         </div>
                       </Link>
                       {/* Enhanced CTA row (sibling to avoid nested links) */}
-                      <div className="p-1.5 sm:p-6 pt-1.5 sm:pt-4 flex flex-wrap items-center gap-1 sm:gap-3 mt-auto border-t border-gray-100/60">
+                      <div className="p-1 sm:p-6 pt-1 sm:pt-4 flex flex-wrap items-center gap-0.5 sm:gap-3 mt-auto border-t border-gray-100/60">
                         <a 
                           href={it.url || '#'} 
                           target="_blank" 
                           rel="noreferrer" 
-                          className="group/btn relative flex-1 min-w-[80px] sm:min-w-[120px] inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-md sm:rounded-xl px-2 sm:px-4 py-1.5 sm:py-3 text-[10px] sm:text-sm shadow-md sm:shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 overflow-hidden"
+                          className="group/btn relative flex-1 min-w-[60px] sm:min-w-[120px] inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-md sm:rounded-xl px-1.5 sm:px-4 py-1 sm:py-3 text-[9px] sm:text-sm shadow-md sm:shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 overflow-hidden"
                         >
                           <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700"></span>
-                          <span className="relative flex items-center gap-1 sm:gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-4 sm:h-4">
+                          <span className="relative flex items-center gap-0.5 sm:gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-4 sm:h-4">
                               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                             </svg>
@@ -1442,9 +1442,9 @@ export default async function Products({ searchParams }: { searchParams: { platf
                           </span>
                         </a>
                         {it.url && ((it.url as string).includes('alibaba.com') || (it.url as string).includes('made-in-china.com') || (it.url as string).includes('indiamart.com')) ? (
-                          <DetailLink url={String(it.url)} title={title} className="flex-1 min-w-[60px] sm:min-w-[90px] px-2 sm:px-4 py-1.5 sm:py-3 rounded-md sm:rounded-xl border border-orange-200/60 hover:border-orange-500 hover:bg-gradient-to-br hover:from-orange-50 hover:to-amber-50 transition-all duration-300 text-[10px] sm:text-sm font-bold text-gray-700 hover:text-orange-600 hover:shadow-lg text-center" />
+                          <DetailLink url={String(it.url)} title={title} className="flex-1 min-w-[45px] sm:min-w-[90px] px-1.5 sm:px-4 py-1 sm:py-3 rounded-md sm:rounded-xl border border-orange-200/60 hover:border-orange-500 hover:bg-gradient-to-br hover:from-orange-50 hover:to-amber-50 transition-all duration-300 text-[9px] sm:text-sm font-bold text-gray-700 hover:text-orange-600 hover:shadow-lg text-center" />
                         ) : (
-                          <a href={it.url || '#'} target="_blank" rel="noreferrer" className="flex-1 min-w-[60px] sm:min-w-[90px] px-2 sm:px-4 py-1.5 sm:py-3 rounded-md sm:rounded-xl border border-orange-200/60 hover:border-orange-500 hover:bg-gradient-to-br hover:from-orange-50 hover:to-amber-50 transition-all duration-300 text-[10px] sm:text-sm font-bold text-gray-700 hover:text-orange-600 hover:shadow-lg text-center">
+                          <a href={it.url || '#'} target="_blank" rel="noreferrer" className="flex-1 min-w-[45px] sm:min-w-[90px] px-1.5 sm:px-4 py-1 sm:py-3 rounded-md sm:rounded-xl border border-orange-200/60 hover:border-orange-500 hover:bg-gradient-to-br hover:from-orange-50 hover:to-amber-50 transition-all duration-300 text-[9px] sm:text-sm font-bold text-gray-700 hover:text-orange-600 hover:shadow-lg text-center">
                             Details
                           </a>
                         )}
