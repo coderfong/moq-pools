@@ -24,7 +24,7 @@ export default function Home() {
       </RevealSection>
 
       {/* Active Pools - Enhanced Design */}
-      <section id="pools" className="relative py-28 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+      <section id="pools" className="relative py-12 sm:py-16 md:py-20 lg:py-28 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-orange-100/30 to-transparent rounded-full blur-3xl"></div>
@@ -32,15 +32,15 @@ export default function Home() {
         
         <div className="container relative mx-auto px-6">
           {/* Enhanced Section Header */}
-          <div className="text-center max-w-4xl mx-auto mb-20 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-50 to-amber-50 text-orange-600 px-5 py-2.5 rounded-full text-sm font-bold mb-8 shadow-lg border border-orange-100 hover:scale-105 transition-transform">
+          <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 lg:mb-20 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-50 to-amber-50 text-orange-600 px-4 py-2 rounded-full text-xs sm:text-sm font-bold mb-4 sm:mb-6 md:mb-8 shadow-lg border border-orange-100 hover:scale-105 transition-transform">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse-slow">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
               Limited Time Offers
             </div>
-            <h2 className="text-4xl font-bold mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 Active Pools{' '}
               </span>
@@ -53,8 +53,8 @@ export default function Home() {
                 </svg>
               </span>
             </h2>
-            <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-gray-900 font-medium max-w-2xl mx-auto">
-              Join now to secure your spot and unlock <span className="text-orange-600 font-bold">wholesale pricing</span>
+            <p className="text-sm sm:text-base md:text-xl lg:text-2xl !text-gray-900 font-medium max-w-2xl mx-auto">
+              Join now to secure your spot and unlock <span className="!text-orange-600 font-bold">wholesale pricing</span>
             </p>
           </div>
 

@@ -245,11 +245,11 @@ export default function Hero() {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
 
-      <div className="relative container mx-auto px-4 sm:px-6 py-6 sm:py-8 md:py-12 lg:py-14">
+      <div className="relative container mx-auto px-4 sm:px-6 py-4 sm:py-6 md:py-10 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center">
           {/* Left column: Content */}
           <div className="flex flex-col justify-center animate-fade-in-up">
-            <div className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6">
+            <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-5">
               {/* Enhanced Badge with animation */}
               <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 rounded-full bg-white/80 backdrop-blur-md border border-orange-200/50 shadow-lg sm:shadow-xl w-fit hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
                 <div className="relative">
@@ -281,8 +281,8 @@ export default function Hero() {
               </h1>
 
               {/* Enhanced Description */}
-              <p className="text-sm sm:text-base text-gray-900 max-w-xl leading-relaxed font-medium">
-                Join buyers pooling orders to meet factory minimums. Get <span className="text-orange-600 font-semibold">wholesale prices</span> on the exact quantity you need—no bulk buying required.
+              <p className="text-sm sm:text-base !text-gray-900 max-w-xl leading-relaxed font-medium">
+                Join buyers pooling orders to meet factory minimums. Get <span className="!text-orange-600 font-semibold">wholesale prices</span> on the exact quantity you need—no bulk buying required.
               </p>
 
               {/* Enhanced CTA Buttons with better hover effects */}
@@ -302,9 +302,9 @@ export default function Hero() {
                 </Link>
                 <Link 
                   href="#how-it-works" 
-                  className="group inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-white/90 backdrop-blur-sm text-gray-900 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 shadow-md sm:shadow-lg hover:shadow-xl hover:scale-105"
+                  className="group inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-white/90 backdrop-blur-sm !text-gray-900 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 shadow-md sm:shadow-lg hover:shadow-xl hover:scale-105"
                 >
-                  <span>How It Works</span>
+                  <span className="!text-gray-900">How It Works</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5 opacity-50 group-hover:opacity-100 transition-opacity">
                     <circle cx="12" cy="12" r="10"></circle>
                     <polygon points="10 8 16 12 10 16 10 8"></polygon>
@@ -313,7 +313,7 @@ export default function Hero() {
               </div>
 
               {/* Enhanced Stats with counters */}
-              <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 pt-2 sm:pt-3 md:pt-4">
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 pt-1.5 sm:pt-2 md:pt-3">
                 <div className="group bg-white/90 backdrop-blur-md px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl border border-gray-100 shadow-md sm:shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-orange-200">
                   <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                     $2.5M+
@@ -336,7 +336,7 @@ export default function Hero() {
             </div>
 
             {/* Enhanced Search Form with better focus states */}
-            <form onSubmit={onSearch} className="mt-4 sm:mt-6 md:mt-8 lg:mt-10 max-w-xl">
+            <form onSubmit={onSearch} className="mt-3 sm:mt-5 md:mt-7 lg:mt-9 max-w-xl">
               <div className="relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-400 to-amber-400 rounded-2xl opacity-0 group-focus-within:opacity-20 blur transition-all duration-300"></div>
                 <div className="relative flex items-stretch gap-1 sm:gap-2 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-1.5 sm:p-2 border border-gray-200 group-focus-within:border-orange-300 transition-all">
@@ -362,7 +362,7 @@ export default function Hero() {
               </div>
               
               {/* Enhanced Trending tags */}
-              <div className="mt-3 sm:mt-4 md:mt-5 flex flex-wrap items-center gap-1.5 sm:gap-2">
+              <div className="mt-2 sm:mt-3 md:mt-4 flex flex-wrap items-center gap-1.5 sm:gap-2">
                 <span className="text-xs sm:text-sm text-gray-500 font-semibold flex items-center gap-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-4 sm:h-4 text-orange-500">
                     <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>

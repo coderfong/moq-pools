@@ -16,29 +16,73 @@ interface FeaturedPool {
   price: number;
   originalPrice: number;
   daysLeft: number;
+  hoursLeft: number;
+  minutesLeft: number;
+  deadlineAt: string;
+  userCount: number;
   status: string;
 }
 
 function PoolCard({ pool }: { pool: FeaturedPool }) {
+  const [timeLeft, setTimeLeft] = useState({
+    days: pool.daysLeft,
+    hours: pool.hoursLeft,
+    minutes: pool.minutesLeft,
+  });
+
+  // Update countdown every minute
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = Date.now();
+      const deadline = new Date(pool.deadlineAt).getTime();
+      const diff = Math.max(0, deadline - now);
+      
+      setTimeLeft({
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
+      });
+    }, 60000); // Update every minute
+
+    return () => clearInterval(interval);
+  }, [pool.deadlineAt]);
+
   const percentage = Math.min(pool.progressPercentage, 100);
   const isAlmostFull = percentage >= 90;
-  const urgent = pool.daysLeft <= 3;
+  const urgent = timeLeft.days === 0 && timeLeft.hours < 24;
   const savingsPercentage = pool.originalPrice > 0 
     ? Math.round(((pool.originalPrice - pool.price) / pool.originalPrice) * 100)
     : 0;
+  
+  // Format time display
+  const getTimeDisplay = () => {
+    if (timeLeft.days > 0) {
+      return `${timeLeft.days}d ${timeLeft.hours}h`;
+    } else if (timeLeft.hours > 0) {
+      return `${timeLeft.hours}h ${timeLeft.minutes}m`;
+    } else {
+      return `${timeLeft.minutes}m`;
+    }
+  };
 
   return (
     <div className="group relative rounded-2xl border border-gray-200 bg-white shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden animate-fade-in-up">
       <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none"></div>
       
       <Link href={`/pools/${pool.savedListingId}`}>
-        <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-50">
+        <div className="relative h-44 sm:h-52 md:h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-50">
           <Image
             src={pool.image}
             alt={pool.title}
             fill
             className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
             unoptimized
+            loading="lazy"
+            onError={(e) => {
+              // Fallback to a simple gray placeholder on error
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           
@@ -63,14 +107,14 @@ function PoolCard({ pool }: { pool: FeaturedPool }) {
         </div>
       </Link>
 
-      <div className="p-6 space-y-5">
+      <div className="p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4 md:space-y-5">
         <Link href={`/pools/${pool.savedListingId}`}>
-          <h3 className="text-lg font-bold line-clamp-2 text-gray-900 group-hover:text-orange-600 transition-colors duration-300 min-h-[3.5rem] leading-tight">
+          <h3 className="text-base sm:text-lg font-bold line-clamp-2 text-gray-900 group-hover:text-orange-600 transition-colors duration-300 min-h-[2.5rem] sm:min-h-[3rem] md:min-h-[3.5rem] leading-tight">
             {pool.title}
           </h3>
         </Link>
 
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           <div className="flex justify-between text-sm">
             <span className="text-gray-600 font-semibold">Progress to MOQ</span>
             <span className="font-bold text-gray-900 tabular-nums">
@@ -101,9 +145,9 @@ function PoolCard({ pool }: { pool: FeaturedPool }) {
           )}
         </div>
 
-        <div className="grid grid-cols-2 gap-6 pt-3 border-t border-gray-100">
+        <div className="grid grid-cols-2 gap-4 sm:gap-5 md:gap-6 pt-2 sm:pt-3 border-t border-gray-100">
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent tabular-nums">
+            <div className="text-2xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent tabular-nums">
               ${pool.price}
             </div>
             {pool.originalPrice > 0 && (
@@ -121,16 +165,16 @@ function PoolCard({ pool }: { pool: FeaturedPool }) {
                 <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
               </svg>
-              <span className="font-semibold tabular-nums">{pool.pledgedQty}</span>
+              <span className="font-semibold tabular-nums">{pool.userCount} {pool.userCount === 1 ? 'user' : 'users'}</span>
             </div>
             
             <div className="flex items-center gap-2 text-sm text-gray-600">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`shrink-0 ${urgent ? 'text-red-500' : 'text-orange-500'}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`shrink-0 ${urgent ? 'text-red-500 animate-pulse' : 'text-orange-500'}`}>
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
-              <span className={`font-semibold tabular-nums ${urgent ? 'text-red-600' : ''}`}>
-                {pool.daysLeft}d
+              <span className={`font-semibold tabular-nums ${urgent ? 'text-red-600 font-bold' : ''}`}>
+                {getTimeDisplay()}
               </span>
             </div>
           </div>

@@ -70,10 +70,24 @@ function isSuspiciousRequest(req: NextRequest): boolean {
 }
 
 function getClientIp(req: NextRequest): string {
-  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-         req.headers.get('x-real-ip') ||
-         req.headers.get('cf-connecting-ip') ||
-         'unknown';
+  // Check standard proxy headers first
+  const forwarded = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim();
+  const realIp = req.headers.get('x-real-ip');
+  const cfIp = req.headers.get('cf-connecting-ip');
+  
+  // Try to get IP from various headers
+  const ip = forwarded || realIp || cfIp;
+  
+  // If we have an IP, return it
+  if (ip) return ip;
+  
+  // For local development, check if the host is localhost
+  const host = req.headers.get('host') || '';
+  if (host.startsWith('localhost') || host.startsWith('127.0.0.1') || host.startsWith('[::1]')) {
+    return '::1';
+  }
+  
+  return 'unknown';
 }
 
 function base64UrlToUint8Array(input: string): Uint8Array {

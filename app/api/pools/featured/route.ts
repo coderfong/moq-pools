@@ -43,29 +43,73 @@ export async function GET(request: NextRequest) {
           (pool.deadlineAt.getTime() - Date.now()) / (1000 * 60 * 60 * 24)
         );
 
-        // Get image - try detailJson first, then image field, then fallback
-        let imageUrl = 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80';
+        // Get image - prioritize actual product images from detailJson or image field
+        let imageUrl = '/cache/placeholder.jpg'; // Fallback only if no image exists
+        
+        // First priority: detailJson.imageUrls from scraped data
         if (savedListing?.detailJson && typeof savedListing.detailJson === 'object') {
           const detail = savedListing.detailJson as any;
           if (detail.imageUrls && Array.isArray(detail.imageUrls) && detail.imageUrls.length > 0) {
             imageUrl = detail.imageUrls[0];
+          } else if (detail.images && Array.isArray(detail.images) && detail.images.length > 0) {
+            imageUrl = detail.images[0];
           }
-        } else if (savedListing?.image) {
+        }
+        
+        // Second priority: SavedListing image field
+        if (imageUrl === '/cache/placeholder.jpg' && savedListing?.image) {
           imageUrl = savedListing.image;
         }
+        
+        // Third priority: Product imagesJson
+        if (imageUrl === '/cache/placeholder.jpg' && product?.imagesJson) {
+          try {
+            const images = typeof product.imagesJson === 'string' 
+              ? JSON.parse(product.imagesJson) 
+              : product.imagesJson;
+            if (Array.isArray(images) && images.length > 0) {
+              imageUrl = images[0];
+            }
+          } catch (e) {
+            console.error('Error parsing product imagesJson:', e);
+          }
+        }
+
+        // Get actual price from product, with fallback to SavedListing
+        const actualPrice = Number(product.unitPrice || savedListing?.priceMin || 0);
+        const originalPrice = savedListing?.priceMax || actualPrice * 2;
+
+        // Calculate actual days, hours, minutes left for countdown
+        const deadlineTime = pool.deadlineAt.getTime();
+        const now = Date.now();
+        const timeLeftMs = Math.max(0, deadlineTime - now);
+        const daysLeftActual = Math.floor(timeLeftMs / (1000 * 60 * 60 * 24));
+        const hoursLeft = Math.floor((timeLeftMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutesLeft = Math.floor((timeLeftMs % (1000 * 60 * 60)) / (1000 * 60));
+
+        // Get actual number of users in the pool
+        const userCount = await prisma!.poolItem.count({
+          where: {
+            poolId: pool.id,
+          },
+        });
 
         return {
           id: pool.id,
-          savedListingId: savedListing?.id || null,
+          savedListingId: savedListing?.id || pool.productId,
           title: product.title || savedListing?.title || 'Untitled Product',
           image: imageUrl,
-          category: savedListing?.categories?.[0] || 'General',
+          category: savedListing?.categories?.[0] || 'general',
           targetQty: pool.targetQty,
           pledgedQty: pool.pledgedQty,
           progressPercentage,
-          price: Number(product.unitPrice || 0),
-          originalPrice: savedListing?.priceMax || Number(product.unitPrice || 0) * 2,
-          daysLeft,
+          price: actualPrice,
+          originalPrice: originalPrice,
+          daysLeft: daysLeftActual,
+          hoursLeft,
+          minutesLeft,
+          deadlineAt: pool.deadlineAt.toISOString(),
+          userCount,
           status: pool.status,
         };
       })

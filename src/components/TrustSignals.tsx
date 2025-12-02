@@ -60,11 +60,11 @@ const stats = [
 
 export default function TrustSignals() {
   return (
-    <div className="py-24 md:py-28 lg:py-32 bg-white">
+    <div className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Main Trust Features */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 leading-tight">
             Shop with Confidence
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 font-medium">
