@@ -51,13 +51,13 @@ export default function FiltersBar() {
       {/* Mobile: single Filters button */}
       <button
         type="button"
-        className="md:hidden flex items-center gap-2 text-sm px-3 py-1.5 rounded-full border border-gray-200 bg-white shadow-sm"
+        className="md:hidden flex items-center gap-1 text-[9px] px-1.5 py-1 rounded-full border border-gray-200 bg-white shadow-sm"
         onClick={() => setOpen(true)}
       >
-        <span className="inline-block w-2 h-2 rounded-full bg-gray-900" />
+        <span className="inline-block w-1.5 h-1.5 rounded-full bg-gray-900" />
         Filters
         {activeCount > 0 ? (
-          <span className="ml-1 inline-flex items-center justify-center text-xs w-5 h-5 rounded-full bg-black text-white">{activeCount}</span>
+          <span className="ml-0.5 inline-flex items-center justify-center text-[8px] w-3.5 h-3.5 rounded-full bg-black text-white">{activeCount}</span>
         ) : null}
       </button>
 

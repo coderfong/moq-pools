@@ -13,12 +13,12 @@ export default function PlatformBadge({ code, className = '' }: { code?: Platfor
   const item = MAP[key] || { label: (code || 'Unknown').toString().replace(/_/g, ' ') };
   return (
     <span
-      className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 text-base text-gray-800 dark:text-gray-100 ${className}`.trim()}
+      className={`inline-flex items-center gap-1 sm:gap-2 px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 text-[8px] sm:text-base text-gray-800 dark:text-gray-100 ${className}`.trim()}
       title={item.label}
       aria-label={item.label}
     >
       {item.logo ? (
-        <img src={item.logo} alt="" className={`h-5 w-5 md:h-6 md:w-6 object-contain`} />
+        <img src={item.logo} alt="" className={`h-3 w-3 sm:h-5 sm:w-5 md:h-6 md:w-6 object-contain`} />
       ) : null}
       <span className="leading-none">{item.label}</span>
     </span>
