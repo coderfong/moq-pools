@@ -129,7 +129,7 @@ export async function sendPoolProgressEmail(
           <tr>
             <td style="background-color: #f9fafb; padding: 30px; text-align: center; border-top: 1px solid #e5e7eb;">
               <p style="margin: 0 0 10px; font-size: 14px; color: #6b7280;">
-                <strong>PoolBuy</strong> - Smart Shopping, Better Prices
+                <strong>MOQPools</strong> - Smart Shopping, Better Prices
               </p>
               <p style="margin: 0; font-size: 12px; color: #9ca3af;">
                 You're receiving this because you joined a pool. 
@@ -147,7 +147,7 @@ export async function sendPoolProgressEmail(
 
   try {
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || 'PoolBuy <noreply@poolbuy.com>',
+      from: process.env.SMTP_FROM || 'MOQPools <noreply@MOQPools.com>',
       to,
       subject,
       html,

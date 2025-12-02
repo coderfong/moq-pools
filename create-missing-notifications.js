@@ -101,7 +101,7 @@ async function createMissingNotifications() {
       // Create conversation with raw SQL
       const convId = await db.$queryRaw`
         INSERT INTO "Conversation" ("id", "title", "company", "avatarUrl", "preview", "poolId", "createdAt", "updatedAt")
-        VALUES (gen_random_uuid()::text, ${order.productTitle}, 'PoolBuy', ${productImage},
+        VALUES (gen_random_uuid()::text, ${order.productTitle}, 'MOQPools', ${productImage},
           ${`Your order for ${order.productTitle} has been placed in escrow. We'll keep you updated!`},
           ${order.poolId}, NOW(), NOW())
         RETURNING id

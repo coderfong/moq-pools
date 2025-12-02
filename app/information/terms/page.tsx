@@ -77,7 +77,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-lg font-semibold">Limitation of Liability</h2>
-          <p className="mt-2">To the maximum extent permitted by law, PoolBuy is not liable for indirect, incidental, or consequential damages, including delays, customs charges, or lost profits. Our total liability is limited to the amount you paid for the applicable order.</p>
+          <p className="mt-2">To the maximum extent permitted by law, MOQPools is not liable for indirect, incidental, or consequential damages, including delays, customs charges, or lost profits. Our total liability is limited to the amount you paid for the applicable order.</p>
         </section>
 
         <section>

@@ -1,6 +1,6 @@
 # Real-Time Notifications Setup
 
-This guide explains how to set up and use real-time WebSocket notifications in PoolBuy.
+This guide explains how to set up and use real-time WebSocket notifications in MOQPools.
 
 ## Overview
 

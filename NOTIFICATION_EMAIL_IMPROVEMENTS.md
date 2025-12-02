@@ -207,7 +207,7 @@ const html = createEmailHTML({
   title: '🎉 Pool Complete!',
   body: htmlBodyContent,
   ctaText: 'View Pool Status',
-  ctaUrl: 'https://poolbuy.com/pools/abc123',
+  ctaUrl: 'https://MOQPools.com/pools/abc123',
 });
 ```
 
@@ -303,9 +303,9 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
-SMTP_FROM=noreply@poolbuy.com
-ADMIN_EMAIL=admin@poolbuy.com
-APP_BASE_URL=https://poolbuy.com
+SMTP_FROM=noreply@MOQPools.com
+ADMIN_EMAIL=admin@MOQPools.com
+APP_BASE_URL=https://MOQPools.com
 ```
 
 ---

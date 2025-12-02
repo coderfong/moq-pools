@@ -23,15 +23,15 @@ export default function AboutPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About PoolBuy",
+    "name": "About MOQPools",
     "url": `${siteUrl}/about`,
     "isPartOf": {
       "@type": "WebSite",
-      "name": "PoolBuy",
+      "name": "MOQPools",
       "url": siteUrl,
       "publisher": {
         "@type": "Organization",
-        "name": "PoolBuy",
+        "name": "MOQPools",
         "email": "chaibotsg@gmail.com"
       }
     }

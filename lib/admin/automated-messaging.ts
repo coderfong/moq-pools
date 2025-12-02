@@ -139,7 +139,7 @@ We'll keep you updated on your order status. Expected delivery: {{deliveryDate}}
 Need help? Just reply to this message!
 
 Best regards,
-PoolBuy Team`;
+MOQPools Team`;
 
   return sendAutomatedMessage({
     userId: params.userId,
@@ -171,7 +171,7 @@ Great news! Your order #{{orderId}} has been shipped! 📦
 Questions? We're here to help!
 
 Best regards,
-PoolBuy Team`;
+MOQPools Team`;
 
   return sendAutomatedMessage({
     userId: params.userId,
@@ -207,7 +207,7 @@ Your pool "{{poolName}}" has reached {{progressPercent}}% of the MOQ! 🎯
 ${params.progressPercent >= 80 ? 'Almost there! Share with friends to help fill this pool.' : ''}
 
 Best regards,
-PoolBuy Team`;
+MOQPools Team`;
 
   return sendAutomatedMessage({
     userId: params.userId,
@@ -242,7 +242,7 @@ We'll process your order soon and keep you updated on shipping.
 Thank you for pooling with us!
 
 Best regards,
-PoolBuy Team`;
+MOQPools Team`;
 
   return sendAutomatedMessage({
     userId: params.userId,
@@ -277,7 +277,7 @@ Your order is now being processed. We'll notify you once it ships.
 Thank you for your purchase!
 
 Best regards,
-PoolBuy Team`;
+MOQPools Team`;
 
   return sendAutomatedMessage({
     userId: params.userId,
@@ -293,7 +293,7 @@ PoolBuy Team`;
 export async function sendWelcomeMessage(userId: string, userName?: string) {
   const template = `Hi ${userName || 'there'},
 
-Welcome to PoolBuy! 👋
+Welcome to MOQPools! 👋
 
 I'm here to help you with:
 - Order questions and updates
@@ -306,7 +306,7 @@ Feel free to ask me anything. Average response time: under 2 hours during busine
 Looking forward to helping you!
 
 Best regards,
-PoolBuy Support Team`;
+MOQPools Support Team`;
 
   return sendAutomatedMessage({
     userId,

@@ -1,4 +1,4 @@
-﻿const { PrismaClient } = require('@prisma/client');
+const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 (async () => {
@@ -30,9 +30,9 @@ const prisma = new PrismaClient();
       
       console.log('Pool:', p.product?.title || p.id);
       console.log('  ID:', p.id);
-      console.log('  Progress:', p.pledgedQty + '/' + p.targetQty, moqReached ? '✅ MOQ REACHED' : '❌ Below MOQ');
+      console.log('  Progress:', p.pledgedQty + '/' + p.targetQty, moqReached ? '? MOQ REACHED' : '? Below MOQ');
       console.log('  Deadline:', deadline.toISOString());
-      console.log('  Status:', expired ? '⏰ EXPIRED' : '⏳ Active', '(' + daysLeft + ' days)');
+      console.log('  Status:', expired ? '? EXPIRED' : '? Active', '(' + daysLeft + ' days)');
       console.log('');
     });
   }

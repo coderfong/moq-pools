@@ -16,7 +16,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: 'general',
-    question: 'How does PoolBuy work?',
+    question: 'How does MOQPools work?',
     answer: 'Browse products, join a pool for items you want, and pay securely. Once the pool reaches its MOQ, we place a bulk order with the supplier. Your items are then shipped directly to you at wholesale prices.'
   },
   {
@@ -110,7 +110,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-medium">
-            Everything you need to know about MOQ pooling and how PoolBuy works
+            Everything you need to know about MOQ pooling and how MOQPools works
           </p>
         </div>
 

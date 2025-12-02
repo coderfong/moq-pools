@@ -122,7 +122,7 @@ function NavbarContent({ scrolled, progress }: { scrolled: boolean; progress: nu
               <span className="absolute inset-0 rounded-lg md:rounded-xl bg-orange-500 opacity-0 group-hover:opacity-20 group-hover:scale-125 transition-all duration-500"></span>
             </div>
             <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 bg-clip-text text-transparent group-hover:from-orange-700 group-hover:to-amber-600 transition-all">
-              PoolBuy
+              MOQPools
             </span>
           </Link>
 

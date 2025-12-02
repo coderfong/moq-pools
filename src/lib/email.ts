@@ -37,7 +37,7 @@ function createEmailHTML(params: {
   ctaUrl?: string;
   footer?: string;
 }) {
-  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://poolbuy.com";
+  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://MOQPools.com";
   
   return `
 <!DOCTYPE html>
@@ -57,7 +57,7 @@ function createEmailHTML(params: {
           <!-- Header -->
           <tr>
             <td style="padding: 32px 32px 24px; text-align: center; border-bottom: 1px solid ${EMAIL_STYLES.borderColor};">
-              <h1 style="margin: 0; color: ${EMAIL_STYLES.primaryColor}; font-size: 24px; font-weight: 700;">PoolBuy</h1>
+              <h1 style="margin: 0; color: ${EMAIL_STYLES.primaryColor}; font-size: 24px; font-weight: 700;">MOQPools</h1>
             </td>
           </tr>
           
@@ -92,7 +92,7 @@ function createEmailHTML(params: {
           <tr>
             <td style="padding: 24px 32px; border-top: 1px solid ${EMAIL_STYLES.borderColor}; text-align: center;">
               <p style="margin: 0 0 8px; color: ${EMAIL_STYLES.mutedColor}; font-size: 12px; line-height: 1.5;">
-                ${params.footer || `You're receiving this email because you're a valued member of PoolBuy.`}
+                ${params.footer || `You're receiving this email because you're a valued member of MOQPools.`}
               </p>
               <p style="margin: 0; color: ${EMAIL_STYLES.mutedColor}; font-size: 12px;">
                 <a href="${appUrl}/settings/notifications" style="color: ${EMAIL_STYLES.primaryColor}; text-decoration: none;">Manage preferences</a> • 
@@ -134,7 +134,7 @@ export async function sendSupportEmail(params: {
     attachments.push({ filename, path });
   }
   await transport.sendMail({
-    from: `PoolBuy Support <${inbox}>`,
+    from: `MOQPools Support <${inbox}>`,
     to: inbox,
     replyTo: `${params.name} <${params.email}>`,
     subject: `[Support] ${params.subject} — ${params.name}${params.orderId ? ` (Order ${params.orderId})` : ""}`,
@@ -161,8 +161,8 @@ export async function sendPoolJoinConfirmationEmail(params: {
   if (!transport) return false;
   
   const progressPercentage = Math.round((params.currentProgress / params.targetQty) * 100);
-  const from = process.env.SMTP_FROM || process.env.SMTP_USER || "noreply@poolbuy.com";
-  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://poolbuy.com";
+  const from = process.env.SMTP_FROM || process.env.SMTP_USER || "noreply@MOQPools.com";
+  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://MOQPools.com";
   const poolUrl = `${appUrl}/pools/${params.poolId}`;
   
   const deadlineStr = params.deadlineAt.toLocaleDateString('en-US', { 
@@ -201,10 +201,10 @@ Track your pool: ${poolUrl}
 ${productLink}
 Questions? Reply to this email or check your messages at ${appUrl}/messages
 
-Thanks for being part of PoolBuy!
+Thanks for being part of MOQPools!
 
 ---
-The PoolBuy Team
+The MOQPools Team
   `.trim();
 
   // HTML version with better formatting
@@ -281,7 +281,7 @@ The PoolBuy Team
   });
 
   await transport.sendMail({
-    from: `PoolBuy <${from}>`,
+    from: `MOQPools <${from}>`,
     to: `${params.userName} <${params.userEmail}>`,
     subject: `✅ You've joined the pool for ${params.productTitle}`,
     text,
@@ -306,8 +306,8 @@ export async function sendAdminPoolJoinNotification(params: {
   if (!transport) return false;
   
   const adminEmail = process.env.ADMIN_EMAIL || process.env.SUPPORT_EMAIL || "chaibotsg@gmail.com";
-  const from = process.env.SMTP_FROM || process.env.SMTP_USER || "noreply@poolbuy.com";
-  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://poolbuy.com";
+  const from = process.env.SMTP_FROM || process.env.SMTP_USER || "noreply@MOQPools.com";
+  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://MOQPools.com";
   const poolUrl = `${appUrl}/pools/${params.poolId}`;
   
   const progressPercentage = Math.round((params.currentProgress / params.targetQty) * 100);
@@ -389,7 +389,7 @@ View Pool: ${poolUrl}
   });
 
   await transport.sendMail({
-    from: `PoolBuy System <${from}>`,
+    from: `MOQPools System <${from}>`,
     to: adminEmail,
     subject: `🆕 New participant joined pool: ${params.productTitle} (${progressPercentage}%)`,
     text,
@@ -413,8 +413,8 @@ export async function sendPoolMilestoneEmail(params: {
   const transport = getMailTransport();
   if (!transport) return false;
   
-  const from = process.env.SMTP_FROM || process.env.SMTP_USER || "noreply@poolbuy.com";
-  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://poolbuy.com";
+  const from = process.env.SMTP_FROM || process.env.SMTP_USER || "noreply@MOQPools.com";
+  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://MOQPools.com";
   const poolUrl = `${appUrl}/pools/${params.poolId}`;
   const progressPercentage = Math.round((params.currentProgress / params.targetQty) * 100);
   
@@ -509,10 +509,10 @@ What's Next?
 
 Track your pool: ${poolUrl}
 
-Thanks for being part of PoolBuy!
+Thanks for being part of MOQPools!
 
 ---
-The PoolBuy Team
+The MOQPools Team
   `.trim();
 
   const html = createEmailHTML({
@@ -524,7 +524,7 @@ The PoolBuy Team
   });
 
   await transport.sendMail({
-    from: `PoolBuy <${from}>`,
+    from: `MOQPools <${from}>`,
     to: `${params.userName} <${params.userEmail}>`,
     subject: `${emoji} ${titleText} - ${params.productTitle}`,
     text,
@@ -547,8 +547,8 @@ export async function sendShippingNotificationEmail(params: {
   const transport = getMailTransport();
   if (!transport) return false;
   
-  const from = process.env.SMTP_FROM || process.env.SMTP_USER || "noreply@poolbuy.com";
-  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://poolbuy.com";
+  const from = process.env.SMTP_FROM || process.env.SMTP_USER || "noreply@MOQPools.com";
+  const appUrl = process.env.APP_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://MOQPools.com";
   
   const deliveryStr = params.estimatedDelivery 
     ? params.estimatedDelivery.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', weekday: 'long' })
@@ -604,7 +604,7 @@ ${params.trackingUrl ? `Track your package: ${params.trackingUrl}\n` : ''}
 Questions? Reply to this email or visit ${appUrl}/support
 
 ---
-The PoolBuy Team
+The MOQPools Team
   `.trim();
 
   const html = createEmailHTML({
@@ -616,7 +616,7 @@ The PoolBuy Team
   });
 
   await transport.sendMail({
-    from: `PoolBuy <${from}>`,
+    from: `MOQPools <${from}>`,
     to: `${params.userName} <${params.userEmail}>`,
     subject: `📦 Your order has shipped - ${params.productTitle}`,
     text,

@@ -30,7 +30,7 @@ export default function SupportPage() {
     url: `${siteUrl}/support`,
     mainEntity: {
       "@type": "Organization",
-      name: "PoolBuy",
+      name: "MOQPools",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
@@ -109,7 +109,7 @@ export default function SupportPage() {
                 Contact methods
               </div>
               <div className="mt-3 grid gap-2">
-                <a href={`/account/messages`} className="rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105 transition-all duration-300 text-center">Message us on PoolBuy</a>
+                <a href={`/account/messages`} className="rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105 transition-all duration-300 text-center">Message us on MOQPools</a>
                 <a href={`mailto:${email}`} className="rounded-xl border-2 border-orange-200 px-4 py-2.5 text-sm font-semibold text-orange-700 hover:bg-orange-50 hover:border-orange-300 transition-all duration-300 text-center">Email: {email}</a>
                 <a href={`tel:+6594799717`} className="rounded-xl border-2 border-orange-200 px-4 py-2.5 text-sm font-semibold text-orange-700 hover:bg-orange-50 hover:border-orange-300 transition-all duration-300 text-center">Phone: {phone}</a>
               </div>

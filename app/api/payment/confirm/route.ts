@@ -123,7 +123,7 @@ export async function POST(request: NextRequest) {
                     data: {
                       userId: systemUser.id,
                       name: 'System',
-                      contactEmail: process.env.ADMIN_EMAIL || 'admin@poolbuy.com',
+                      contactEmail: process.env.ADMIN_EMAIL || 'admin@MOQPools.com',
                     }
                   });
                 }
@@ -598,7 +598,7 @@ export async function POST(request: NextRequest) {
           const conversation = await (prisma as any).conversation.create({
             data: {
               title: pool.product?.title || 'Your Pool Order',
-              company: 'PoolBuy',
+              company: 'MOQPools',
               avatarUrl: productImage,
               preview: `Your order for ${pool.product?.title || 'this product'} has been placed in escrow. We'll keep you updated!`,
               poolId: effectivePoolId, // Link conversation to pool

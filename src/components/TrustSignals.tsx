@@ -150,7 +150,7 @@ export default function TrustSignals() {
               {
                 name: 'Sarah Chen',
                 role: 'Small Business Owner',
-                review: 'PoolBuy helped me get wholesale prices for my boutique without huge upfront costs. Game changer!',
+                review: 'MOQPools helped me get wholesale prices for my boutique without huge upfront costs. Game changer!',
                 rating: 5
               },
               {

@@ -64,13 +64,13 @@ SMTP_HOST=smtp.example.com
 SMTP_PORT=587
 SMTP_USER=noreply@example.com
 SMTP_PASS=password
-SMTP_FROM=PoolBuy <noreply@poolbuy.com>
+SMTP_FROM=MOQPools <noreply@MOQPools.com>
 
 # Admin notifications
-ADMIN_EMAIL=admin@poolbuy.com
+ADMIN_EMAIL=admin@MOQPools.com
 
 # App URLs
-APP_BASE_URL=https://poolbuy.com
+APP_BASE_URL=https://MOQPools.com
 ```
 
 ## How It Works

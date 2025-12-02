@@ -261,7 +261,7 @@ export default function AlertsClient({ initialAlerts }: AlertsClientProps) {
       if (permission === 'granted') {
         setIsPushEnabled(true);
         // Show success notification
-        new Notification('PoolBuy Notifications Enabled', {
+        new Notification('MOQPools Notifications Enabled', {
           body: 'You will now receive push notifications for important updates',
           icon: '/favicon.ico',
         });

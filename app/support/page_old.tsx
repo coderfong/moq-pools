@@ -28,7 +28,7 @@ export default function SupportPage() {
     url: `${siteUrl}/support`,
     mainEntity: {
       "@type": "Organization",
-      name: "PoolBuy",
+      name: "MOQPools",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
@@ -94,7 +94,7 @@ export default function SupportPage() {
             <div className="rounded-xl border border-neutral-200 bg-white p-4">
               <div className="text-sm font-medium text-neutral-900">Contact methods</div>
               <div className="mt-2 grid gap-2">
-                <a href={`/account/messages`} className="rounded-md bg-neutral-900 px-3 py-2 text-sm font-medium text-white hover:bg-neutral-800">Message us on PoolBuy</a>
+                <a href={`/account/messages`} className="rounded-md bg-neutral-900 px-3 py-2 text-sm font-medium text-white hover:bg-neutral-800">Message us on MOQPools</a>
                 <a href={`mailto:${email}`} className="rounded-md border border-neutral-200 px-3 py-2 text-sm hover:bg-neutral-50">Email: {email}</a>
                 <a href={`tel:+6594799717`} className="rounded-md border border-neutral-200 px-3 py-2 text-sm hover:bg-neutral-50">Phone: {phone}</a>
               </div>

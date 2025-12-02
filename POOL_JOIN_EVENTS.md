@@ -64,7 +64,7 @@ SMTP_PORT=587
 SMTP_USER=your-smtp-user
 SMTP_PASS=your-smtp-password
 SMTP_SECURE=0
-SMTP_FROM=noreply@poolbuy.com
+SMTP_FROM=noreply@MOQPools.com
 ```
 
 ### 3. Admin In-App Alert
@@ -97,7 +97,7 @@ Sends email to admin team about new pool participant.
 
 **Configuration:**
 ```env
-ADMIN_EMAIL=admin@poolbuy.com
+ADMIN_EMAIL=admin@MOQPools.com
 ```
 
 ### 5. Existing Participants Notification
@@ -264,15 +264,15 @@ SMTP_PORT=587
 SMTP_USER=noreply@example.com
 SMTP_PASS=your-password
 SMTP_SECURE=0
-SMTP_FROM=PoolBuy <noreply@poolbuy.com>
+SMTP_FROM=MOQPools <noreply@MOQPools.com>
 
 # Admin Notifications
-ADMIN_EMAIL=admin@poolbuy.com
-SUPPORT_EMAIL=support@poolbuy.com
+ADMIN_EMAIL=admin@MOQPools.com
+SUPPORT_EMAIL=support@MOQPools.com
 
 # Application URLs
-APP_BASE_URL=https://poolbuy.com
-NEXT_PUBLIC_APP_URL=https://poolbuy.com
+APP_BASE_URL=https://MOQPools.com
+NEXT_PUBLIC_APP_URL=https://MOQPools.com
 ```
 
 ## Testing

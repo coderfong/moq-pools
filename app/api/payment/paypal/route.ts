@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
           const conversation = await (prisma as any).conversation.create({
             data: {
               title: pool.product?.title || 'Your Pool Order',
-              company: 'PoolBuy',
+              company: 'MOQPools',
               avatarUrl: productImage,
               preview: `Your order for ${pool.product?.title || 'this product'} has been placed in escrow. We'll keep you updated!`,
               updatedAt: new Date(),

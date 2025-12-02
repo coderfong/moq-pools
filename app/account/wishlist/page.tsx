@@ -3,7 +3,7 @@ import { auth } from '../../../auth';
 import WishlistClient from './WishlistClient';
 
 export const metadata = {
-  title: 'My Wishlist - PoolBuy',
+  title: 'My Wishlist - MOQPools',
   description: 'View and manage your saved favorite products',
 };
 

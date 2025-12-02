@@ -18,7 +18,7 @@ We'll keep you updated on your order status. Expected delivery: {{deliveryDate}}
 Need help? Just reply to this message!
 
 Best regards,
-PoolBuy Team`,
+MOQPools Team`,
     variables: ['userName', 'orderId', 'productName', 'quantity', 'totalAmount', 'deliveryDate'],
   },
 
@@ -40,7 +40,7 @@ Track your package: {{trackingUrl}}
 Questions? We're here to help!
 
 Best regards,
-PoolBuy Team`,
+MOQPools Team`,
     variables: ['userName', 'orderId', 'carrier', 'trackingNumber', 'expectedDelivery', 'trackingUrl'],
   },
 
@@ -63,7 +63,7 @@ Your pool "{{poolName}}" has reached {{progressPercent}}% of the MOQ! 🎯
 View pool: {{poolUrl}}
 
 Best regards,
-PoolBuy Team`,
+MOQPools Team`,
     variables: ['userName', 'poolName', 'progressPercent', 'targetQty', 'currentQty', 'remainingQty', 'deadline', 'poolUrl'],
   },
 
@@ -85,7 +85,7 @@ We'll process your order soon and keep you updated on shipping.
 Thank you for pooling with us!
 
 Best regards,
-PoolBuy Team`,
+MOQPools Team`,
     variables: ['userName', 'poolName', 'finalQty', 'userQty', 'orderDate'],
   },
 
@@ -106,7 +106,7 @@ Complete payment: {{paymentUrl}}
 If you've already paid, please disregard this message. Questions? Let us know!
 
 Best regards,
-PoolBuy Team`,
+MOQPools Team`,
     variables: ['userName', 'orderId', 'amount', 'dueDate', 'paymentUrl'],
   },
 
@@ -128,7 +128,7 @@ Your order is now being processed. We'll notify you once it ships.
 Thank you for your purchase!
 
 Best regards,
-PoolBuy Team`,
+MOQPools Team`,
     variables: ['userName', 'orderId', 'amount', 'paymentMethod', 'paymentRef'],
   },
 
@@ -138,7 +138,7 @@ PoolBuy Team`,
     category: 'general',
     template: `Hi {{userName}},
 
-Welcome to PoolBuy! 👋
+Welcome to MOQPools! 👋
 
 I'm here to help you with:
 - Order questions and updates
@@ -151,7 +151,7 @@ Feel free to ask me anything. Average response time: under 2 hours during busine
 Looking forward to helping you!
 
 Best regards,
-PoolBuy Support Team`,
+MOQPools Support Team`,
     variables: ['userName'],
   },
 
@@ -173,7 +173,7 @@ We'd love to help you source {{productDescription}}. Here's what we need:
 Could you provide these details? We'll get back to you within 24 hours with options and pricing.
 
 Best regards,
-PoolBuy Team`,
+MOQPools Team`,
     variables: ['userName', 'productDescription'],
   },
 
@@ -195,7 +195,7 @@ The refund will be returned to your original payment method. You'll receive a co
 Questions? We're here to help!
 
 Best regards,
-PoolBuy Team`,
+MOQPools Team`,
     variables: ['userName', 'orderId', 'refundAmount', 'refundReason', 'processingDays'],
   },
 
@@ -210,7 +210,7 @@ Following up on your previous message. {{customMessage}}
 Is there anything else I can help you with?
 
 Best regards,
-PoolBuy Support Team`,
+MOQPools Support Team`,
     variables: ['userName', 'customMessage'],
   },
 };
