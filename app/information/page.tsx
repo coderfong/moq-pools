@@ -265,7 +265,7 @@ export default function InformationPage() {
                 aria-controls="country-listbox"
                 aria-autocomplete="list"
                 placeholder="Type to search country, code, or dial"
-                className="mt-1 w-full rounded-xl border-2 border-orange-200 bg-white px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm transition-all"
+                className="mt-1 w-full rounded-xl border-2 border-orange-200 bg-white text-gray-900 px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm transition-all"
                 value={isCountryOpen ? countryQuery : `${country.name} (${country.dial})`}
                 onFocus={() => {
                   setIsCountryOpen(true);
@@ -347,7 +347,7 @@ export default function InformationPage() {
               <label className="block text-xs sm:text-sm font-semibold text-gray-900 mb-1">Company Name<span className="text-red-600 ml-1">*</span></label>
               <div className="mt-1 flex flex-col gap-2">
                 <input
-                  className="w-full rounded-xl border-2 border-orange-200 bg-white px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 disabled:opacity-60 disabled:bg-gray-50 shadow-sm transition-all"
+                  className="w-full rounded-xl border-2 border-orange-200 bg-white text-gray-900 px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 disabled:opacity-60 disabled:bg-gray-50 shadow-sm transition-all"
                   placeholder="In English"
                   maxLength={160}
                   value={companyName}
@@ -370,7 +370,7 @@ export default function InformationPage() {
             <div>
               <label className="block text-xs sm:text-sm font-semibold text-gray-900 mb-1">Full Name<span className="text-red-600 ml-1">*</span></label>
               <input
-                className="mt-1 w-full rounded-xl border-2 border-orange-200 bg-white px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm transition-all"
+                className="mt-1 w-full rounded-xl border-2 border-orange-200 bg-white text-gray-900 px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm transition-all"
                 placeholder="In English"
                 maxLength={50}
                 value={fullName}
@@ -384,7 +384,7 @@ export default function InformationPage() {
               <div className="mt-1 flex">
                 <span className="inline-flex items-center px-2 sm:px-3 rounded-l-xl border-2 border-r-0 border-orange-200 bg-orange-50/50 text-gray-700 select-none font-semibold text-sm sm:text-base">{country.dial}</span>
                 <input title="Mobile number" placeholder="Your mobile number"
-                  className="flex-1 rounded-r-xl border-2 border-orange-200 bg-white px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm transition-all"
+                  className="flex-1 rounded-r-xl border-2 border-orange-200 bg-white text-gray-900 px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm transition-all"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
                 />
