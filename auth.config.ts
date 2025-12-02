@@ -63,7 +63,7 @@ export const authConfig = {
     error: '/login',
   },
   callbacks: {
-    async jwt({ token, user, account, profile }) {
+    async jwt({ token, user, account, profile, trigger, session }) {
       // On first sign in, user object is available
       if (user) {
         token.id = user.id;
@@ -71,6 +71,24 @@ export const authConfig = {
         token.email = user.email;
         token.profileComplete = (user as any).profileComplete ?? false;
       }
+      
+      // When updateSession is called, fetch fresh data from database
+      if (trigger === 'update' && token.id && prisma) {
+        try {
+          const dbUser = await prisma.user.findUnique({
+            where: { id: token.id as string },
+            select: { profileComplete: true, role: true, name: true },
+          });
+          if (dbUser) {
+            token.profileComplete = dbUser.profileComplete ?? false;
+            token.role = dbUser.role;
+            if (dbUser.name) token.name = dbUser.name;
+          }
+        } catch (err) {
+          console.error('Failed to refresh token from database:', err);
+        }
+      }
+      
       return token;
     },
     async session({ session, token }) {
