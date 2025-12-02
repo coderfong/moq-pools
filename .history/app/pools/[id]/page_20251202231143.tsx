@@ -10,13 +10,13 @@ import TrackProductView from './TrackProductView';
 import PoolTimerInjector from './PoolTimerInjector';
 import LivePoolProgress from './LivePoolProgress';
 import SocialShare from '../../../src/components/SocialShare';
-// PERFORMANCE: Lazy load heavy components to speed up initial page load
-import NextDynamic from 'next/dynamic';
-const ProductReviews = NextDynamic(() => import('../../../src/components/ProductReviews'), {
+// PERFORMANCE: Lazy load heavy components
+const ProductReviews = dynamic(() => import('../../../src/components/ProductReviews'), {
   ssr: false,
   loading: () => <div className="mt-12 h-48 animate-pulse bg-gray-100 rounded-lg" />
 });
-const SimilarProducts = NextDynamic(() => import('./SimilarProducts'), { 
+import dynamic from 'next/dynamic';
+const SimilarProducts = dynamic(() => import('./SimilarProducts'), { 
   ssr: false,
   loading: () => <div className="mt-12 h-64 animate-pulse bg-gray-100 rounded-lg" />
 });
@@ -723,20 +723,53 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
             } catch {}
             crumbs.push({ label: siteLabel, href: `/products?platform=${encodeURIComponent(plat)}` });
 
-            // PERFORMANCE: Simplified breadcrumb generation - use simple category list without expensive tree traversal
+            // Derive up to 3 levels: category > sub-category > sub-sub category
             const catsRaw = Array.isArray(listing.categories) ? listing.categories.filter(Boolean) as string[] : [];
-            const MAX_LEVELS = 2; // Reduced from 3 to 2 for faster rendering
+            const MAX_LEVELS = 3;
             const keyToLabel = new Map(CATEGORIES.map(c => [c.key, c.label] as const));
+            const normalized = (s: string) => s.trim().toLowerCase();
 
-            // Start with provided categories (map keys to labels when known) - limit to 2 levels
+            // Helper: DFS to find path for a key/label in shared taxonomy
+            const findPath = (target: string): string[] => {
+              const tkey = toKey(target);
+              const stack: { node: SharedCategoryNode; path: string[] }[] = SHARED_CATEGORIES.map(n => ({ node: n, path: [n.label] }));
+              while (stack.length) {
+                const { node, path } = stack.pop()!;
+                if (normalized(node.label) === normalized(target) || node.key === tkey) {
+                  return path;
+                }
+                if (node.children) {
+                  for (const ch of node.children) stack.push({ node: ch, path: [...path, ch.label] });
+                }
+                if ((node as any).leaves) {
+                  for (const l of (node as any).leaves as any[]) {
+                    if (normalized(l.label) === normalized(target) || l.key === tkey) return [...path, l.label];
+                  }
+                }
+              }
+              return [];
+            };
+
+            // Start with provided categories (map keys to labels when known)
             let path: string[] = [];
             if (catsRaw.length) {
+              // If already hierarchical, use first 3 entries
               path = catsRaw.map(s => keyToLabel.get(s) || s).slice(0, MAX_LEVELS);
             }
 
-            // PERFORMANCE: Removed expensive DFS tree traversal through shared taxonomy
-            // This was iterating through entire category tree for every page load
-            // If categories are missing, that's acceptable - breadcrumbs will just be simpler
+            // If shallow (<=1), attempt to derive from shared taxonomy using categories, terms, or title
+            if (path.length <= 1) {
+              const candidates: string[] = [];
+              if (catsRaw.length) candidates.push(...catsRaw);
+              if (Array.isArray(listing.terms)) candidates.push(...(listing.terms as string[]));
+              if (listing.title) candidates.push(String(listing.title));
+              if (listing.description) candidates.push(String(listing.description));
+              // Prefer the first candidate that yields a path of length >= 2
+              for (const cand of candidates) {
+                const p = findPath(cand);
+                if (p.length >= 2) { path = p.slice(0, MAX_LEVELS); break; }
+              }
+            }
 
             // Emit crumbs for derived path
             return crumbs

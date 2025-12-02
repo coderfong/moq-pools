@@ -342,7 +342,8 @@ export async function querySavedListings(params: {
       description: true,
       ratingRaw: true,
       ordersRaw: true,
-      detailJson: true,
+      // PERFORMANCE: Removed detailJson from select - it's a large JSON field that slows queries
+      // detailJson: true,
     },
     orderBy: { updatedAt: 'desc' },
     skip: offset,
@@ -361,7 +362,8 @@ export async function querySavedListings(params: {
     description: r.description || undefined,
     rating: r.ratingRaw || undefined,
     orders: r.ordersRaw || undefined,
-    detailJson: r.detailJson || undefined,
+    // PERFORMANCE: Removed detailJson from response - large field not needed for listing cards
+    // detailJson: r.detailJson || undefined,
     // Non-standard field to help UI link to /pools/[id]
     savedId: r.id,
   }));

@@ -37,7 +37,7 @@ function getBatchSize(envVar: string, fallback: number) {
 
 async function runBatchWithRetry<T>(
   ops: Prisma.PrismaPromise<T>[],
-  options?: { label?: string; maxRetries?: number; initialDelayMs?: number; backoff?: number; fallbackSequential?: boolean }
+  options?: { label?: string; maxRetries?: number; initialDelayMs?: number; backoff?: number; fallbackSequential?: boolean; continueOnError?: boolean }
 ) {
   const {
     label = 'batch',
@@ -45,6 +45,7 @@ async function runBatchWithRetry<T>(
     initialDelayMs = 500,
     backoff = 2,
     fallbackSequential = true,
+    continueOnError = false,
   } = options || {};
 
   // Try as a single transaction first with retries on transient connection closures
@@ -89,7 +90,13 @@ async function runBatchWithRetry<T>(
                 d = Math.min(d * 2, 5000);
                 continue;
               }
-              throw e;
+              if (!continueOnError) {
+                throw e;
+              }
+              // Best-effort: log and continue
+              // eslint-disable-next-line no-console
+              console.warn(`[${label}] op failed after retries:`, e?.code || '', e?.message || e);
+              break;
             }
           }
         }
@@ -147,89 +154,6 @@ export function toSourcePlatform(p: PlatformKey): SourcePlatform {
   if (p === 'INDIAMART') return (SourcePlatform as any).INDIAMART;
   if ((p as any) === 'GLOBAL_SOURCES') return (SourcePlatform as any).GLOBAL_SOURCES ?? SourcePlatform.ALIBABA;
   return SourcePlatform.ALIBABA;
-}
-
-export async function upsertListingsRaw(list: ExternalListing[]) {
-  if (!list?.length) return;
-  const ops: Prisma.PrismaPromise<any>[] = [];
-  const p: any = prisma as any;
-  if (!p?.externalListingCache?.upsert) return; // prisma client not generated for new models yet
-  for (const it of list) {
-    const priceMin = parseMinPrice(it.price) ?? undefined;
-    const moq = parseMoq(it.moq || `${it.price || ''} ${it.title || ''}`) ?? undefined;
-    ops.push(
-      p.externalListingCache.upsert({
-        where: { url: it.url },
-        create: {
-          platform: toSourcePlatform(it.platform),
-          url: it.url,
-          title: it.title || 'Product',
-          image: it.image || null as any,
-          priceRaw: it.price || null as any,
-          currency: it.currency || null as any,
-          priceMin,
-          priceMax: undefined,
-          moqRaw: it.moq || null as any,
-          moq: moq as any,
-          ordersRaw: it.orders || null as any,
-          ratingRaw: it.rating || null as any,
-          storeName: it.storeName || null as any,
-          description: it.description || null as any,
-        },
-        update: {
-          title: it.title || undefined,
-          image: (it.image || undefined) as any,
-          priceRaw: (it.price || undefined) as any,
-          currency: (it.currency || undefined) as any,
-          priceMin,
-          moqRaw: (it.moq || undefined) as any,
-          moq: (moq as any),
-          ordersRaw: (it.orders || undefined) as any,
-          ratingRaw: (it.rating || undefined) as any,
-          storeName: (it.storeName || undefined) as any,
-          description: (it.description || undefined) as any,
-        }
-      })
-    );
-  }
-  // Run in small batches with retry to avoid connection closures/timeouts
-  const batchSize = getBatchSize('EXTERNAL_LISTING_UPSERT_BATCH', 20);
-  for (let i = 0; i < ops.length; i += batchSize) {
-    const slice = ops.slice(i, i + batchSize);
-    await runBatchWithRetry(slice, { label: 'externalListingCache', maxRetries: 3, initialDelayMs: 400, backoff: 2 });
-  }
-}
-
-export async function saveSearchSnapshot(params: {
-  q: string;
-  platform: string; // 'ALL' or specific
-  filters: SearchFilters;
-  orderedUrls: string[]; // deduped and sorted list of listing urls
-}) {
-  const { q, platform, filters, orderedUrls } = params;
-  const p: any = prisma as any;
-  if (!p?.externalListingCache?.findMany || !p?.listingSearch?.create) return null;
-  // Resolve listing IDs for urls
-  const listings = await p.externalListingCache.findMany({
-    where: { url: { in: orderedUrls } },
-    select: { id: true, url: true },
-  });
-  const map = new Map<string, string>((listings as Array<{id: string; url: string}>).map((l) => [l.url, l.id] as const));
-  const itemsData = orderedUrls
-    .map((url, idx) => ({ url, idx }))
-    .filter(x => map.has(x.url))
-    .map(x => ({ position: x.idx, listingId: map.get(x.url)! }));
-
-  const search = await p.listingSearch.create({
-    data: {
-      q,
-      platform,
-      filtersJson: JSON.stringify(filters || {}),
-      total: orderedUrls.length,
-      items: { createMany: { data: itemsData } },
-    }
-  });
-  return search.id as string;
 }
 
 export async function getCachedSearch(params: {
@@ -366,7 +290,7 @@ export async function upsertSavedListings(list: SavedListingUpsert[]) {
   const batchSize = getBatchSize('SAVED_LISTING_UPSERT_BATCH', 20);
   for (let i = 0; i < ops.length; i += batchSize) {
     const slice = ops.slice(i, i + batchSize);
-    await runBatchWithRetry(slice, { label: 'savedListing', maxRetries: 4, initialDelayMs: 500, backoff: 2 });
+    await runBatchWithRetry(slice, { label: 'savedListing', maxRetries: 4, initialDelayMs: 500, backoff: 2, continueOnError: true });
   }
 }
 
@@ -377,9 +301,13 @@ export async function querySavedListings(params: {
   offset?: number;
   limit?: number;
 }): Promise<ExternalListing[]> {
-  const { q, platform = 'ALL', categories = [], offset = 0, limit = 60 } = params;
+  const { q, platform = 'ALL', categories = [], offset = 0, limit = 999999 } = params;
+  console.log('[querySavedListings] Called with:', { q, platform, categories, offset, limit });
   const p: any = prisma as any;
-  if (!p?.savedListing?.findMany) return [];
+  if (!p?.savedListing?.findMany) {
+    console.log('[querySavedListings] Prisma savedListing not available');
+    return [];
+  }
   const where: any = {};
   if (platform !== 'ALL') where.platform = platform;
   const ors: any[] = [];
@@ -398,12 +326,30 @@ export async function querySavedListings(params: {
     ors.push({ categories: { hasSome: categories } });
   }
   if (ors.length) where.OR = ors;
+  console.log('[querySavedListings] Query where:', JSON.stringify(where));
   const rows = await p.savedListing.findMany({
     where,
+    select: {
+      id: true,
+      platform: true,
+      title: true,
+      image: true,
+      url: true,
+      priceRaw: true,
+      currency: true,
+      moqRaw: true,
+      storeName: true,
+      description: true,
+      ratingRaw: true,
+      ordersRaw: true,
+      // PERFORMANCE: Removed detailJson from select - it's a large JSON field that slows queries
+      // detailJson: true,
+    },
     orderBy: { updatedAt: 'desc' },
     skip: offset,
     take: limit,
   });
+  console.log('[querySavedListings] Found rows:', rows.length);
   return (rows as Array<any>).map((r) => ({
     platform: (r.platform as any),
     title: r.title,
@@ -416,6 +362,7 @@ export async function querySavedListings(params: {
     description: r.description || undefined,
     rating: r.ratingRaw || undefined,
     orders: r.ordersRaw || undefined,
+    detailJson: r.detailJson || undefined,
     // Non-standard field to help UI link to /pools/[id]
     savedId: r.id,
   }));
