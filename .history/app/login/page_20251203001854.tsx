@@ -210,11 +210,11 @@ function SocialBtn({
       type="button"
       onClick={onClick}
       aria-label={label}
-      className="w-full h-10 sm:h-12 rounded-full border-2 border-orange-200 bg-white hover:bg-orange-50 hover:border-orange-300 flex items-center justify-center gap-1 sm:gap-2 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105"
+      className="w-full h-12 rounded-full border-2 border-orange-200 bg-white hover:bg-orange-50 hover:border-orange-300 flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={img} alt="" className="w-4 sm:w-5 h-4 sm:h-5 object-contain" />
-      <span className="text-xs sm:text-sm font-semibold text-gray-800">{label}</span>
+      <img src={img} alt="" className="w-5 h-5 object-contain" />
+      <span className="text-sm font-semibold text-gray-800">{label}</span>
     </button>
   );
 }

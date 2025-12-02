@@ -110,32 +110,32 @@ export default function LoginPage() {
               </div>
 
               <div>
-                <div className="flex items-center justify-between mb-1 sm:mb-2">
-                  <label htmlFor="password" className="block text-sm sm:text-base font-semibold text-gray-900">
+                <div className="flex items-center justify-between mb-2">
+                  <label htmlFor="password" className="block text-base font-semibold text-gray-900">
                     Password
                   </label>
                   <Link
                     href="/forgot"
-                    className="text-xs sm:text-sm text-orange-600 hover:text-orange-700 font-semibold hover:underline"
+                    className="text-sm text-orange-600 hover:text-orange-700 font-semibold hover:underline"
                   >
                     Forgot password?
                   </Link>
                 </div>
-                <div className="mt-1 sm:mt-2 relative">
+                <div className="mt-2 relative">
                   <input
                     id="password"
                     name="password"
                     type={showPassword ? "text" : "password"}
                     autoComplete="current-password"
                     required
-                    className="w-full rounded-xl sm:rounded-2xl border-2 border-orange-200 bg-white px-3 sm:px-5 py-2.5 sm:py-3.5 pr-12 sm:pr-14 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm transition-all"
+                    className="w-full rounded-2xl border-2 border-orange-200 bg-white px-5 py-3.5 pr-14 text-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm transition-all"
                     placeholder="••••••••"
                   />
                   <button
                     type="button"
                     aria-label={showPassword ? "Hide password" : "Show password"}
                     onClick={() => setShowPassword((v) => !v)}
-                    className="absolute inset-y-0 right-0 px-3 sm:px-4 text-gray-600 hover:text-orange-600 text-xl sm:text-2xl transition-colors"
+                    className="absolute inset-y-0 right-0 px-4 text-gray-600 hover:text-orange-600 text-2xl transition-colors"
                   >
                     {showPassword ? "🙈" : "👁️"}
                   </button>
@@ -143,7 +143,7 @@ export default function LoginPage() {
               </div>
 
               {error && (
-                <p className="text-xs sm:text-sm text-red-600 font-semibold bg-red-50 border border-red-200 rounded-lg sm:rounded-xl p-2 sm:p-3" role="alert">
+                <p className="text-sm text-red-600 font-semibold bg-red-50 border border-red-200 rounded-xl p-3" role="alert">
                   ⚠️ {error}
                 </p>
               )}
@@ -151,23 +151,23 @@ export default function LoginPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full inline-flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-bold hover:from-orange-600 hover:to-orange-700 disabled:opacity-60 transition-all shadow-lg hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105 duration-300"
+                className="w-full inline-flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-4 text-lg font-bold hover:from-orange-600 hover:to-orange-700 disabled:opacity-60 transition-all shadow-lg hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105 duration-300"
               >
                 {loading ? "🔄 Signing in…" : "Sign in"}
               </button>
 
-              <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600 font-medium">
+              <div className="flex items-center gap-4 text-sm text-gray-600 font-medium">
                 <span>Or continue with</span>
                 <div className="h-px bg-orange-200 grow" />
               </div>
 
-              <div className="grid grid-cols-3 gap-2 sm:gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <SocialBtn label="Google" onClick={() => signIn('google', { callbackUrl: '/products' })} img="/company-logos/google%20logo.jpg" />
                 <SocialBtn label="Facebook" onClick={() => signIn('facebook', { callbackUrl: '/products' })} img="/company-logos/Facebook-Logo-JPG.jpg" />
                 <SocialBtn label="X" onClick={() => signIn('twitter', { callbackUrl: '/products' })} img="/company-logos/Twitter.png" />
               </div>
 
-              <p className="text-[10px] sm:text-xs text-gray-600 font-medium text-center">
+              <p className="text-xs text-gray-600 font-medium text-center">
                 By continuing you agree to our{" "}
                 <Link href="/terms" className="underline hover:text-orange-600">
                   Terms
@@ -180,7 +180,7 @@ export default function LoginPage() {
               </p>
             </form>
 
-            <p className="text-sm sm:text-lg mt-4 sm:mt-8 text-center text-white drop-shadow">
+            <p className="text-lg mt-8 text-center text-white drop-shadow">
               New to MOQ Pools?{" "}
               <Link
                 href="/register"
@@ -210,11 +210,11 @@ function SocialBtn({
       type="button"
       onClick={onClick}
       aria-label={label}
-      className="w-full h-10 sm:h-12 rounded-full border-2 border-orange-200 bg-white hover:bg-orange-50 hover:border-orange-300 flex items-center justify-center gap-1 sm:gap-2 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105"
+      className="w-full h-12 rounded-full border-2 border-orange-200 bg-white hover:bg-orange-50 hover:border-orange-300 flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={img} alt="" className="w-4 sm:w-5 h-4 sm:h-5 object-contain" />
-      <span className="text-xs sm:text-sm font-semibold text-gray-800">{label}</span>
+      <img src={img} alt="" className="w-5 h-5 object-contain" />
+      <span className="text-sm font-semibold text-gray-800">{label}</span>
     </button>
   );
 }
