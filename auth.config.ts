@@ -67,7 +67,7 @@ export const authConfig = {
       // On first sign in, user object is available
       if (user) {
         token.id = user.id;
-        token.role = (user as any).role || 'USER';
+        token.role = (user as any).role || 'BUYER';
         token.email = user.email;
       }
       return token;
@@ -100,7 +100,7 @@ export const authConfig = {
                 email: user.email,
                 name: user.name || user.email.split('@')[0],
                 image: user.image,
-                role: 'USER',
+                role: 'BUYER',
                 emailVerified: new Date(), // OAuth emails are pre-verified
               },
             });
