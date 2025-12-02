@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 const BG_URL = "/background.png" as const;
 
 type CountryOption = { code: string; name: string; dial: string };
@@ -73,6 +74,7 @@ const COUNTRIES: CountryOption[] = [
 
 export default function InformationPage() {
   const router = useRouter();
+  const { data: session, update: updateSession } = useSession();
   const [country, setCountry] = useState<CountryOption>(COUNTRIES[0]);
   const [isCountryOpen, setIsCountryOpen] = useState(false);
   const [countryQuery, setCountryQuery] = useState("");
@@ -229,9 +231,24 @@ export default function InformationPage() {
         setSubmitting(false);
         return;
       }
-      console.log('Success! Redirecting to /products');
-      // Force reload to refresh session with profileComplete=true
-      window.location.href = "/products";
+      console.log('Success! Updating session and redirecting to /products');
+      
+      // Update the session to refresh profileComplete status
+      try {
+        await updateSession({
+          ...session,
+          user: {
+            ...session?.user,
+            profileComplete: true,
+          },
+        });
+        console.log('Session updated successfully');
+      } catch (updateErr) {
+        console.error('Session update failed, but continuing:', updateErr);
+      }
+      
+      // Use Next.js router for client-side navigation
+      router.push("/products");
     } catch (err) {
       console.error('Submission error:', err);
       setError("Failed to submit information. Please try again.");
