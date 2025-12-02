@@ -302,7 +302,7 @@ export default function Hero() {
                 </Link>
                 <Link 
                   href="#how-it-works" 
-                  className="group inline-flex items-center justify-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm !text-gray-900 px-3 sm:px-6 md:px-7 py-2 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl font-semibold text-xs sm:text-base border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 shadow-md sm:shadow-lg hover:shadow-xl hover:scale-105"
+                  className="group inline-flex items-center justify-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm !text-gray-900 px-3 sm:px-6 md:px-7 py-2 sm:py-3 md:py-3.5 rounded-lg sm:rounded-xl font-semibold text-xs sm:text-base border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 shadow-md sm:shadow-lg hover:shadow-xl hover:scale-105">
                 >
                   <span className="!text-gray-900">How It Works</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5 opacity-50 group-hover:opacity-100 transition-opacity">
