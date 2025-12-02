@@ -1,7 +1,0 @@
-{
-  "jobs": [
-    { "platform": "ALIBABA", "q": "Respirator", "limit": 80, "headless": true, "categories": ["safety-security"], "terms": ["mask"] },
-    { "platform": "ALIEXPRESS", "q": "Gaming Keyboard", "limit": 60, "headless": true, "categories": ["consumer-electronics"], "terms": ["keyboard", "mechanical keyboard"] },
-    { "platform": "C1688", "q": "Dog Crate", "limit": 60, "headless": true, "categories": ["pet-supplies"] }
-  ]
-}
