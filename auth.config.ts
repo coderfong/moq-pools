@@ -89,13 +89,13 @@ export const authConfig = {
           if (!user.email) return false;
           
           // Check if user already exists
-          const existingUser = await prisma.user.findUnique({
+          let existingUser = await prisma.user.findUnique({
             where: { email: user.email },
           });
           
           if (!existingUser) {
             // Create new user for OAuth sign-in
-            const newUser = await prisma.user.create({
+            existingUser = await prisma.user.create({
               data: {
                 email: user.email,
                 name: user.name || user.email.split('@')[0],
@@ -105,12 +105,8 @@ export const authConfig = {
               },
             });
             
-            // Update user.id with the new user's id for JWT token
-            user.id = newUser.id;
+            console.log(`Created new user via ${account.provider}:`, existingUser.email);
           } else {
-            // User exists, update their id for JWT
-            user.id = existingUser.id;
-            
             // Update user info if changed
             await prisma.user.update({
               where: { id: existingUser.id },
@@ -119,6 +115,40 @@ export const authConfig = {
                 image: user.image || existingUser.image,
               },
             });
+          }
+          
+          // Update user.id for JWT token
+          user.id = existingUser.id;
+          
+          // Check if this OAuth account is already linked
+          const existingAccount = await prisma.account.findUnique({
+            where: {
+              provider_providerAccountId: {
+                provider: account.provider,
+                providerAccountId: account.providerAccountId,
+              },
+            },
+          });
+          
+          // Create Account record if it doesn't exist
+          if (!existingAccount) {
+            await prisma.account.create({
+              data: {
+                userId: existingUser.id,
+                type: account.type,
+                provider: account.provider,
+                providerAccountId: account.providerAccountId,
+                refresh_token: account.refresh_token,
+                access_token: account.access_token,
+                expires_at: account.expires_at,
+                token_type: account.token_type,
+                scope: account.scope,
+                id_token: account.id_token,
+                session_state: account.session_state,
+              },
+            });
+            
+            console.log(`Linked ${account.provider} account to user:`, existingUser.email);
           }
           
           return true;
