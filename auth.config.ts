@@ -63,10 +63,12 @@ export const authConfig = {
     error: '/login',
   },
   callbacks: {
-    async jwt({ token, user, account }) {
+    async jwt({ token, user, account, profile }) {
+      // On first sign in, user object is available
       if (user) {
         token.id = user.id;
-        token.role = (user as any).role;
+        token.role = (user as any).role || 'USER';
+        token.email = user.email;
       }
       return token;
     },
@@ -74,14 +76,58 @@ export const authConfig = {
       if (token && session.user) {
         session.user.id = token.id as string;
         (session.user as any).role = token.role as string;
+        session.user.email = token.email as string;
       }
       return session;
     },
     async signIn({ user, account, profile }) {
-      // For OAuth providers, ensure email is verified
+      if (!prisma) return true;
+      
+      // For OAuth providers, create user if doesn't exist
       if (account?.provider !== 'credentials') {
-        return true; // Allow OAuth sign-ins
+        try {
+          if (!user.email) return false;
+          
+          // Check if user already exists
+          const existingUser = await prisma.user.findUnique({
+            where: { email: user.email },
+          });
+          
+          if (!existingUser) {
+            // Create new user for OAuth sign-in
+            const newUser = await prisma.user.create({
+              data: {
+                email: user.email,
+                name: user.name || user.email.split('@')[0],
+                image: user.image,
+                role: 'USER',
+                emailVerified: new Date(), // OAuth emails are pre-verified
+              },
+            });
+            
+            // Update user.id with the new user's id for JWT token
+            user.id = newUser.id;
+          } else {
+            // User exists, update their id for JWT
+            user.id = existingUser.id;
+            
+            // Update user info if changed
+            await prisma.user.update({
+              where: { id: existingUser.id },
+              data: {
+                name: user.name || existingUser.name,
+                image: user.image || existingUser.image,
+              },
+            });
+          }
+          
+          return true;
+        } catch (error) {
+          console.error('OAuth sign-in error:', error);
+          return false;
+        }
       }
+      
       return true;
     },
   },
