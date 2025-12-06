@@ -657,17 +657,20 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                     .sort((a, b) => a - b);
                   return `
                   <style>
-                    .tp-inline .marker{transform:translateX(-50%); top:20px}
+                    .tp-inline .marker{transform:translateX(-50%); top:20px; pointer-events: auto;}
                     .tp-inline .chip{
                       background: linear-gradient(135deg, rgba(255, 247, 237, 0.98) 0%, rgba(255, 251, 235, 0.98) 100%);
                       border: 2px solid #fb923c;
                       box-shadow: 0 10px 30px rgba(251, 146, 60, 0.25);
                       border-radius: 9999px;
                       backdrop-filter: blur(8px);
+                      white-space: nowrap;
+                      transition: all 0.2s ease;
                     }
                     .tp-inline .chip:hover {
                       box-shadow: 0 15px 40px rgba(251, 146, 60, 0.35);
-                      transform: scale(1.05);
+                      transform: scale(1.1);
+                      z-index: 10;
                     }
                     .tp-inline .chip strong{
                       font-weight:800;
@@ -677,9 +680,12 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                       background-clip: text;
                     }
                     .tp-inline .chip .rng{font-size:13px;color:#78350f;font-weight:600}
+                    /* Alternate vertical positioning for overlapping markers */
+                    .tp-inline .marker:nth-child(even) { top: 45px; }
+                    .tp-inline .marker:nth-child(odd) { top: 20px; }
                   </style>
                   <div class="tp-inline mt-6">
-                    <div class="relative mt-4">
+                    <div class="relative mt-4 min-h-[80px]">
                       ${tiersMid.map(r => `
                         <div class=\"absolute marker\" style=\"left:${pct(r.mid).toFixed(2)}%\">
                           <div class=\"chip inline-flex items-baseline gap-2 rounded-full px-3 py-1\">
