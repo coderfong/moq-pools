@@ -39,12 +39,21 @@ function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
 export default async function PoolDetailPage({ params, searchParams }: { params: { id: string }, searchParams?: { [key: string]: string | string[] | undefined } }) {
   const { id } = params;
   // If Prisma isn't available (e.g., missing DATABASE_URL), this page cannot load data
-  if (!prisma) return notFound();
+  if (!prisma) {
+    console.error(`[Pool ${id}] Prisma not available`);
+    return notFound();
+  }
   const listing = await withTimeout(
     prisma.savedListing.findUnique({ where: { id } }),
-    800 // PERFORMANCE: Reduced from 1500ms to 800ms
-  ).catch(() => null) as any;
-  if (!listing) return notFound();
+    3000 // Increased timeout from 800ms to 3000ms for better reliability
+  ).catch((err) => {
+    console.error(`[Pool ${id}] Database query failed:`, err?.message || err);
+    return null;
+  }) as any;
+  if (!listing) {
+    console.warn(`[Pool ${id}] Listing not found in database`);
+    return notFound();
+  }
   const esc = (s: string) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;').replace(/'/g, '&#39;');
   const toTitleCase = (s: string) => String(s || '').replace(/\s+/g, ' ').trim().toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
   const normalizeTierRange = (range: string) => {
