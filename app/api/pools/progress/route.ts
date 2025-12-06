@@ -20,8 +20,7 @@ export async function GET(request: NextRequest) {
 
     // Find the saved listing with MOQ data
     const savedListing = await (prisma as any).savedListing.findUnique({
-      where: { id: savedListingId },
-      select: { url: true, moq: true, detailJson: true }
+      where: { id: savedListingId }
     });
 
     console.log('[Pool Progress API] Found listing:', !!savedListing);
@@ -30,22 +29,87 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Listing not found' }, { status: 404 });
     }
 
-    // Extract MOQ from listing data
+    // Extract MOQ using the same normalization logic as the pool page
     let moqValue = 100; // Default fallback
+    
+    // Try direct MOQ field first
     if (savedListing.moq) {
       moqValue = savedListing.moq;
-    } else if (savedListing.detailJson) {
+      console.log('[Pool Progress API] Using listing.moq:', moqValue);
+    }
+    // Try parsing moqRaw field
+    else if (savedListing.moqRaw) {
+      const match = String(savedListing.moqRaw).match(/(\d+)/);
+      if (match) {
+        moqValue = parseInt(match[1], 10);
+        console.log('[Pool Progress API] Parsed moqRaw:', savedListing.moqRaw, '→', moqValue);
+      }
+    }
+    // Try detailJson next
+    if (savedListing.detailJson) {
       try {
         const detailData = typeof savedListing.detailJson === 'string' 
           ? JSON.parse(savedListing.detailJson) 
           : savedListing.detailJson;
+        
+        // Try to get MOQ from detailJson.moq
         if (detailData?.moq) {
           moqValue = Number(detailData.moq);
+          console.log('[Pool Progress API] Using detailJson.moq:', moqValue);
         }
-      } catch {}
+        // If no direct MOQ, extract from first price tier
+        else if (detailData?.priceTiers && detailData.priceTiers.length > 0) {
+          const firstTier = detailData.priceTiers[0];
+          if (firstTier?.range) {
+            // Extract first number from range (e.g., "50-99" -> 50, "≥ 100" -> 100)
+            const match = String(firstTier.range).match(/(\d+)/);
+            if (match) {
+              moqValue = parseInt(match[1], 10);
+              console.log('[Pool Progress API] Extracted MOQ from first tier:', moqValue);
+            }
+          }
+        }
+      } catch (err) {
+        console.error('[Pool Progress API] Error parsing detailJson:', err);
+      }
+    }
+    // Use normalizeDetail logic when no detailJson
+    else {
+      try {
+        const { normalizeDetail } = await import('@/lib/detail-contract');
+        const normalized = normalizeDetail(
+          {},
+          {
+            title: savedListing.title || '',
+            priceRaw: savedListing.priceRaw,
+            priceMin: savedListing.priceMin,
+            priceMax: savedListing.priceMax,
+            currency: savedListing.currency,
+            ordersRaw: savedListing.ordersRaw,
+            image: savedListing.image,
+          }
+        );
+        
+        // Extract MOQ from normalized data
+        if (normalized.moq && normalized.moq > 1) {
+          moqValue = normalized.moq;
+          console.log('[Pool Progress API] Using normalized.moq:', moqValue);
+        } else if (normalized.priceTiers && normalized.priceTiers.length > 0) {
+          const firstTier = normalized.priceTiers[0];
+          if (firstTier?.range) {
+            const match = String(firstTier.range).match(/(\d+)/);
+            if (match) {
+              moqValue = parseInt(match[1], 10);
+              console.log('[Pool Progress API] Extracted MOQ from normalized tier:', moqValue);
+            }
+          }
+        }
+      } catch (err) {
+        console.error('[Pool Progress API] Error normalizing detail:', err);
+      }
     }
 
-    console.log('[Pool Progress API] MOQ value:', moqValue);
+    console.log('[Pool Progress API] Final MOQ value:', moqValue);
 
     // Find the product and pool based on sourceUrl
     const product = await (prisma as any).product.findFirst({
