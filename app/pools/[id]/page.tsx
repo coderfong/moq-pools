@@ -266,6 +266,14 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
       return /(?:^|\/)?seed\/|sleeves\.(?:jpg|jpeg|png|webp)/i.test(String(u));
     }
   }
+  // Upgrade Alibaba thumbnail URLs to higher resolution
+  function upgradeThumbnail(url: string): string {
+    if (!url) return url;
+    // Replace thumbnail suffixes with higher resolution versions
+    // _80x80 -> _960x960, _50x50 -> _960x960, _220x220 -> _960x960
+    return url.replace(/_(\d+)x(\d+)\.(jpg|png|webp)/i, '_960x960.$3');
+  }
+  
   async function computeHeroImage(): Promise<string> {
     const { resolveFallbackImage, isBadImageHashFromPath } = await import('@/lib/imageFallbacks');
     const raw: string = String(listing.image || '');
@@ -345,12 +353,13 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
     // } catch {}
 
     // 3) Use remote URLs directly if available (browser handles caching)
+    // Upgrade thumbnails to higher resolution for better quality
     if (hero && (hero.startsWith('http://') || hero.startsWith('https://'))) {
-      return hero;
+      return upgradeThumbnail(hero);
     }
     
     if (raw && (raw.startsWith('http://') || raw.startsWith('https://'))) {
-      return raw;
+      return upgradeThumbnail(raw);
     }
 
     // 4) Fallback (seed or computed placeholder)
