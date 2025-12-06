@@ -215,6 +215,10 @@ export async function middleware(req: NextRequest) {
   const secret = process.env.SESSION_SECRET || "dev-secret";
   const verified = token ? await verifySessionToken(token, secret) : null;
   
+  // Debug: Log all cookies to see what's available
+  const allCookies = req.cookies.getAll();
+  console.log('[Middleware] All cookies:', allCookies.map(c => c.name));
+  
   // Also check for NextAuth session token (both secure and non-secure variants)
   const nextAuthToken = req.cookies.get("next-auth.session-token")?.value || 
                         req.cookies.get("__Secure-next-auth.session-token")?.value;
@@ -265,7 +269,13 @@ export async function middleware(req: NextRequest) {
   // TEMPORARY FIX: If NextAuth cookie exists, allow checkout (let page handle auth)
   // This works around Edge Runtime getToken issues
   const isCheckout = pathname.startsWith('/checkout');
-  const hasAnyAuth = (token && verified) || nextAuthValid || (isCheckout && nextAuthToken);
+  
+  // Check if ANY NextAuth cookie exists (more lenient check)
+  const hasAnyNextAuthCookie = allCookies.some(c => 
+    c.name.includes('next-auth') || c.name.includes('authjs')
+  );
+  
+  const hasAnyAuth = (token && verified) || nextAuthValid || (isCheckout && (nextAuthToken || hasAnyNextAuthCookie));
   
   // Allow access if either authentication method is valid
   if (!hasAnyAuth) {

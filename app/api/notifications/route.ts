@@ -1,12 +1,25 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { getSession } from '../_lib/session';
+import { auth } from '@/auth';
 
 export async function GET(request: Request) {
   try {
-    const session = getSession();
+    // Try custom session first (for traditional login)
+    let session = getSession();
+    let userId: string | null = null;
+    
+    if (session) {
+      userId = session.sub;
+    } else {
+      // Fall back to NextAuth session (for OAuth login)
+      const nextAuthSession = await auth();
+      if (nextAuthSession?.user?.id) {
+        userId = nextAuthSession.user.id;
+      }
+    }
 
-    if (!session?.sub) {
+    if (!userId) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
@@ -16,7 +29,7 @@ export async function GET(request: Request) {
 
     // Find user by ID (from session)
     const user = await prisma.user.findUnique({
-      where: { id: session.sub },
+      where: { id: userId },
       select: { id: true },
     });
 
