@@ -219,32 +219,38 @@ export async function middleware(req: NextRequest) {
   const nextAuthToken = req.cookies.get("next-auth.session-token")?.value || 
                         req.cookies.get("__Secure-next-auth.session-token")?.value;
   
-  // Validate NextAuth JWT token
+  // Validate NextAuth JWT token using getToken (works in Edge Runtime)
   let nextAuthValid = false;
   if (nextAuthToken) {
     try {
-      const { decode } = await import('next-auth/jwt');
-      const decoded = await decode({
-        token: nextAuthToken,
-        secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || '',
+      const { getToken } = await import('next-auth/jwt');
+      const authToken = await getToken({ 
+        req: req as any,
+        secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET,
+        secureCookie: process.env.NODE_ENV === 'production'
       });
-      nextAuthValid = decoded !== null && decoded.sub !== undefined;
-    } catch (err) {
-      console.error('NextAuth token validation failed:', err);
+      nextAuthValid = authToken !== null && authToken.sub !== undefined;
+      
+      // Extra debug logging for troubleshooting
+      console.log('[Middleware] NextAuth validation:', {
+        hasToken: !!nextAuthToken,
+        tokenValid: nextAuthValid,
+        userId: authToken?.sub,
+        pathname
+      });
+    } catch (err: any) {
+      console.error('[Middleware] NextAuth token validation failed:', err?.message || err);
     }
   }
   
   // Debug logging
-  if (process.env.NODE_ENV === 'development') {
-    console.log("Middleware auth check:", {
-      pathname,
-      hasToken: !!token,
-      hasVerified: !!verified,
-      hasNextAuth: !!nextAuthToken,
-      nextAuthValid,
-      tokenPreview: token?.substring(0, 20) + "..."
-    });
-  }
+  console.log("[Middleware] Auth check:", {
+    pathname,
+    clientIp,
+    customSession: !!verified,
+    nextAuthSession: nextAuthValid,
+    willRedirect: (!token || !verified) && !nextAuthValid
+  });
   
   // Allow access if either authentication method is valid
   if ((!token || !verified) && !nextAuthValid) {
