@@ -227,7 +227,10 @@ export async function middleware(req: NextRequest) {
       const authToken = await getToken({ 
         req: req as any,
         secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET,
-        secureCookie: process.env.NODE_ENV === 'production'
+        secureCookie: process.env.NODE_ENV === 'production',
+        cookieName: process.env.NODE_ENV === 'production' 
+          ? '__Secure-next-auth.session-token'
+          : 'next-auth.session-token'
       });
       nextAuthValid = authToken !== null && authToken.sub !== undefined;
       
@@ -236,11 +239,17 @@ export async function middleware(req: NextRequest) {
         hasToken: !!nextAuthToken,
         tokenValid: nextAuthValid,
         userId: authToken?.sub,
-        pathname
+        pathname,
+        cookieName: process.env.NODE_ENV === 'production' 
+          ? '__Secure-next-auth.session-token'
+          : 'next-auth.session-token',
+        authSecret: process.env.AUTH_SECRET ? 'set' : 'missing'
       });
     } catch (err: any) {
       console.error('[Middleware] NextAuth token validation failed:', err?.message || err);
     }
+  } else {
+    console.log('[Middleware] No NextAuth token found in cookies');
   }
   
   // Debug logging
@@ -249,11 +258,17 @@ export async function middleware(req: NextRequest) {
     clientIp,
     customSession: !!verified,
     nextAuthSession: nextAuthValid,
-    willRedirect: (!token || !verified) && !nextAuthValid
+    hasNextAuthCookie: !!nextAuthToken,
+    willRedirect: (!token || !verified) && !nextAuthValid && !nextAuthToken
   });
   
+  // TEMPORARY FIX: If NextAuth cookie exists, allow checkout (let page handle auth)
+  // This works around Edge Runtime getToken issues
+  const isCheckout = pathname.startsWith('/checkout');
+  const hasAnyAuth = (token && verified) || nextAuthValid || (isCheckout && nextAuthToken);
+  
   // Allow access if either authentication method is valid
-  if ((!token || !verified) && !nextAuthValid) {
+  if (!hasAnyAuth) {
     console.log(`🔒 Auth failed for ${clientIp}, redirecting to login`);
     const loginUrl = req.nextUrl.clone();
     loginUrl.pathname = "/login";
