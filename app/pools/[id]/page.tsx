@@ -655,6 +655,29 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                     ]
                     .filter((v, i, arr) => arr.indexOf(v) === i) // unique
                     .sort((a, b) => a - b);
+                  
+                  // Adjust marker positions to prevent overlap
+                  // Minimum spacing: 12% of total width between markers
+                  const MIN_SPACING = 12;
+                  const adjustedTiers = tiersMid.map((r, i) => ({...r, adjustedPct: pct(r.mid)}));
+                  
+                  // Sort by position and push overlapping markers apart
+                  for (let i = 1; i < adjustedTiers.length; i++) {
+                    const prev = adjustedTiers[i - 1];
+                    const curr = adjustedTiers[i];
+                    const gap = curr.adjustedPct - prev.adjustedPct;
+                    
+                    if (gap < MIN_SPACING) {
+                      // Push current marker to the right to maintain minimum spacing
+                      curr.adjustedPct = prev.adjustedPct + MIN_SPACING;
+                      
+                      // Cap at 95% to keep within bounds
+                      if (curr.adjustedPct > 95) {
+                        curr.adjustedPct = 95;
+                      }
+                    }
+                  }
+                  
                   return `
                   <style>
                     .tp-inline .marker{transform:translateX(-50%); top:20px; pointer-events: auto;}
@@ -680,14 +703,11 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                       background-clip: text;
                     }
                     .tp-inline .chip .rng{font-size:13px;color:#78350f;font-weight:600}
-                    /* Alternate vertical positioning for overlapping markers */
-                    .tp-inline .marker:nth-child(even) { top: 45px; }
-                    .tp-inline .marker:nth-child(odd) { top: 20px; }
                   </style>
                   <div class="tp-inline mt-6">
-                    <div class="relative mt-4 min-h-[80px]">
-                      ${tiersMid.map(r => `
-                        <div class=\"absolute marker\" style=\"left:${pct(r.mid).toFixed(2)}%\">
+                    <div class="relative mt-4">
+                      ${adjustedTiers.map(r => `
+                        <div class=\"absolute marker\" style=\"left:${r.adjustedPct.toFixed(2)}%\">
                           <div class=\"chip inline-flex items-baseline gap-2 rounded-full px-3 py-1\">
                             <strong class=\"text-gray-900\">${esc(r.price)}</strong>
                             <i class=\"rng not-italic\">${esc(
