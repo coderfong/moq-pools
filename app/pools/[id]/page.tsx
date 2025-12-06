@@ -433,7 +433,8 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
     : ((detail as any)?.supplier?.profileLink ? esc(String((detail as any).supplier.profileLink)) : '');
   const supplierName: string = (detail as any)?.supplier?.name ? esc(String((detail as any).supplier.name)) : '';
   const actions = { chatLabel: 'Chat Now' };
-  // Timer deadline: prefer Pool.deadlineAt for the associated product; fallback to 5 days (to match Products page)
+  // Timer deadline: prefer Pool.deadlineAt for the associated product; 
+  // fallback to listing.createdAt + 5 days for consistent deadline across page refreshes
   let timerDeadlineISO: string = '';
   try {
     const prod = await withTimeout(
@@ -448,7 +449,10 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
     }
   } catch {}
   if (!timerDeadlineISO) {
-    timerDeadlineISO = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString();
+    // Use listing.createdAt + 5 days for consistent deadline
+    const createdAt = (listing as any)?.createdAt ? new Date((listing as any).createdAt) : new Date();
+    const deadline = new Date(createdAt.getTime() + 5 * 24 * 60 * 60 * 1000);
+    timerDeadlineISO = deadline.toISOString();
   }
 
   // Build details sections
