@@ -215,23 +215,39 @@ export async function middleware(req: NextRequest) {
   const secret = process.env.SESSION_SECRET || "dev-secret";
   const verified = token ? await verifySessionToken(token, secret) : null;
   
-  // Also check for NextAuth session token
+  // Also check for NextAuth session token (both secure and non-secure variants)
   const nextAuthToken = req.cookies.get("next-auth.session-token")?.value || 
                         req.cookies.get("__Secure-next-auth.session-token")?.value;
   
-  // Debug logging (remove in production)
+  // Validate NextAuth JWT token
+  let nextAuthValid = false;
+  if (nextAuthToken) {
+    try {
+      const { decode } = await import('next-auth/jwt');
+      const decoded = await decode({
+        token: nextAuthToken,
+        secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || '',
+      });
+      nextAuthValid = decoded !== null && decoded.sub !== undefined;
+    } catch (err) {
+      console.error('NextAuth token validation failed:', err);
+    }
+  }
+  
+  // Debug logging
   if (process.env.NODE_ENV === 'development') {
     console.log("Middleware auth check:", {
       pathname,
       hasToken: !!token,
       hasVerified: !!verified,
       hasNextAuth: !!nextAuthToken,
+      nextAuthValid,
       tokenPreview: token?.substring(0, 20) + "..."
     });
   }
   
   // Allow access if either authentication method is valid
-  if ((!token || !verified) && !nextAuthToken) {
+  if ((!token || !verified) && !nextAuthValid) {
     console.log(`🔒 Auth failed for ${clientIp}, redirecting to login`);
     const loginUrl = req.nextUrl.clone();
     loginUrl.pathname = "/login";
