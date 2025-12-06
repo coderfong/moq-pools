@@ -722,7 +722,30 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                       `).join('')}
                     </div>
                     <div class="relative mt-2 w-full h-5 text-[12px] text-gray-500">
-                      ${stops.map(s => `<span class=\"absolute\" style=\"left:${pct(Number(s)).toFixed(2)}%;transform:translateX(-50%)\">${Number(s).toLocaleString('en-US')}</span>`).join('')}
+                      ${(() => {
+                        // Apply same spacing logic to numeric ticks
+                        const MIN_TICK_SPACING = 8; // Smaller spacing for smaller text
+                        const ticks = stops.map(s => ({
+                          value: Number(s),
+                          pct: pct(Number(s))
+                        }));
+                        
+                        // Adjust positions to prevent overlap
+                        for (let i = 1; i < ticks.length; i++) {
+                          const prev = ticks[i - 1];
+                          const curr = ticks[i];
+                          const gap = curr.pct - prev.pct;
+                          
+                          if (gap < MIN_TICK_SPACING) {
+                            curr.pct = prev.pct + MIN_TICK_SPACING;
+                            if (curr.pct > 92) curr.pct = 92; // Leave room for "End"
+                          }
+                        }
+                        
+                        return ticks.map(t => 
+                          `<span class=\"absolute\" style=\"left:${t.pct.toFixed(2)}%;transform:translateX(-50%)\">${t.value.toLocaleString('en-US')}</span>`
+                        ).join('');
+                      })()}
                       <span class="absolute" style="left:100%;transform:translateX(-100%)">End</span>
                     </div>
                   </div>
