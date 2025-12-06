@@ -66,7 +66,8 @@ export default async function CheckoutPage({ searchParams }: { searchParams: { p
   };
 
   // Extract data from pool or listing
-  const title = pool?.product?.title || listing?.title || 'Selected product';
+  // Try to get the best title: detailJson.title > pool title > listing title
+  const title = pool?.product?.title || detailData?.title || listing?.title || 'Selected product';
   const currency = pool?.product?.baseCurrency || listing?.currency || detailData?.currency || 'USD';
   
   // Try to get price in order: pool unitPrice, listing priceMin, detailJson priceMin, parse from priceText
@@ -93,7 +94,7 @@ export default async function CheckoutPage({ searchParams }: { searchParams: { p
     if (listing) {
       return {
         img: listing.image || null,
-        actualTitle: listing.title || title,
+        actualTitle: detailData?.title || listing.title || title,
         actualMoq: moq,
         actualPrice: listing.priceMin ? Number(listing.priceMin) : unitPrice,
         actualSupplier: supplierName,
