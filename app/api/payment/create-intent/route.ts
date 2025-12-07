@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { getSession } from '../../_lib/session';
+import { auth } from '@/auth';
 
 // Initialize Stripe with your secret key
 // Use API version 2025-09-30.clover to match Stripe.js client version
@@ -47,8 +47,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Check authentication - user must be logged in
-    const session = getSession();
-    if (!session) {
+    const session = await auth();
+    if (!session?.user?.id) {
       console.error('No session found - user not authenticated');
       return NextResponse.json(
         { error: 'Please log in to checkout' },
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
       listingId,
       poolId,
       email,
-      userId: session.sub,
+      userId: session.user.id,
       stripeConfigured: !!stripe,
     });
     
@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
         listingId: listingId || '',
         poolId: poolId || '',
         quantity: quantity.toString(),
-        userId: session.sub || '',
+        userId: session.user.id || '',
         subtotal: (subtotal || amount).toString(),
         shipping: (shipping || 0).toString(),
         shippingZone: shippingZone || 'domestic',
