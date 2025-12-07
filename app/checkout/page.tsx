@@ -155,19 +155,19 @@ export default async function CheckoutPage({ searchParams }: { searchParams: { p
   })();
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-8 sm:py-12">
-      <h1 className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent">Checkout</h1>
-      <div className="mt-2 text-base text-gray-700">Pay safely with escrow. We only capture payment once MOQ is met.</div>
+    <div className="mx-auto w-full max-w-6xl px-3 sm:px-6 py-4 sm:py-8 lg:py-12">
+      <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent">Checkout</h1>
+      <div className="mt-2 text-sm sm:text-base text-gray-700">Pay safely with escrow. We only capture payment once MOQ is met.</div>
 
       {/* Progress Steps */}
       {(poolId || listingId) && (
-        <div className="mt-8">
+        <div className="mt-4 sm:mt-8">
           <CheckoutSteps currentStep={2} />
         </div>
       )}
 
       {!poolId && !listingId && (
-        <div className="mt-6 rounded-xl border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-amber-50 p-6 text-base text-neutral-700 shadow-md">
+        <div className="mt-4 sm:mt-6 rounded-lg sm:rounded-xl border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-amber-50 p-4 sm:p-6 text-sm sm:text-base text-neutral-700 shadow-md">
           No pool selected. Go to <Link href="/products" className="underline hover:text-orange-600 font-medium">Products</Link> and click <span className="font-semibold text-orange-600">Join Pool</span>.
         </div>
       )}

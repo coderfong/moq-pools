@@ -39,26 +39,26 @@ export default function CheckoutForm({
 
   return (
     <div className="relative pb-12">
-      {/* Enhanced Animated Background with Gradient Mesh */}
+      {/* Enhanced Animated Background with Gradient Mesh - hidden on mobile for performance */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-gradient-to-br from-orange-50/30 via-amber-50/20 to-yellow-50/10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-orange-300/40 to-amber-300/30 rounded-full blur-3xl animate-blob" />
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-amber-300/40 to-yellow-300/30 rounded-full blur-3xl animate-blob animation-delay-2000" />
-        <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-gradient-to-br from-yellow-300/30 to-orange-300/20 rounded-full blur-3xl animate-blob animation-delay-4000" />
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-rose-300/20 to-pink-300/20 rounded-full blur-3xl animate-blob animation-delay-700" />
+        <div className="hidden sm:block absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-orange-300/40 to-amber-300/30 rounded-full blur-3xl animate-blob" />
+        <div className="hidden sm:block absolute top-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-amber-300/40 to-yellow-300/30 rounded-full blur-3xl animate-blob animation-delay-2000" />
+        <div className="hidden lg:block absolute bottom-0 left-1/2 w-72 h-72 bg-gradient-to-br from-yellow-300/30 to-orange-300/20 rounded-full blur-3xl animate-blob animation-delay-4000" />
+        <div className="hidden lg:block absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-rose-300/20 to-pink-300/20 rounded-full blur-3xl animate-blob animation-delay-700" />
         
-        {/* Sparkle effects */}
-        <div className="absolute top-20 right-20 w-2 h-2 bg-orange-400 rounded-full animate-sparkle" />
-        <div className="absolute top-40 left-40 w-1.5 h-1.5 bg-amber-400 rounded-full animate-sparkle animation-delay-300" />
-        <div className="absolute bottom-32 right-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-sparkle animation-delay-500" />
+        {/* Sparkle effects - hidden on mobile */}
+        <div className="hidden md:block absolute top-20 right-20 w-2 h-2 bg-orange-400 rounded-full animate-sparkle" />
+        <div className="hidden md:block absolute top-40 left-40 w-1.5 h-1.5 bg-amber-400 rounded-full animate-sparkle animation-delay-300" />
+        <div className="hidden md:block absolute bottom-32 right-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-sparkle animation-delay-500" />
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3 animate-fade-in-up">
-        <div className="lg:col-span-2 group overflow-hidden rounded-2xl border-2 border-orange-300/50 bg-gradient-to-br from-white via-orange-50/30 to-amber-50/20 p-6 lg:p-8 shadow-xl hover:shadow-2xl hover:border-orange-400/60 transition-all duration-500 backdrop-blur-sm relative">
+      <div className="mt-4 sm:mt-6 grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3 animate-fade-in-up">
+        <div className="lg:col-span-2 group overflow-hidden rounded-xl sm:rounded-2xl border-2 border-orange-300/50 bg-gradient-to-br from-white via-orange-50/30 to-amber-50/20 p-4 sm:p-6 lg:p-8 shadow-xl hover:shadow-2xl hover:border-orange-400/60 transition-all duration-500 backdrop-blur-sm relative">
           {/* Card glow effect on hover */}
           <div className="absolute inset-0 bg-gradient-to-br from-orange-400/0 via-amber-400/0 to-yellow-400/0 group-hover:from-orange-400/5 group-hover:via-amber-400/5 group-hover:to-yellow-400/5 transition-all duration-500 rounded-2xl pointer-events-none" />
           
-          <div className="relative flex flex-col sm:flex-row items-start gap-6">
-            <div className="w-32 h-32 sm:w-36 sm:h-36 shrink-0 overflow-hidden rounded-2xl border-2 border-orange-300 bg-gradient-to-br from-orange-100 to-amber-100 shadow-lg hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-300/50 relative group/img">
+          <div className="relative flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+            <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mx-auto sm:mx-0 shrink-0 overflow-hidden rounded-xl sm:rounded-2xl border-2 border-orange-300 bg-gradient-to-br from-orange-100 to-amber-100 shadow-lg hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-300/50 relative group/img">
               {img ? (
                 <>
                   <img src={img} alt={actualTitle} className="h-full w-full object-cover" />
@@ -134,10 +134,10 @@ export default function CheckoutForm({
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6">
             <div className="animate-fade-in-up animation-delay-100">
-              <div className="flex items-center justify-between mb-4">
-                <label className="flex items-center gap-2 text-sm font-bold text-neutral-900">
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-bold text-neutral-900">
                   <svg className="w-4 sm:w-5 h-4 sm:h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
                   </svg>
@@ -197,7 +197,7 @@ export default function CheckoutForm({
               </label>
               <textarea 
                 id="notes"
-                rows={4}
+                rows={3}
                 className="w-full rounded-xl border-2 border-orange-300 bg-white px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200 placeholder:text-neutral-400 shadow-sm hover:shadow-md resize-none" 
                 placeholder="Specify color preferences, size variations, custom packaging, or any other special requirements for your order..."
               />

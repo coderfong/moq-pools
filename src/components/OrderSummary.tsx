@@ -86,29 +86,29 @@ export default function OrderSummary({
   };
   
   return (
-    <div className="group overflow-hidden rounded-2xl border-2 border-orange-300/50 bg-gradient-to-br from-white via-orange-50/30 to-amber-50/20 p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:border-orange-400/60 transition-all duration-500 backdrop-blur-sm lg:sticky lg:top-6">
+    <div className="group overflow-hidden rounded-xl sm:rounded-2xl border-2 border-orange-300/50 bg-gradient-to-br from-white via-orange-50/30 to-amber-50/20 p-3 sm:p-4 lg:p-6 shadow-xl hover:shadow-2xl hover:border-orange-400/60 transition-all duration-500 backdrop-blur-sm lg:sticky lg:top-6">
       {/* Card glow effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-400/0 via-amber-400/0 to-yellow-400/0 group-hover:from-orange-400/5 group-hover:via-amber-400/5 group-hover:to-yellow-400/5 transition-all duration-500 rounded-2xl pointer-events-none" />
       
       <div className="relative">
-        <div className="flex items-center gap-2 mb-4 sm:mb-6">
-          <svg className="w-5 sm:w-6 h-5 sm:h-6 text-orange-600 animate-pulse-subtle" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 lg:mb-6">
+          <svg className="w-4 sm:w-5 lg:w-6 h-4 sm:h-5 lg:h-6 text-orange-600 animate-pulse-subtle" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
           </svg>
-          <h3 className="font-extrabold text-lg sm:text-xl bg-gradient-to-r from-gray-900 via-orange-700 to-amber-600 bg-clip-text text-transparent">
+          <h3 className="font-extrabold text-base sm:text-lg lg:text-xl bg-gradient-to-r from-gray-900 via-orange-700 to-amber-600 bg-clip-text text-transparent">
             Order Summary
           </h3>
         </div>
       
       {/* Product Image - only show when showImage is true */}
       {showImage && productImage && (
-        <div className="mb-6 w-full aspect-square overflow-hidden rounded-xl border-2 border-orange-300 bg-gradient-to-br from-orange-100 to-amber-100 shadow-lg hover:scale-105 transition-transform duration-300">
+        <div className="mb-4 sm:mb-6 w-full aspect-square overflow-hidden rounded-lg sm:rounded-xl border-2 border-orange-300 bg-gradient-to-br from-orange-100 to-amber-100 shadow-lg hover:scale-105 transition-transform duration-300">
           <img src={productImage} alt={productTitle} className="h-full w-full object-cover" />
         </div>
       )}
       
-      <div className="space-y-3 sm:space-y-4 text-sm">
-        <div className="group/item flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-white/50 hover:bg-white/80 transition-all duration-200 border border-orange-100 hover:border-orange-200 hover:shadow-md">
+      <div className="space-y-2 sm:space-y-3 lg:space-y-4 text-sm">
+        <div className="group/item flex items-center justify-between p-2 sm:p-2.5 lg:p-3 rounded-lg sm:rounded-xl bg-white/50 hover:bg-white/80 transition-all duration-200 border border-orange-100 hover:border-orange-200 hover:shadow-md">
           <span className="flex items-center gap-2 text-neutral-700 font-medium text-xs sm:text-sm">
             <svg className="w-4 sm:w-5 h-4 sm:h-5 text-orange-600 group-hover/item:scale-110 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -158,7 +158,7 @@ export default function OrderSummary({
         </div>
         
         {/* Shipping Cost */}
-        <div className="group/item flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-white/50 hover:bg-white/80 transition-all duration-200 border border-orange-100 hover:border-orange-200 hover:shadow-md">
+        <div className="group/item flex items-center justify-between p-2 sm:p-2.5 lg:p-3 rounded-lg sm:rounded-xl bg-white/50 hover:bg-white/80 transition-all duration-200 border border-orange-100 hover:border-orange-200 hover:shadow-md">
           <span className="flex items-center gap-2 text-neutral-700 font-medium text-xs sm:text-sm">
             <svg className="w-4 sm:w-5 h-4 sm:h-5 text-orange-600 group-hover/item:scale-110 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
@@ -170,15 +170,15 @@ export default function OrderSummary({
           </span>
         </div>
         
-        <div className="pt-3 sm:pt-4 border-t-2 border-orange-200/50">
-          <div className="flex items-center justify-between p-3 sm:p-4 rounded-xl bg-gradient-to-r from-orange-100 to-amber-100 border-2 border-orange-300 shadow-lg">
+        <div className="pt-2 sm:pt-3 lg:pt-4 border-t-2 border-orange-200/50">
+          <div className="flex items-center justify-between p-2.5 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-orange-100 to-amber-100 border-2 border-orange-300 shadow-lg">
             <span className="flex items-center gap-2 text-neutral-900 font-bold text-sm sm:text-base">
               <svg className="w-5 sm:w-6 h-5 sm:h-6 text-orange-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span className="text-neutral-900">Total</span>
             </span>
-            <span className="text-xl sm:text-2xl font-extrabold text-orange-600 whitespace-nowrap ml-2">
+            <span className="text-lg sm:text-xl lg:text-2xl font-extrabold text-orange-600 whitespace-nowrap ml-2">
               {formatCurrencyStable(finalTotal ?? null, currency)}
             </span>
           </div>
@@ -208,7 +208,7 @@ export default function OrderSummary({
       <button 
         disabled={disabled} 
         onClick={handlePayment}
-        className={`mt-4 sm:mt-6 w-full rounded-xl bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-extrabold text-white shadow-xl hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 relative overflow-hidden group/btn ${disabled ? 'opacity-60 cursor-not-allowed hover:scale-100 hover:shadow-xl' : 'cursor-pointer hover:scale-105 animate-pulse-subtle'}`}
+        className={`mt-3 sm:mt-4 lg:mt-6 w-full rounded-lg sm:rounded-xl bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-extrabold text-white shadow-xl hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 relative overflow-hidden group/btn ${disabled ? 'opacity-60 cursor-not-allowed hover:scale-100 hover:shadow-xl' : 'cursor-pointer hover:scale-105 animate-pulse-subtle'}`}
       >
         {/* Button shine effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000 pointer-events-none" />
