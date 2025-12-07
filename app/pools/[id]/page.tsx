@@ -869,7 +869,7 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
     <div className="px-2 sm:px-4 md:px-6 lg:px-10 xl:px-16 py-2 sm:py-4 md:py-6 min-h-screen bg-gray-50">
       <HeroAutoFillClient />
       <div className="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-3 md:gap-4 mb-2 sm:mb-3 md:mb-4">
-        <ol className="flex flex-wrap items-center gap-0.5 sm:gap-1 text-[10px] sm:text-sm md:text-base overflow-hidden">
+        <ol className="flex flex-wrap items-center gap-0.5 sm:gap-1 text-[10px] sm:text-sm md:text-base text-gray-700 overflow-hidden">
           {(() => {
             const crumbs: { label: string; href?: string }[] = [];
             const plat = String(listing.platform || '');
@@ -909,9 +909,9 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                     </svg>
                   )}
                   {c.href ? (
-                    <Link className="transition-colors hover:text-foreground hover:underline" href={c.href}>{c.label}</Link>
+                    <Link className="text-gray-700 hover:text-gray-900 transition-colors hover:underline" href={c.href}>{c.label}</Link>
                   ) : (
-                    <span>{c.label}</span>
+                    <span className="text-gray-700">{c.label}</span>
                   )}
                 </li>
               ));
