@@ -65,6 +65,7 @@ export default function PaymentClientSecure() {
         const response = await fetch('/api/payment/create-intent', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+          credentials: 'include', // Include cookies for session authentication
           body: JSON.stringify({
             amount,
             subtotal,
