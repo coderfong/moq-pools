@@ -18,8 +18,12 @@ export type SessionPayload = { sub: string; email?: string; iat?: number; exp?: 
 
 export function getSession(): SessionPayload | null {
   try {
-    const token = cookies().get('session')?.value;
-    if (!token) return null;
+    const cookieStore = cookies();
+    const token = cookieStore.get('session')?.value;
+    if (!token) {
+      console.log('No session cookie found');
+      return null;
+    }
     const secret = process.env.SESSION_SECRET || 'dev-secret';
     const [h, p, s] = token.split('.');
     if (!h || !p || !s) return null;
@@ -30,10 +34,18 @@ export function getSession(): SessionPayload | null {
     if (expected !== s) return null;
     const payloadJson = base64urlDecodeToBuffer(p).toString('utf8');
     const payload = JSON.parse(payloadJson) as SessionPayload;
-    if (typeof payload?.exp === 'number' && Math.floor(Date.now() / 1000) > payload.exp) return null;
-    if (typeof payload?.sub !== 'string') return null;
+    if (typeof payload?.exp === 'number' && Math.floor(Date.now() / 1000) > payload.exp) {
+      console.log('Session expired');
+      return null;
+    }
+    if (typeof payload?.sub !== 'string') {
+      console.log('Invalid session payload - missing sub');
+      return null;
+    }
+    console.log('Session validated:', { sub: payload.sub, email: payload.email });
     return payload;
-  } catch {
+  } catch (err) {
+    console.error('Session validation error:', err);
     return null;
   }
 }
