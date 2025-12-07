@@ -70,16 +70,16 @@ export default function SimilarProducts({
 
   if (loading) {
     return (
-      <div className="mt-12">
-        <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent">
+      <div className="mt-6 sm:mt-8 md:mt-12">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-5 md:mb-6 bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent">
           Similar Products
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-6">
           {[...Array(4)].map((_, i) => (
             <div key={i} className="animate-pulse">
-              <div className="bg-gray-200 h-48 rounded-lg mb-3"></div>
-              <div className="bg-gray-200 h-4 rounded mb-2"></div>
-              <div className="bg-gray-200 h-4 rounded w-2/3"></div>
+              <div className="bg-gray-200 h-32 sm:h-40 md:h-48 rounded-lg mb-2 sm:mb-3"></div>
+              <div className="bg-gray-200 h-3 sm:h-4 rounded mb-1 sm:mb-2"></div>
+              <div className="bg-gray-200 h-3 sm:h-4 rounded w-2/3"></div>
             </div>
           ))}
         </div>
@@ -96,8 +96,8 @@ export default function SimilarProducts({
   const canGoNext = currentIndex < maxIndex;
 
   return (
-    <div className="mt-12">
-      <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent">
+    <div className="mt-6 sm:mt-8 md:mt-12">
+      <h2 className="text-lg sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent">
         Similar Products You May Like
       </h2>
       
@@ -107,10 +107,10 @@ export default function SimilarProducts({
           <button
             onClick={handlePrev}
             disabled={isTransitioning}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-10 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full p-3 shadow-xl border-2 border-white hover:from-orange-600 hover:to-amber-600 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-4 md:-translate-x-6 z-10 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full p-1.5 sm:p-2 md:p-3 shadow-md sm:shadow-lg md:shadow-xl border sm:border-2 border-white hover:from-orange-600 hover:to-amber-600 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Previous products"
           >
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -119,7 +119,7 @@ export default function SimilarProducts({
         {/* Products Grid with Smooth Transition */}
         <div className="overflow-hidden">
           <div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-500 ease-in-out"
+            className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-6 transition-all duration-500 ease-in-out"
             style={{
               opacity: isTransitioning ? 0.5 : 1,
               transform: isTransitioning ? 'scale(0.98)' : 'scale(1)'
@@ -135,12 +135,12 @@ export default function SimilarProducts({
                 <Link
                   key={product.id}
                   href={`/pools/${product.id}`}
-                  className="group block bg-white rounded-xl border-2 border-orange-100 hover:border-orange-400 shadow-md hover:shadow-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2"
+                  className="group block bg-white rounded-lg sm:rounded-xl border sm:border-2 border-orange-100 hover:border-orange-400 shadow-sm sm:shadow-md hover:shadow-xl sm:hover:shadow-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2"
                   style={{
                     animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both`
                   }}
                 >
-                  <div className="relative h-56 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+                  <div className="relative h-32 sm:h-40 md:h-48 lg:h-56 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
                     {product.image ? (
                       <Image
                         src={product.image}
@@ -158,33 +158,33 @@ export default function SimilarProducts({
                     )}
                     
                     {/* Platform Badge */}
-                    <div className="absolute top-3 left-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                    <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-3 md:left-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[8px] sm:text-[10px] md:text-xs font-bold px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-full shadow-sm sm:shadow-md md:shadow-lg">
                       {product.platform.toUpperCase()}
                     </div>
 
                     {/* MOQ Status Badge */}
                     {moqReached && (
-                      <div className="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1">
+                      <div className="absolute top-1 right-1 sm:top-2 sm:right-2 md:top-3 md:right-3 bg-green-500 text-white text-[8px] sm:text-[10px] md:text-xs font-bold px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-full shadow-sm sm:shadow-md md:shadow-lg flex items-center gap-0.5 sm:gap-1">
                         <span>✓</span> Active
                       </div>
                     )}
                   </div>
                   
-                  <div className="p-4">
-                    <h3 className="font-bold text-gray-900 text-sm line-clamp-2 mb-3 h-10 group-hover:text-orange-600 transition-colors">
+                  <div className="p-2 sm:p-3 md:p-4">
+                    <h3 className="font-bold text-gray-900 text-[10px] sm:text-xs md:text-sm line-clamp-2 mb-1.5 sm:mb-2 md:mb-3 h-7 sm:h-8 md:h-10 group-hover:text-orange-600 transition-colors">
                       {product.title}
                     </h3>
 
                     {/* MOQ Progress Bar */}
                     {product.targetQty && (
-                      <div className="mb-3">
-                        <div className="flex items-center justify-between text-xs mb-1.5">
+                      <div className="mb-1.5 sm:mb-2 md:mb-3">
+                        <div className="flex items-center justify-between text-[8px] sm:text-[10px] md:text-xs mb-1 sm:mb-1.5">
                           <span className="text-gray-600 font-medium">Pool Progress</span>
                           <span className={`font-bold ${moqReached ? 'text-green-600' : 'text-orange-600'}`}>
                             {product.pledgedQty || 0}/{product.targetQty}
                           </span>
                         </div>
-                        <div className="relative h-2 w-full overflow-hidden rounded-full bg-gray-200">
+                        <div className="relative h-1 sm:h-1.5 md:h-2 w-full overflow-hidden rounded-full bg-gray-200">
                           <div 
                             className={`absolute inset-y-0 left-0 rounded-full transition-all duration-500 ${
                               moqReached 
@@ -197,19 +197,19 @@ export default function SimilarProducts({
                       </div>
                     )}
                     
-                    <div className="flex items-center justify-between text-sm border-t border-gray-100 pt-3">
+                    <div className="flex items-center justify-between text-[10px] sm:text-xs md:text-sm border-t border-gray-100 pt-1.5 sm:pt-2 md:pt-3">
                       <div>
                         {product.priceMin != null && (
-                          <span className="font-bold text-orange-600 text-base">
+                          <span className="font-bold text-orange-600 text-xs sm:text-sm md:text-base">
                             {product.currency || '$'}{product.priceMin.toFixed(2)}
                             {product.priceMax != null && product.priceMax !== product.priceMin && (
-                              <span className="text-sm"> - {product.currency || '$'}{product.priceMax.toFixed(2)}</span>
+                              <span className="text-[10px] sm:text-xs md:text-sm"> - {product.currency || '$'}{product.priceMax.toFixed(2)}</span>
                             )}
                           </span>
                         )}
                       </div>
                       {product.moq != null && (
-                        <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                        <span className="text-[8px] sm:text-[10px] md:text-xs text-gray-500 bg-gray-100 px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded">
                           MOQ: {product.moq}
                         </span>
                       )}
@@ -226,10 +226,10 @@ export default function SimilarProducts({
           <button
             onClick={handleNext}
             disabled={isTransitioning}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-10 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full p-3 shadow-xl border-2 border-white hover:from-orange-600 hover:to-amber-600 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-4 md:translate-x-6 z-10 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full p-1.5 sm:p-2 md:p-3 shadow-md sm:shadow-lg md:shadow-xl border sm:border-2 border-white hover:from-orange-600 hover:to-amber-600 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Next products"
           >
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -238,7 +238,7 @@ export default function SimilarProducts({
 
       {/* Dots Indicator */}
       {products.length > itemsPerPage && (
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex justify-center gap-1.5 sm:gap-2 md:gap-3 mt-4 sm:mt-6 md:mt-8">
           {[...Array(Math.ceil(products.length / itemsPerPage))].map((_, i) => (
             <button
               key={i}
@@ -250,10 +250,10 @@ export default function SimilarProducts({
                 }
               }}
               disabled={isTransitioning}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
+              className={`h-1.5 sm:h-2 md:h-2.5 rounded-full transition-all duration-300 ${
                 Math.floor(currentIndex / itemsPerPage) === i
-                  ? 'bg-gradient-to-r from-orange-500 to-amber-500 w-10 shadow-md'
-                  : 'bg-gray-300 hover:bg-orange-300 w-2.5'
+                  ? 'bg-gradient-to-r from-orange-500 to-amber-500 w-6 sm:w-8 md:w-10 shadow-sm sm:shadow-md'
+                  : 'bg-gray-300 hover:bg-orange-300 w-1.5 sm:w-2 md:w-2.5'
               }`}
               aria-label={`Go to page ${i + 1}`}
             />
