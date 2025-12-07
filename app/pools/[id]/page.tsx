@@ -850,7 +850,7 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
   `;
 
   return (
-    <div className="px-2 sm:px-4 md:px-6 lg:px-10 xl:px-16 py-2 sm:py-4 md:py-6">
+    <div className="px-2 sm:px-4 md:px-6 lg:px-10 xl:px-16 py-2 sm:py-4 md:py-6 min-h-screen bg-gray-50">
       <HeroAutoFillClient />
       <div className="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-3 md:gap-4 mb-2 sm:mb-3 md:mb-4">
         <ol className="flex flex-wrap items-center gap-0.5 sm:gap-1 text-[10px] sm:text-sm md:text-base overflow-hidden">
@@ -951,12 +951,14 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
       </div>
 
       {/* Product Reviews Section */}
-      <div className="mt-12">
+      <div className="mt-6 sm:mt-8 md:mt-12">
         <ProductReviews productId={id} canReview={true} />
       </div>
 
       {/* Similar Products Section */}
-      <SimilarProducts currentProductId={id} categories={listing.categories || []} />
+      <div className="mt-6 sm:mt-8 md:mt-12">
+        <SimilarProducts currentProductId={id} categories={listing.categories || []} />
+      </div>
     </div>
   );
 }
