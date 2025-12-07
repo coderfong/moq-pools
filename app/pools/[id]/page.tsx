@@ -581,13 +581,23 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
             /* Pool hero enhancements */
             .pool-hero {
               background: linear-gradient(to bottom, rgba(255, 247, 237, 0.4), white);
-              padding: 2rem;
+              padding: 1rem;
               border-radius: 1.5rem;
               margin-bottom: 2rem;
             }
+            @media (min-width: 768px) {
+              .pool-hero {
+                padding: 2rem;
+              }
+            }
             .pool-hero-left {
-              position: sticky;
-              top: 20px;
+              position: relative;
+            }
+            @media (min-width: 1024px) {
+              .pool-hero-left {
+                position: sticky;
+                top: 20px;
+              }
             }
             .btn-mag {
               background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #fbbf24 100%);
@@ -693,15 +703,26 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                   
                   return `
                   <style>
-                    .tp-inline .marker{transform:translateX(-50%); top:20px; pointer-events: auto;}
+                    .tp-inline .marker{transform:translateX(-50%); top:15px; pointer-events: auto;}
                     .tp-inline .chip{
                       background: linear-gradient(135deg, rgba(255, 247, 237, 0.98) 0%, rgba(255, 251, 235, 0.98) 100%);
-                      border: 2px solid #fb923c;
-                      box-shadow: 0 10px 30px rgba(251, 146, 60, 0.25);
+                      border: 1.5px solid #fb923c;
+                      box-shadow: 0 6px 20px rgba(251, 146, 60, 0.25);
                       border-radius: 9999px;
                       backdrop-filter: blur(8px);
                       white-space: nowrap;
                       transition: all 0.2s ease;
+                      font-size: 0.75rem;
+                      padding: 0.25rem 0.5rem;
+                    }
+                    @media (min-width: 640px) {
+                      .tp-inline .marker{top:20px;}
+                      .tp-inline .chip{
+                        border: 2px solid #fb923c;
+                        box-shadow: 0 10px 30px rgba(251, 146, 60, 0.25);
+                        font-size: 0.875rem;
+                        padding: 0.25rem 0.75rem;
+                      }
                     }
                     .tp-inline .chip:hover {
                       box-shadow: 0 15px 40px rgba(251, 146, 60, 0.35);
@@ -715,7 +736,10 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                       -webkit-text-fill-color: transparent;
                       background-clip: text;
                     }
-                    .tp-inline .chip .rng{font-size:13px;color:#78350f;font-weight:600}
+                    .tp-inline .chip .rng{font-size:11px;color:#78350f;font-weight:600}
+                    @media (min-width: 640px) {
+                      .tp-inline .chip .rng{font-size:13px}
+                    }
                   </style>
                   <div class="tp-inline mt-6">
                     <div class="relative mt-4">
@@ -777,10 +801,10 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
   `;
 
   return (
-    <div className="px-6 md:px-10 xl:px-16 py-6">
+    <div className="px-3 sm:px-6 md:px-10 xl:px-16 py-3 sm:py-6">
       <HeroAutoFillClient />
-      <div className="flex items-start justify-between gap-4 mb-4">
-        <ol className="flex flex-wrap items-center gap-1">
+      <div className=\"flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-4 mb-4\">
+        <ol className=\"flex flex-wrap items-center gap-1 text-sm sm:text-base overflow-hidden\">
           {(() => {
             const crumbs: { label: string; href?: string }[] = [];
             const plat = String(listing.platform || '');
@@ -828,13 +852,13 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
               ));
           })()}
         </ol>
-        <div className="flex gap-2 shrink-0">
+        <div className="flex gap-2 shrink-0 w-full sm:w-auto">
           {listing.url ? (
-            <Link href={listing.url} target="_blank" className="text-xs px-3 py-1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-500">Open Original ↗</Link>
+            <Link href={listing.url} target="_blank" className="text-xs px-3 py-1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-500 whitespace-nowrap">Open Original ↗</Link>
           ) : null}
         </div>
       </div>
-      <div className="rounded-2xl border border-gray-200 bg-white p-4 overflow-x-auto">
+      <div className="rounded-lg sm:rounded-2xl border border-gray-200 bg-white p-2 sm:p-4 overflow-x-auto">
         <TrackProductView 
           savedListingId={id}
           productTitle={listing.title || 'Product'}
@@ -842,23 +866,23 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
           productUrl={`/pools/${id}`}
         />
         {/* Pool hero section with timer */}
-        <div className="pool-hero grid grid-cols-1 md:grid-cols-[420px_1fr] gap-10 items-start" data-source-url={listing.url || ''}>
+        <div className="pool-hero grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-4 sm:gap-6 lg:gap-10 items-start" data-source-url={listing.url || ''}>
           <div className="pool-hero-left">
-            <div className="relative w-full aspect-square bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50 rounded-3xl overflow-hidden border-4 border-orange-300/60 shadow-2xl ring-4 ring-orange-100/50">
+            <div className="relative w-full aspect-square bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50 rounded-2xl sm:rounded-3xl overflow-hidden border-2 sm:border-4 border-orange-300/60 shadow-xl sm:shadow-2xl ring-2 sm:ring-4 ring-orange-100/50">
               <img src={imgSrc} alt={titleRaw} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
-            <div className="mt-6 flex flex-col items-center gap-4">
-              <a href={`/checkout?listingId=${id}`} className="inline-flex items-center justify-center rounded-2xl font-bold btn-mag text-2xl px-10 py-5 w-full text-white">
+            <div className="mt-4 sm:mt-6 flex flex-col items-center gap-3 sm:gap-4">
+              <a href={`/checkout?listingId=${id}`} className="inline-flex items-center justify-center rounded-xl sm:rounded-2xl font-bold btn-mag text-lg sm:text-2xl px-6 sm:px-10 py-3 sm:py-5 w-full text-white">
                 <span className="mr-2">🛒</span> Join Pool
               </a>
-              <a href="/information/payment-protection" className="text-base text-orange-600 font-semibold underline hover:text-orange-700 flex items-center gap-2">
+              <a href="/information/payment-protection" className="text-sm sm:text-base text-orange-600 font-semibold underline hover:text-orange-700 flex items-center gap-1 sm:gap-2">
                 <span className="text-xl">🔒</span> Payment Protection Guaranteed
               </a>
             </div>
           </div>
           <div className="pool-hero-right min-w-0">
-            <div className="flex items-start justify-between gap-4 mb-4">
-              <h1 className="text-4xl font-black bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent leading-tight">{titleRaw}</h1>
+            <div className="flex flex-col sm:flex-row items-start justify-between gap-3 sm:gap-4 mb-4">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent leading-tight">{titleRaw}</h1>
               <PoolTimerInjector deadline={timerDeadlineISO} />
             </div>
             <LivePoolProgress savedListingId={id} />
