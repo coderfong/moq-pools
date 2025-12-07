@@ -545,10 +545,15 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
 
   const html = `
           <style>
+            /* Ensure all text has proper colors */
+            * {
+              color: inherit;
+            }
+            
             /* Section tables and cards styling */
             .sec-table th.th-label { 
               text-align:left; 
-              color:#111827; 
+              color:#111827 !important; 
               font-weight:700; 
               padding:6px 8px; 
               background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
@@ -571,7 +576,7 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
             }
             .sec-table td { 
               padding:6px 8px; 
-              color:#4b5563;
+              color:#4b5563 !important;
               border-bottom: 1px solid #fed7aa;
               font-size: 0.625rem;
             }
@@ -654,6 +659,17 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
               box-shadow: 0 20px 40px rgba(251, 146, 60, 0.2);
               transform: translateY(-2px);
             }
+            
+            /* Explicit color classes */
+            .text-gray-900 { color: #111827 !important; }
+            .text-gray-800 { color: #1f2937 !important; }
+            .text-gray-700 { color: #374151 !important; }
+            .text-gray-600 { color: #4b5563 !important; }
+            .text-gray-500 { color: #6b7280 !important; }
+            .text-orange-600 { color: #ea580c !important; }
+            .text-orange-700 { color: #c2410c !important; }
+            .font-bold { font-weight: 700; }
+            .font-semibold { font-weight: 600; }
           </style>
           
                 ${(() => {
