@@ -457,10 +457,10 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
 
   // Build details sections
   const keyAttrSec = (Array.isArray(detail?.attributes) && detail.attributes.length) ? `
-              <section class=\"mt-8\">
-                <h2 class=\"text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-4\">Key attributes</h2>
-                <div class=\"overflow-hidden rounded-2xl border-2 border-orange-200/50 bg-white shadow-lg\">
-                  <div class=\"grid md:grid-cols-2 divide-x divide-orange-100\">
+              <section class="mt-4 sm:mt-8">
+                <h2 class="text-sm sm:text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-2 sm:mb-4">Key attributes</h2>
+                <div class="overflow-hidden rounded-lg sm:rounded-2xl border sm:border-2 border-orange-200/50 bg-white shadow-md sm:shadow-lg">
+                  <div class="grid grid-cols-2 divide-x divide-orange-100">
                     <table class=\"sec-table w-full text-sm\"><tbody>
                         ${detail.attributes.slice(0, Math.ceil(detail.attributes.length / 2)).map((r: any, i: number) => `<tr key=\"${esc(r.label)}|${esc(r.value)}|${i}\"><th class=\"th-label\">${esc(toTitleCase(r.label))}</th><td>${esc(r.value)}</td></tr>`).join('')}
                     </tbody></table>
@@ -486,8 +486,8 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                 </section>` : '';
 
   const variationsSec = (Array.isArray(variations) && variations.length) ? `
-              <section class=\"mt-8\">
-                <h2 class=\"text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-4\">Variations</h2>
+              <section class="mt-4 sm:mt-8">
+                <h2 class="text-sm sm:text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-2 sm:mb-4">Variations</h2>
                 <div class=\"overflow-hidden rounded-2xl border-2 border-orange-200/50 bg-white shadow-lg\">
                   <div class=\"p-4 grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4\">
                     ${variations.map((v: any, i: number) => `
@@ -501,8 +501,8 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
               </section>` : '';
 
   const packagingSec = (Array.isArray(detail?.packaging) && detail.packaging.length) ? `
-              <section class=\"mt-8\">
-                <h2 class=\"text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-4\">Packaging and delivery</h2>
+              <section class="mt-4 sm:mt-8">
+                <h2 class="text-sm sm:text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-2 sm:mb-4">Packaging and delivery</h2>
                 <div class=\"overflow-hidden rounded-2xl border-2 border-orange-200/50 bg-white shadow-lg\">
                   <table class=\"sec-table w-full text-sm\"><tbody>
                       ${detail.packaging.map((r: any, i: number) => `<tr key=\"${esc(r.name)}|${esc(r.value)}|${i}\"><th class=\"th-label\">${esc(toTitleCase(r.name))}</th><td>${esc(r.value)}</td></tr>`).join('')}
@@ -511,26 +511,26 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
               </section>` : '';
 
   const protectionsSec = (Array.isArray(protections) && protections.length) ? `
-              <section class=\"mt-8\">
-                <h2 class=\"text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-4\">Protections</h2>
-                <div class=\"grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4\">
+              <section class="mt-4 sm:mt-8">
+                <h2 class="text-sm sm:text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-2 sm:mb-4">Protections</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-2 sm:gap-4">
                   ${protections.map((p, i) => `
-                    <div key=\"prot-${i}\" class=\"prot-card bg-gradient-to-br from-white to-orange-50/30 border-2 border-orange-200 rounded-2xl p-5 shadow-lg\"> 
-                      <div class=\"font-bold text-gray-900 text-base\">${p.header ? esc(p.header) : ''}</div>
-                      <p class=\"text-sm text-gray-700 mt-2 leading-relaxed\">${p.body ? esc(p.body) : ''}</p>
+                    <div key="prot-${i}" class="prot-card bg-gradient-to-br from-white to-orange-50/30 border sm:border-2 border-orange-200 rounded-lg sm:rounded-2xl p-2 sm:p-4 md:p-5 shadow-md sm:shadow-lg"> 
+                      <div class="font-bold text-gray-900 text-xs sm:text-sm md:text-base">${p.header ? esc(p.header) : ''}</div>
+                      <p class="text-[10px] sm:text-xs md:text-sm text-gray-700 mt-1 sm:mt-2 leading-relaxed">${p.body ? esc(p.body) : ''}</p>
                     </div>
                   `).join('')}
                 </div>
               </section>` : '';
 
   const supplierSec = supplierName ? `
-              <section class=\"mt-8\">
-                <h2 class=\"text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-4\">Supplier</h2>
-                <div class=\"supplier-card rounded-2xl p-6 shadow-xl flex items-center gap-4\">
-                  ${companyLogo ? `<img src=\"${companyLogo}\" alt=\"${supplierName}\" class=\"w-16 h-16 rounded-full border-2 border-orange-300 shadow-md\" referrerpolicy=\"no-referrer\" />` : '<div class=\"w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-white text-2xl font-bold shadow-md\">🏭</div>'}
+              <section class=\"mt-4 sm:mt-8\">
+                <h2 class=\"text-sm sm:text-xl font-bold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent mb-2 sm:mb-4\">Supplier</h2>
+                <div class=\"supplier-card rounded-lg sm:rounded-2xl p-2 sm:p-4 md:p-6 shadow-md sm:shadow-xl flex items-center gap-2 sm:gap-3 md:gap-4\">
+                  ${companyLogo ? `<img src=\"${companyLogo}\" alt=\"${supplierName}\" class=\"w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full border sm:border-2 border-orange-300 shadow-sm sm:shadow-md\" referrerpolicy=\"no-referrer\" />` : '<div class=\"w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-white text-sm sm:text-xl md:text-2xl font-bold shadow-sm sm:shadow-md\">🏭</div>'}
                   <div class=\"flex-1 min-w-0\">
-                    <div class=\"font-bold text-xl text-gray-900 truncate\">${supplierName}</div>
-                    ${companyLink ? `<a href=\"${companyLink}\" target=\"_blank\" class=\"text-sm text-orange-600 hover:text-orange-700 font-medium underline mt-1 inline-block\">View supplier profile →</a>` : ''}
+                    <div class=\"font-bold text-xs sm:text-base md:text-xl text-gray-900 truncate\">${supplierName}</div>
+                    ${companyLink ? `<a href=\"${companyLink}\" target=\"_blank\" class=\"text-[10px] sm:text-xs md:text-sm text-orange-600 hover:text-orange-700 font-medium underline mt-0.5 sm:mt-1 inline-block\">View profile →</a>` : ''}
                   </div>
                 </div>
               </section>` : '';
@@ -550,16 +550,42 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
               text-align:left; 
               color:#111827; 
               font-weight:700; 
-              padding:14px 18px; 
+              padding:6px 8px; 
               background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-              border-bottom: 2px solid #fb923c;
-              font-size: 0.875rem;
+              border-bottom: 1px solid #fb923c;
+              font-size: 0.625rem;
+            }
+            @media (min-width: 640px) {
+              .sec-table th.th-label {
+                padding:10px 12px;
+                border-bottom: 1.5px solid #fb923c;
+                font-size: 0.75rem;
+              }
+            }
+            @media (min-width: 768px) {
+              .sec-table th.th-label {
+                padding:14px 18px;
+                border-bottom: 2px solid #fb923c;
+                font-size: 0.875rem;
+              }
             }
             .sec-table td { 
-              padding:14px 18px; 
+              padding:6px 8px; 
               color:#4b5563;
               border-bottom: 1px solid #fed7aa;
-              font-size: 0.875rem;
+              font-size: 0.625rem;
+            }
+            @media (min-width: 640px) {
+              .sec-table td {
+                padding:10px 12px;
+                font-size: 0.75rem;
+              }
+            }
+            @media (min-width: 768px) {
+              .sec-table td {
+                padding:14px 18px;
+                font-size: 0.875rem;
+              }
             }
             .sec-table tr:last-child th,
             .sec-table tr:last-child td {
@@ -687,8 +713,8 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                     .sort((a, b) => a - b);
                   
                   // Adjust marker positions to prevent overlap
-                  // Minimum spacing: 12% of total width between markers
-                  const MIN_SPACING = 12;
+                  // Minimum spacing: 22% on mobile to prevent overlap
+                  const MIN_SPACING = 22;
                   const adjustedTiers = tiersMid.map((r, i) => ({...r, adjustedPct: pct(r.mid)}));
                   
                   // Sort by position and push overlapping markers apart
@@ -710,17 +736,18 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                   
                   return `
                   <style>
-                    .tp-inline .marker{transform:translateX(-50%); top:12px; pointer-events: auto;}
+                    .tp-inline .marker{transform:translateX(-50%); top:8px; pointer-events: auto;}
                     .tp-inline .chip{
                       background: linear-gradient(135deg, rgba(255, 247, 237, 0.98) 0%, rgba(255, 251, 235, 0.98) 100%);
-                      border: 1px solid #fb923c;
-                      box-shadow: 0 4px 15px rgba(251, 146, 60, 0.25);
+                      border: 0.5px solid #fb923c;
+                      box-shadow: 0 2px 8px rgba(251, 146, 60, 0.2);
                       border-radius: 9999px;
                       backdrop-filter: blur(8px);
                       white-space: nowrap;
                       transition: all 0.2s ease;
-                      font-size: 0.625rem;
-                      padding: 0.125rem 0.375rem;
+                      font-size: 0.5rem;
+                      padding: 0.0625rem 0.25rem;
+                      line-height: 1.2;
                     }
                     @media (min-width: 640px) {
                       .tp-inline .marker{top:15px;}
@@ -752,11 +779,14 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                       -webkit-text-fill-color: transparent;
                       background-clip: text;
                     }
-                    .tp-inline .chip .rng{font-size:9px;color:#78350f;font-weight:600}
+                    .tp-inline .chip .rng{font-size:7px;color:#78350f;font-weight:600;line-height:1.2}
                     @media (min-width: 640px) {
-                      .tp-inline .chip .rng{font-size:11px}
+                      .tp-inline .chip .rng{font-size:9px}
                     }
                     @media (min-width: 768px) {
+                      .tp-inline .chip .rng{font-size:11px}
+                    }
+                    @media (min-width: 1024px) {
                       .tp-inline .chip .rng{font-size:13px}
                     }
                   </style>
@@ -780,7 +810,7 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
                     <div class="relative mt-2 w-full h-5 text-[12px] text-gray-500">
                       ${(() => {
                         // Apply same spacing logic to numeric ticks
-                        const MIN_TICK_SPACING = 8; // Smaller spacing for smaller text
+                        const MIN_TICK_SPACING = 12; // Increased spacing for mobile to prevent overlap
                         const ticks = stops.map(s => ({
                           value: Number(s),
                           pct: pct(Number(s))
@@ -887,7 +917,7 @@ export default async function PoolDetailPage({ params, searchParams }: { params:
         {/* Pool hero section with timer */}
         <div className="pool-hero grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-2 sm:gap-4 md:gap-6 lg:gap-10 items-start" data-source-url={listing.url || ''}>
           <div className="pool-hero-left">
-            <div className="relative w-full aspect-square bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50 rounded-lg sm:rounded-2xl md:rounded-3xl overflow-hidden border sm:border-2 md:border-4 border-orange-300/60 shadow-md sm:shadow-xl md:shadow-2xl ring-1 sm:ring-2 md:ring-4 ring-orange-100/50">
+            <div className="relative w-3/5 sm:w-full mx-auto aspect-square bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50 rounded-lg sm:rounded-2xl md:rounded-3xl overflow-hidden border sm:border-2 md:border-4 border-orange-300/60 shadow-md sm:shadow-xl md:shadow-2xl ring-1 sm:ring-2 md:ring-4 ring-orange-100/50">
               <img src={imgSrc} alt={titleRaw} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
             <div className="mt-2 sm:mt-4 md:mt-6 flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
