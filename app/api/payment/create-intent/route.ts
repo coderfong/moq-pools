@@ -46,15 +46,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check authentication
+    // Check authentication (optional for guest checkout)
     const session = getSession();
-    if (!session) {
-      console.error('No session found');
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
-    }
+    const userId = session?.sub || `guest_${email.split('@')[0]}_${Date.now()}`;
     
     console.log('Creating payment intent:', {
       amount,
@@ -66,7 +60,8 @@ export async function POST(request: NextRequest) {
       listingId,
       poolId,
       email,
-      userId: session.sub,
+      userId,
+      isGuest: !session,
       stripeConfigured: !!stripe,
     });
     
@@ -91,7 +86,7 @@ export async function POST(request: NextRequest) {
         listingId: listingId || '',
         poolId: poolId || '',
         quantity: quantity.toString(),
-        userId: session.sub || '',
+        userId: userId || '',
         subtotal: (subtotal || amount).toString(),
         shipping: (shipping || 0).toString(),
         shippingZone: shippingZone || 'domestic',
