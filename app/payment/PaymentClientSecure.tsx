@@ -153,16 +153,16 @@ export default function PaymentClientSecure() {
 
   return (
     <>
-      {/* Animated Background */}
+      {/* Animated Background - hidden on mobile for performance */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-white to-amber-50/50"></div>
-        <div className="absolute top-20 right-20 h-96 w-96 rounded-full bg-orange-200/20 blur-3xl animate-blob"></div>
-        <div className="absolute bottom-20 left-20 h-96 w-96 rounded-full bg-amber-200/20 blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="hidden sm:block absolute top-20 right-20 h-96 w-96 rounded-full bg-orange-200/20 blur-3xl animate-blob"></div>
+        <div className="hidden sm:block absolute bottom-20 left-20 h-96 w-96 rounded-full bg-amber-200/20 blur-3xl animate-blob animation-delay-2000"></div>
       </div>
 
-      <div className="mx-auto w-full max-w-6xl px-6 py-8 sm:py-12">
+      <div className="mx-auto w-full max-w-6xl px-3 sm:px-6 py-4 sm:py-8 lg:py-12">
         {/* Back Button */}
-        <div className="mb-8 animate-fade-in-up">
+        <div className="mb-4 sm:mb-8 animate-fade-in-up">
           <Link 
             href={`/checkout?${poolId ? `poolId=${poolId}` : `listingId=${listingId}`}`} 
             className="inline-flex items-center gap-2 text-sm text-orange-600 hover:text-orange-700 font-semibold transition-colors group"
@@ -176,10 +176,10 @@ export default function PaymentClientSecure() {
         
         {/* Page Header */}
         <div className="animate-fade-in-up animation-delay-100">
-          <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-gray-900 via-orange-600 to-amber-600 bg-clip-text text-transparent">
             Complete Payment
           </h1>
-          <div className="mt-3 flex items-center gap-2 text-base text-gray-700">
+          <div className="mt-2 sm:mt-3 flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-gray-700">
             <svg className="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
@@ -187,30 +187,30 @@ export default function PaymentClientSecure() {
           </div>
         </div>
       
-      <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div className="mt-4 sm:mt-8 grid grid-cols-1 gap-4 sm:gap-6 lg:gap-8 lg:grid-cols-3">
         {/* Payment Form */}
         <div className="lg:col-span-2 animate-fade-in-up animation-delay-200">
-          <div className="rounded-3xl border-2 border-orange-200/60 bg-gradient-to-br from-white via-orange-50/10 to-amber-50/20 p-8 shadow-2xl backdrop-blur-sm hover:shadow-3xl transition-shadow duration-300">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-amber-600 shadow-lg shadow-orange-500/30">
-                <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl border-2 border-orange-200/60 bg-gradient-to-br from-white via-orange-50/10 to-amber-50/20 p-4 sm:p-6 lg:p-8 shadow-2xl backdrop-blur-sm hover:shadow-3xl transition-shadow duration-300">
+            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+              <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-orange-500 to-amber-600 shadow-lg shadow-orange-500/30">
+                <svg className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-extrabold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-extrabold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent">
                 Payment Method
               </h2>
             </div>
             
             {/* Payment Method Selection */}
-            <div className="mt-6">
-              <div className="group relative overflow-hidden flex items-center gap-4 rounded-2xl border-2 border-orange-400 bg-gradient-to-r from-orange-50 via-white to-amber-50 p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+            <div className="mt-4 sm:mt-6">
+              <div className="group relative overflow-hidden flex items-center gap-3 sm:gap-4 rounded-xl sm:rounded-2xl border-2 border-orange-400 bg-gradient-to-r from-orange-50 via-white to-amber-50 p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-100/50 to-amber-100/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative z-10 flex items-center gap-4 w-full">
-                  <Image src={stripeLogo} alt="Stripe" width={90} height={36} className="h-9 w-auto" />
+                  <Image src={stripeLogo} alt="Stripe" width={90} height={36} className="h-7 sm:h-9 w-auto" />
                   <div className="flex-1">
-                    <span className="block text-lg font-bold text-orange-900">Secure Card Payment</span>
-                    <span className="text-xs text-orange-700">Powered by Stripe • PCI-DSS Level 1</span>
+                    <span className="block text-base sm:text-lg font-bold text-orange-900">Secure Card Payment</span>
+                    <span className="text-[10px] sm:text-xs text-orange-700">Powered by Stripe • PCI-DSS Level 1</span>
                   </div>
                   <svg className="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -221,7 +221,7 @@ export default function PaymentClientSecure() {
             
             {/* Loading State */}
             {loading && (
-              <div className="mt-10 text-center py-16">
+              <div className="mt-6 sm:mt-10 text-center py-8 sm:py-16">
                 <div className="relative inline-block">
                   <div className="absolute inset-0 animate-ping rounded-full bg-orange-400 opacity-20"></div>
                   <div className="relative inline-block animate-spin rounded-full h-16 w-16 border-4 border-orange-200 border-t-orange-600"></div>
@@ -233,7 +233,7 @@ export default function PaymentClientSecure() {
             
             {/* Error State */}
             {error && !loading && (
-              <div className="mt-10 rounded-2xl bg-gradient-to-br from-red-50 to-pink-50 border-2 border-red-300 p-8 text-sm shadow-lg">
+              <div className="mt-6 sm:mt-10 rounded-xl sm:rounded-2xl bg-gradient-to-br from-red-50 to-pink-50 border-2 border-red-300 p-4 sm:p-6 lg:p-8 text-sm shadow-lg">
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100">
                     <svg className="h-6 w-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -259,7 +259,7 @@ export default function PaymentClientSecure() {
             
             {/* Stripe Elements Form */}
             {clientSecret && !loading && !error && stripePromise && (
-              <div className="mt-10">
+              <div className="mt-6 sm:mt-10">
                 {/* Key prop prevents re-mounting with same clientSecret in React strict mode */}
                 <Elements key={clientSecret} stripe={stripePromise} options={{ clientSecret, appearance }}>
                   <StripeCheckoutForm
@@ -293,21 +293,21 @@ export default function PaymentClientSecure() {
         
         {/* Order Summary */}
         <div className="lg:col-span-1 animate-fade-in-up animation-delay-300">
-          <div className="rounded-3xl border-2 border-orange-200/60 bg-gradient-to-br from-white via-orange-50/10 to-amber-50/20 p-8 shadow-2xl sticky top-6 backdrop-blur-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 shadow-md">
-                <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl border-2 border-orange-200/60 bg-gradient-to-br from-white via-orange-50/10 to-amber-50/20 p-4 sm:p-6 lg:p-8 shadow-2xl lg:sticky lg:top-6 backdrop-blur-sm">
+            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+              <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg sm:rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 shadow-md">
+                <svg className="h-4 w-4 sm:h-5 sm:w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-extrabold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-extrabold bg-gradient-to-r from-gray-900 to-orange-600 bg-clip-text text-transparent">
                 Order Summary
               </h3>
             </div>
             
             {/* Product Image */}
             {productImage && (
-              <div className="mt-6 w-full aspect-square overflow-hidden rounded-2xl border-2 border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50 shadow-xl hover:shadow-2xl transition-shadow duration-300 group">
+              <div className="mt-4 sm:mt-6 w-full aspect-square overflow-hidden rounded-xl sm:rounded-2xl border-2 border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50 shadow-xl hover:shadow-2xl transition-shadow duration-300 group">
                 <img 
                   src={productImage} 
                   alt={decodeURIComponent(productTitle)} 
@@ -316,7 +316,7 @@ export default function PaymentClientSecure() {
               </div>
             )}
             
-            <div className="mt-8 space-y-4 text-sm">
+            <div className="mt-4 sm:mt-6 lg:mt-8 space-y-2 sm:space-y-3 lg:space-y-4 text-xs sm:text-sm">
               <div className="flex items-start justify-between pb-4 border-b-2 border-orange-200">
                 <span className="text-neutral-800 font-semibold flex-1 mr-2 leading-snug">{decodeURIComponent(productTitle)}</span>
               </div>
@@ -346,17 +346,17 @@ export default function PaymentClientSecure() {
                 <span className="text-neutral-900 font-bold text-base">{formatCurrency(shipping)}</span>
               </div>
               
-              <div className="border-t-2 border-orange-300 pt-5 mt-4 bg-gradient-to-r from-orange-50 to-amber-50 -mx-8 px-8 py-5 rounded-xl">
+              <div className="border-t-2 border-orange-300 pt-3 sm:pt-4 lg:pt-5 mt-3 sm:mt-4 bg-gradient-to-r from-orange-50 to-amber-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 rounded-lg sm:rounded-xl">
                 <div className="flex items-center justify-between">
-                  <span className="text-xl font-extrabold text-orange-900">Total</span>
-                  <span className="text-2xl font-extrabold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+                  <span className="text-lg sm:text-xl font-extrabold text-orange-900">Total</span>
+                  <span className="text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                     {formatCurrency(amount)}
                   </span>
                 </div>
               </div>
             </div>
             
-            <div className="mt-8 space-y-3 text-xs bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-5 border-2 border-green-200 shadow-inner">
+            <div className="mt-4 sm:mt-6 lg:mt-8 space-y-2 sm:space-y-3 text-[10px] sm:text-xs bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 border-2 border-green-200 shadow-inner">
               <div className="flex items-start gap-3">
                 <svg className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
